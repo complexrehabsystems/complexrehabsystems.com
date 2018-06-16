@@ -3,6 +3,7 @@
 body {
   margin: 0;
   background: $brand-light;
+  height: 120vh;
 }
 
 header {
@@ -10,14 +11,14 @@ header {
   background-blend-mode: multiply;
   background-position: center bottom;
   background-size: cover;
-  height: 70vh;
+  height: 50vh;
   display: flex;
   flex-direction: column;
   align-items: center;
 
   .logo {
-    margin-top: 15vh;
-    max-height: 30vh;
+    margin-top: 10vh;
+    max-height: 20vh;
     max-width: 80vw;
   }
 
@@ -25,7 +26,7 @@ header {
     position: absolute;
     width: 100%;
     height: 10vh;
-    top: calc(70vh - 9.9vh);
+    top: calc(50vh - 9.9vh);
     left: 0;
     fill: #eee;
     stroke: $brand-primary;
