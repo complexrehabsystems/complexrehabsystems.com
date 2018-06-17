@@ -4,3 +4,28 @@ body {
   margin: 0;
   background: $brand-light;
 }
+
+.layout {
+  height: 100%;
+  display: grid;
+  grid-template-areas:
+    "header"
+    "content"
+    "footer";
+  grid-template-rows: auto 1fr auto;
+}
+
+.site-header {
+  grid-area: header;
+}
+
+.content {
+  grid-area: content;
+  display: flex;
+  flex-direction: column;
+}
+
+.site-footer {
+  grid-area: footer;
+}
+
