@@ -16,9 +16,19 @@ export default () =>
   </Header>
 
   <div className="content">
-    <div className="cta">
-      <FaEnvelope className="cta-icon"/>
-      <h4 className="cta-info">Signup for E-Mail Updates</h4>
+    <div className="ctas">
+      <div className="cta">
+        <FaEnvelope className="cta-icon"/>
+        <h4 className="cta-info">Signup for E-Mail Updates</h4>
+      </div>
+      <div className="cta">
+        <FaEnvelope className="cta-icon"/>
+        <h4 className="cta-info">Signup for E-Mail Updates</h4>
+      </div>
+      <div className="cta">
+        <FaEnvelope className="cta-icon"/>
+        <h4 className="cta-info">Signup for E-Mail Updates</h4>
+      </div>
     </div>
   </div>
 

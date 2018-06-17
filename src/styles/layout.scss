@@ -28,6 +28,16 @@ body {
   flex-direction: column;
   align-items: center;
 
+  @media(min-width: 800px) {
+    .ctas {
+      width: 100%;
+      max-width: 1200px;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+    }
+  }
+
   .cta {
     background: lighten($brand-light, 7);
     border: 2px solid $brand-dark;
@@ -39,7 +49,9 @@ body {
     justify-content: space-around;
     align-items: center;
     padding: 15px;
+    margin: 15px;
   }
+
   .cta-icon {
     font-size: 100px;
     color: $brand-primary;
