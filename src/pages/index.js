@@ -23,6 +23,12 @@ export default () =>
   </Header>
 
   <div className="content">
+
+    <div className="mission">
+      <h1>The Future of Complex Rehab</h1>
+      <p>Building advanced tools for ATPs</p>
+    </div>
+
     <div className="ctas">
       <a href="#about">
         <div className="cta">
