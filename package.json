@@ -12,6 +12,7 @@
     "gatsby-link": "^1.6.40",
     "gatsby-plugin-sass": "^1.0.26",
     "gatsby-plugin-typography": "^1.7.19",
-    "react-icons": "^2.2.7"
+    "react-icons": "^2.2.7",
+    "smooth-scroll": "^14.2.0"
   }
 }

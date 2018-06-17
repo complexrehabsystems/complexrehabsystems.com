@@ -1,4 +1,5 @@
 import React from "react"
+import Link from "gatsby-link"
 import Header from "../components/header"
 import Footer from "../components/footer"
 
@@ -10,6 +11,10 @@ import "../styles/layout.scss"
 
 import logo from "../assets/banner_logo.svg"
 
+if (typeof window !== 'undefined') {
+  require('smooth-scroll')('a[href*="#"]');
+}
+
 export default () => 
 <div className="layout">
 
@@ -19,18 +24,36 @@ export default () =>
 
   <div className="content">
     <div className="ctas">
-      <div className="cta">
-        <InfoIcon className="cta-icon"/>
-        <h4 className="cta-info">About CRS</h4>
-      </div>
-      <div className="cta">
-        <MailIcon className="cta-icon"/>
-        <h4 className="cta-info">Signup for E-Mail Updates</h4>
-      </div>
-      <div className="cta">
-        <PeopleIcon className="cta-icon"/>
-        <h4 className="cta-info">Meet the Team</h4>
-      </div>
+      <a href="#about">
+        <div className="cta">
+          <InfoIcon className="cta-icon"/>
+          <h4 className="cta-info">About CRS</h4>
+        </div>
+      </a>
+      <a href="#team">
+        <div className="cta">
+          <PeopleIcon className="cta-icon"/>
+          <h4 className="cta-info">Meet the Team</h4>
+        </div>
+      </a>
+      <a href="#signup">
+        <div className="cta">
+          <MailIcon className="cta-icon"/>
+          <h4 className="cta-info">Signup for E-Mail Updates</h4>
+        </div>
+      </a>
+    </div>
+
+    <div className="sections">
+      <section id="about">
+        <h1>About CRS</h1>
+      </section>
+      <section id="team">
+        <h1>Meet the Team</h1>
+      </section>
+      <section id="signup">
+        <h1>Sign Up Now</h1>
+      </section>
     </div>
   </div>
 

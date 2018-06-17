@@ -28,6 +28,30 @@ body {
   flex-direction: column;
   align-items: center;
 
+  section {
+    min-height: 100vh;
+    width: 80vw;
+    &:not(:last-child){
+      border-bottom: 3px solid $brand-highlight;
+    }
+    background: lighten($brand-primary, 50);
+    margin: 15px auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+  .ctas {
+    min-height: 35vh;
+    margin-bottom: 5vh;
+    border-bottom: 1px solid $brand-highlight;
+  }
+
   @media(min-width: $breakpoint-lg) {
     .ctas {
       width: 100%;
@@ -35,6 +59,7 @@ body {
       display: flex;
       flex-direction: row;
       justify-content: space-around;
+      align-items: center;
     }
   }
 
@@ -53,14 +78,27 @@ body {
   }
 
   .cta-icon {
+    opacity: .8;
     font-size: 100px;
     color: $brand-primary;
+    transition: opacity .25s ease-in-out;
   }
 
   .cta-info {
     color: $brand-dark;
     text-align: center;
   }
+
+  .cta:hover {
+    background: lighten($brand-light, 10);
+    border: 2px solid $brand-dark;
+
+    .cta-icon {
+      opacity: 1;
+    }
+  }
+
+
 }
 
 .site-footer {
