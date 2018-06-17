@@ -1,6 +1,6 @@
 @import "_vars.scss";
 
-$header-height: 40vh;
+$header-height: 60vh;
 
 header {
   background: url("../assets/banner.svg");
@@ -11,7 +11,7 @@ header {
 
   .logo {
     margin-top: 10vh;
-    max-height: 15vh;
+    max-height: 35vh;
     max-width: 60vw;
   }
 
