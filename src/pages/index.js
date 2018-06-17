@@ -10,4 +10,5 @@ export default () =>
   <Header>
     <img src={logo} className="logo"/>
   </Header>
+
 </div>
