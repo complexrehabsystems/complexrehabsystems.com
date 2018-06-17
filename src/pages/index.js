@@ -20,14 +20,15 @@ export default () =>
 
   <Header className="site-header">
     <img src={logo} className="logo"/>
-  </Header>
-
-  <div className="content">
 
     <div className="mission">
       <h1>The Future of Complex Rehab</h1>
-      <p>Building advanced tools for ATPs</p>
+      <h2>Building advanced tools for ATPs</h2>
     </div>
+
+  </Header>
+
+  <div className="content">
 
     <div className="ctas">
       <a href="#about">

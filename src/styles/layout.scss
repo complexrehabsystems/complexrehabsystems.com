@@ -45,16 +45,6 @@ body {
     text-decoration: none;
   }
 
-  .mission {
-    background: darken($brand-dark, 10);
-    color: $brand-light;
-    margin:0;
-    padding:35px 15px 15px;
-    text-align: center;
-    border-bottom: 5px solid $brand-primary;
-    width: 100vw;
-  }
-
   .ctas {
     min-height: 40vh;
     margin-bottom: 5vh;

@@ -1,6 +1,6 @@
 @import "_vars.scss";
 
-$header-height: 25vh;
+$header-height: 55vh;
 
 header {
   background: url("../assets/banner.svg"), linear-gradient(90deg, rgba(33,33,33,1) 0%, rgba(255,255,255,1) 100%);
@@ -8,12 +8,27 @@ header {
   background-size: cover;
   height: $header-height;
   display: flex;
+  flex-direction: column;
   justify-content: center;
+  align-items: center;
 
   .logo {
     margin-top: 3vh;
     max-height: 25vh;
     max-width: 60vw;
+  }
+
+  .mission {
+    color: $brand-light;
+    margin:0;
+    padding:3vh 15px 15px;
+    border-top: 1px solid $brand-light;
+    text-align: center;
+    max-width: 60vw;
+
+    h2 {
+      font-weight: 200;
+    }
   }
 
   border-bottom: 10px solid $brand-primary;
