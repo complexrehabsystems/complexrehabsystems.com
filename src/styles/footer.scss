@@ -6,13 +6,19 @@ footer {
   color: $brand-light;
   background: url("../assets/banner.svg");
   background-size: cover;
-  height: $footer-height;
+  height: min-content;
 
   .footer-items {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    span {
+      padding: 15px 0;
+      &:not(:last-child){
+        border-bottom: 3px solid $brand-light;
+      }
+    }
   }
 
   @media(min-width: $breakpoint-md) {
@@ -20,12 +26,13 @@ footer {
       flex-direction: row;
       justify-content: center;
       align-items: center;
-      height: calc(#{$footer-height} - 7.5vh);
+      margin-bottom: 20px;
 
       span{
         padding: 0 15px;
         &:not(:last-child){
           border-right: 3px solid $brand-light;
+          border-bottom: none;
         }
       }
 
