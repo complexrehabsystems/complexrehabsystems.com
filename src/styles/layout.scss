@@ -30,12 +30,11 @@ body {
 
   section {
     min-height: 100vh;
-    width: 80vw;
+    width: 100vw;
     &:not(:last-child){
       border-bottom: 3px solid $brand-highlight;
     }
     background: lighten($brand-primary, 50);
-    margin: 15px auto;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -59,7 +58,7 @@ body {
   .ctas {
     min-height: 40vh;
     margin-bottom: 5vh;
-    padding-bottom: 5vh;
+    padding: 5vh;
     border-bottom: 1px solid $brand-highlight;
   }
 
