@@ -2,7 +2,9 @@ import React from "react"
 import Header from "../components/header"
 import Footer from "../components/footer"
 
-import FaEnvelope from "react-icons/lib/fa/envelope-o"
+import InfoIcon from "react-icons/lib/md/info-outline"
+import MailIcon from "react-icons/lib/md/mail-outline"
+import PeopleIcon from "react-icons/lib/md/people-outline"
 
 import "../styles/layout.scss"
 
@@ -18,16 +20,16 @@ export default () =>
   <div className="content">
     <div className="ctas">
       <div className="cta">
-        <FaEnvelope className="cta-icon"/>
+        <InfoIcon className="cta-icon"/>
+        <h4 className="cta-info">About CRS</h4>
+      </div>
+      <div className="cta">
+        <MailIcon className="cta-icon"/>
         <h4 className="cta-info">Signup for E-Mail Updates</h4>
       </div>
       <div className="cta">
-        <FaEnvelope className="cta-icon"/>
-        <h4 className="cta-info">Signup for E-Mail Updates</h4>
-      </div>
-      <div className="cta">
-        <FaEnvelope className="cta-icon"/>
-        <h4 className="cta-info">Signup for E-Mail Updates</h4>
+        <PeopleIcon className="cta-icon"/>
+        <h4 className="cta-info">Meet the Team</h4>
       </div>
     </div>
   </div>
