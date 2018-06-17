@@ -7,7 +7,7 @@ footer {
   background: url("../assets/banner.svg");
   background-size: cover;
   height: min-content;
-  margin-top: 8px solid $brand-highlight;
+  border-top: 8px solid $brand-highlight;
 
   .footer-items {
     display: flex;
