@@ -87,10 +87,10 @@ body {
 
   .cta:hover {
     background: lighten($brand-light, 10);
-    border: 4px solid $brand-primary;
+    border: 2px solid $brand-primary;
 
     .cta-icon {
-      opacity: .7;
+      opacity: .8;
     }
 
     .cta-info {
