@@ -22,7 +22,7 @@ export default () =>
     <img src={logo} className="logo"/>
 
     <div className="mission">
-      <h1>The Future of Complex Rehab</h1>
+      <h3>The Future of Complex Rehab</h3>
       <h2>Building advanced tools for ATPs</h2>
     </div>
 
