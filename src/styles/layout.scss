@@ -74,10 +74,10 @@ body {
   }
 
   .cta-icon {
-    opacity: .8;
+    opacity: 1;
     font-size: 100px;
     color: $brand-primary;
-    transition: opacity .25s ease-in-out;
+    transition: opacity .1s ease-in-out;
   }
 
   .cta-info {
@@ -87,10 +87,10 @@ body {
 
   .cta:hover {
     background: lighten($brand-light, 10);
-    border: 2px solid $brand-dark;
+    border: 3px solid $brand-dark;
 
     .cta-icon {
-      opacity: 1;
+      opacity: .6;
     }
   }
 

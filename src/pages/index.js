@@ -31,24 +31,28 @@ export default () =>
   <div className="content">
 
     <div className="ctas">
+
       <a href="#about">
         <div className="cta">
           <InfoIcon className="cta-icon"/>
           <h4 className="cta-info">About CRS</h4>
         </div>
       </a>
+
       <a href="#team">
         <div className="cta">
           <PeopleIcon className="cta-icon"/>
           <h4 className="cta-info">Meet the Team</h4>
         </div>
       </a>
+
       <a href="#signup">
         <div className="cta">
           <MailIcon className="cta-icon"/>
           <h4 className="cta-info">Signup for E-Mail Updates</h4>
         </div>
       </a>
+
     </div>
 
     <div className="sections">
