@@ -18,6 +18,7 @@ import doug from "../assets/doug.png"
 import patrick from "../assets/patrick.png"
 import tom from "../assets/tom.jpg"
 import avatar from "../assets/avatar.png"
+import avatarAddUser from "../assets/avatarAddUser.jpg"
 
 if (typeof window !== 'undefined') {
   require('smooth-scroll')('a[href*="#"]');
@@ -66,6 +67,7 @@ export default () =>
     <div className="sections">
       <section id="about">
         <h1>About CRS</h1>
+        <h2>(placeholder)</h2>
       </section>
       <section id="team">
         <h1>The Team</h1>
@@ -133,7 +135,7 @@ export default () =>
 
           <a href="https://complexrehabsystems.github.io/job-descriptions">
           <div className="person">
-            <img src={avatar}/>
+            <img src={avatarAddUser}/>
             <div className="overlay hiring">
               <h1>We're Hiring!</h1>
               <p className="lede">Click Here to Learn More</p>
