@@ -28,6 +28,7 @@ export default () =>
 <div className="layout">
 
   <Header className="site-header">
+
     <img src={logo} className="logo"/>
 
     <div className="mission">
@@ -151,7 +152,7 @@ export default () =>
         <h1>Sign Up Now</h1>
         <img src={signupImg}/>
         <h2>To Receive Email Updates about CRS and Our Products</h2>
-        <form id="contact" name="contact" method="POST" netlify>
+        <form id="contact" name="contact" method="POST" data-netlify="true" netlify>
           <input type="email"/>
           <input type="submit" value="Signup Now"/>
         </form>
