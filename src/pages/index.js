@@ -6,6 +6,7 @@ import InfoIcon from "react-icons/lib/md/info-outline"
 import MailIcon from "react-icons/lib/md/mail-outline"
 import PeopleIcon from "react-icons/lib/md/people-outline"
 import LinkedInIcon from "react-icons/lib/fa/linkedin-square"
+import AddPersonIcon from "react-icons/lib/fa/user-plus"
 
 import "../styles/layout.scss"
 
@@ -130,8 +131,18 @@ export default () =>
             </div>
           </div>
 
-        </div>
+          <a href="https://complexrehabsystems.github.io/job-descriptions">
+          <div className="person">
+            <img src={avatar}/>
+            <div className="overlay hiring">
+              <h1>We're Hiring!</h1>
+              <p className="lede">Click Here to Learn More!</p>
+              <AddPersonIcon className="social-icon"></AddPersonIcon>
+            </div>
+          </div>
+          </a>
 
+        </div>
 
       </section>
       <section id="signup">
