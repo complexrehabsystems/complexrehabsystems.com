@@ -4,7 +4,7 @@ $footer-height: 100px;
 
 footer {
   color: $brand-light;
-  background: url("../assets/banner.svg");
+  background: $brand-dark;
   background-size: cover;
   height: min-content;
   border-top: 8px solid $brand-highlight;
