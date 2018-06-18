@@ -125,6 +125,7 @@ body {
   margin-top: 5vh;
   h2 {
     font-weight: 200;
+    margin-bottom: 0;
   }
 
   .people {
@@ -153,7 +154,7 @@ body {
       img {
         width: 80%;
         height: 80%;
-        border-radius: 50%;
+        border-radius: 5px;
         margin: 10%;
         transition: opacity .5s ease-in-out;
       }
@@ -172,6 +173,7 @@ body {
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        border-radius: 5px;
 
         h1 {
           font-size: 1.2em;
