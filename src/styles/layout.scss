@@ -79,7 +79,7 @@ body {
   .cta-icon {
     font-size: 100px;
     color: $brand-primary;
-    transition: opacity .1s ease-in-out;
+    transition: opacity .3s ease-in-out;
   }
 
   .cta-info {
@@ -166,7 +166,7 @@ body {
       max-height: 80%;
       border-radius: 5px;
       margin: 10%;
-      transition: opacity .5s ease-in-out;
+      transition: opacity .3s ease-in-out;
     }
 
     .overlay {
@@ -177,7 +177,7 @@ body {
       background-color: $brand-primary;
       color: $brand-light;
       opacity: 0;
-      transition: opacity .5s ease-in-out;
+      transition: opacity .3s ease-in-out;
       text-align: center;
       display: flex;
       flex-direction: column;
