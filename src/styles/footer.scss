@@ -16,6 +16,7 @@ footer {
     align-items: center;
     span {
       padding: 15px 0;
+      text-align: center;
       &:not(:last-child){
         border-bottom: 3px solid $brand-light;
       }
