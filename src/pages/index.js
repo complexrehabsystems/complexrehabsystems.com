@@ -149,7 +149,6 @@ export default () =>
   <Footer className="site-footer">
     <span>&copy; Complex Rehab Systems 2018</span>
     <span>1348 Westmore Court - Stevens Point, WI, USA - 54481</span>
-    <span>etc</span>
   </Footer>
 
 </div>
