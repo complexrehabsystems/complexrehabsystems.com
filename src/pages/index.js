@@ -1,5 +1,4 @@
 import React from "react"
-import Link from "gatsby-link"
 import Header from "../components/header"
 import Footer from "../components/footer"
 
@@ -10,6 +9,7 @@ import PeopleIcon from "react-icons/lib/md/people-outline"
 import "../styles/layout.scss"
 
 import logo from "../assets/banner_logo.svg"
+import signupImg from "../assets/about-crs2.jpg"
 
 if (typeof window !== 'undefined') {
   require('smooth-scroll')('a[href*="#"]');
@@ -64,6 +64,12 @@ export default () =>
       </section>
       <section id="signup">
         <h1>Sign Up Now</h1>
+        <img src={signupImg}/>
+        <h2>To Receive Email Updates about CRS and Our Products</h2>
+        <form id="email-signup-form">
+          <input type="email"/>
+          <input type="submit" value="Signup Now"/>
+        </form>
       </section>
     </div>
   </div>
