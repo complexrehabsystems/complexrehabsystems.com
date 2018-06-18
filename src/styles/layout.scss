@@ -64,7 +64,7 @@ body {
   }
 
   .cta {
-    background: lighten($brand-light, 3);
+    background-color: lighten($brand-light, 6);
     border: 2px solid $brand-dark;
     border-radius: 5px;
     width: 250px;
@@ -73,10 +73,10 @@ body {
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
+    transition: background-color .2s ease-in-out;
   }
 
   .cta-icon {
-    opacity: 1;
     font-size: 100px;
     color: $brand-primary;
     transition: opacity .1s ease-in-out;
