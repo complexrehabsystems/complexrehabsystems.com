@@ -23,6 +23,15 @@ if (typeof window !== 'undefined') {
   require('smooth-scroll')('a[href*="#"]');
 }
 
+$("#contact").submit(function(e) {
+  e.preventDefault();
+
+  var $form = $(this);
+  $.post($form.attr("action"), $form.serialize()).then(function() {
+    alert("Thank you!");
+  });
+});
+
 export default () => 
 <div className="layout">
 
@@ -149,21 +158,19 @@ export default () =>
       </section>
 
       { window.location.search==="?success" ?
-
-      (<section id="signup-success" visible={window.location.search}>
-        <h1>Success</h1>
-        <p>We have been notified, and will reach out to you with more informatoin.</p>
-</section> )
-      :
-      (<section id="signup" visible={window.location.search}>
-        <h1>Sign Up Now</h1>
-        <img src={signupImg}/>
-        <h2>To Receive Email Updates about CRS and Our Products</h2>
-        <form id="contact" name="contact" method="POST" action="/?success" data-netlify="true" netlify>
-          <input name="email" type="email"/>
-          <input type="submit" value="Signup Now"/>
-        </form>
-      </section>)
+        (<section id="signup-success" visible={window.location.search}>
+          <h1>Success</h1>
+          <p>We have been notified, and will reach out to you with more informatoin.</p>
+        </section> ) :
+        (<section id="signup" visible={window.location.search}>
+          <h1>Sign Up Now</h1>
+          <img src={signupImg}/>
+          <h2>To Receive Email Updates about CRS and Our Products</h2>
+          <form id="contact" name="contact" method="POST" action="/?success" data-netlify="true" netlify>
+            <input name="email" type="email"/>
+            <input type="submit" value="Signup Now"/>
+          </form>
+        </section>)
       }
 
     </div>
