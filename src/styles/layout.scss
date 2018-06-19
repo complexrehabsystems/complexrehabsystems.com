@@ -203,6 +203,9 @@ body {
         background: #ddd;
         color: #148fce;
         align-self: center;
+        transform: rotateX(90deg);
+        transition: transform .1s linear .5s;
+
       }
 
       a:hover {
@@ -228,6 +231,10 @@ body {
       }
       .overlay {
         opacity: .9;
+      }
+      a {
+        transform: rotateX(0);
+        transition: transform .05s linear .3s;
       }
     }
   }
