@@ -47,7 +47,7 @@ body {
   }
 
   .ctas {
-    min-height: 40vh;
+    min-height: 50vh;
     border-bottom: 1px solid $brand-highlight;
   }
 
@@ -67,8 +67,8 @@ body {
     background-color: lighten($brand-light, 6);
     border: 2px solid $brand-dark;
     border-radius: 5px;
-    width: 250px;
-    height: 200px;
+    width: 300px;
+    height: 250px;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -77,7 +77,7 @@ body {
   }
 
   .cta-icon {
-    font-size: 100px;
+    font-size: 130px;
     color: $brand-primary;
     transition: opacity .3s ease-in-out;
   }
