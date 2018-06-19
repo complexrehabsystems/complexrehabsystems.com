@@ -110,7 +110,8 @@ export default () =>
             <img src={daniel}/>
             <div className="overlay">
               <h1>Daniel Packard</h1>
-              <p> This is some information about daniel.</p>
+              <p>With a diverse background in physics, math, robotics, and software - Daniel brings nearly ten years of experience to the table.</p>
+              <p>In his free time, he enjoys beer, guitar, and bicycles.</p>
               <LinkedInIcon className="social-icon"></LinkedInIcon>
             </div>
           </div>
