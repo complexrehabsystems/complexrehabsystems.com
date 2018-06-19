@@ -203,8 +203,6 @@ body {
         background: #ddd;
         color: #148fce;
         align-self: center;
-        transition: margin-left .5s linear;
-        margin-left: 300%;
       }
 
       .lede {
@@ -226,10 +224,6 @@ body {
       }
       .overlay {
         opacity: .9;
-      }
-
-      a {
-        margin-left: 0;
       }
     }
   }
