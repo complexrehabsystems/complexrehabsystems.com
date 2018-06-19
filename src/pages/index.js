@@ -135,13 +135,13 @@ export default () =>
 
           <div className="person">
             <img src={avatar}/>
-            <a href="https://complexrehabsystems.github.io/job-descriptions">
-              <div className="overlay">
-                <h1>We're Hiring!</h1>
+            <div className="overlay">
+              <h1>We're Hiring!</h1>
+              <a href="https://complexrehabsystems.github.io/job-descriptions">
                 <p>Click Here to Learn More</p>
-                <AddPersonIcon className="social-icon"></AddPersonIcon>
+              </a>
+              <AddPersonIcon className="social-icon"></AddPersonIcon>
               </div>
-            </a>
           </div>
 
         </div>
