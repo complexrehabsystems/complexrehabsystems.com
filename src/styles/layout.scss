@@ -204,7 +204,7 @@ body {
         color: #148fce;
         align-self: center;
         transform: rotateX(90deg);
-        transition: transform .1s linear .5s;
+        transition: transform .3s ease-in-out .2s;
 
       }
 
@@ -234,7 +234,6 @@ body {
       }
       a {
         transform: rotateX(0);
-        transition: transform .05s linear;
       }
     }
   }
