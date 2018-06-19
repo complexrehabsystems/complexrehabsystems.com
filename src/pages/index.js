@@ -136,7 +136,7 @@ export default () =>
           <div className="person">
             <img src={avatar}/>
             <a href="https://complexrehabsystems.github.io/job-descriptions">
-              <div className="overlay" style="margin-top:-109%;">
+              <div className="overlay">
                 <h1>We're Hiring!</h1>
                 <p>Click Here to Learn More</p>
                 <AddPersonIcon className="social-icon"></AddPersonIcon>
