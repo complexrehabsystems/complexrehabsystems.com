@@ -193,13 +193,16 @@ body {
         font-weight: 200;
         flex-grow: 1;
         text-align: center;
+        display: flex;
       }
 
       a {
+        font-weight: 400;
         border-radius: 5px;
-        padding: 5px;
-        background: $brand-light;
-        color: $brand-primary;
+        padding: 20px;
+        background: #ddd;
+        color: #148fce;
+        align-self: center;
       }
 
       .lede {
