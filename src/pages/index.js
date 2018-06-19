@@ -23,15 +23,6 @@ if (typeof window !== 'undefined') {
   require('smooth-scroll')('a[href*="#"]');
 }
 
-$("#contact").submit(function(e) {
-  e.preventDefault();
-
-  var $form = $(this);
-  $.post($form.attr("action"), $form.serialize()).then(function() {
-    alert("Thank you!");
-  });
-});
-
 export default () => 
 <div className="layout">
 
@@ -166,8 +157,8 @@ export default () =>
           <h1>Sign Up Now</h1>
           <img src={signupImg}/>
           <h2>To Receive Email Updates about CRS and Our Products</h2>
-          <form id="contact" name="contact" method="POST" action="/?success" data-netlify="true" netlify>
-            <input name="email" type="email"/>
+          <form id="contact" name="contact" method="POST" action="/" data-netlify="true" netlify>
+            <input name="email" type="email" required/>
             <input type="submit" value="Signup Now"/>
           </form>
         </section>)
