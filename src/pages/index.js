@@ -2,9 +2,9 @@ import React from "react"
 import Header from "../components/header"
 import Footer from "../components/footer"
 
-import InfoIcon from "react-icons/lib/md/info-outline"
-import MailIcon from "react-icons/lib/md/mail-outline"
-import PeopleIcon from "react-icons/lib/md/people-outline"
+import InfoIcon from "react-icons/lib/fa/info-circle"
+import MailIcon from "react-icons/lib/fa/envelope"
+import PeopleIcon from "react-icons/lib/fa/user"
 import LinkedInIcon from "react-icons/lib/fa/linkedin-square"
 import AddPersonIcon from "react-icons/lib/fa/user-plus"
 
