@@ -203,8 +203,6 @@ body {
         background: #ddd;
         color: #148fce;
         align-self: center;
-        opacity:0;
-        transition: opacity .3s ease-in-out .3s;
       }
 
       a:hover {
@@ -230,9 +228,6 @@ body {
       }
       .overlay {
         opacity: .9;
-      }
-      a {
-        opacity: 1;
       }
     }
   }
