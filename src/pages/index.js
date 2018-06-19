@@ -133,16 +133,16 @@ export default () =>
             </div>
           </div>
 
-          <a href="https://complexrehabsystems.github.io/job-descriptions">
           <div className="person">
             <img src={avatar}/>
-            <div className="overlay hiring">
-              <h1>We're Hiring!</h1>
-              <p className="lede">Click Here to Learn More</p>
-              <AddPersonIcon className="social-icon"></AddPersonIcon>
-            </div>
+            <a href="https://complexrehabsystems.github.io/job-descriptions">
+              <div className="overlay">
+                <h1>We're Hiring!</h1>
+                <p>Click Here to Learn More</p>
+                <AddPersonIcon className="social-icon"></AddPersonIcon>
+              </div>
+            </a>
           </div>
-          </a>
 
         </div>
 
