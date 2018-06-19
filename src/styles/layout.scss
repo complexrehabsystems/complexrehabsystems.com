@@ -143,6 +143,7 @@ body {
     justify-content: center;
     align-items: center;
     margin-bottom: 5vh;
+    max-width: 1024px;
 
     @media (min-width: $breakpoint-md) {
       flex-direction: row;

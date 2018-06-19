@@ -137,6 +137,15 @@ export default () =>
           <div className="person">
             <img src={avatar}/>
             <div className="overlay">
+              <h1>Hima Bharathi Adusumilli</h1>
+              <p> This is some information about hima.</p>
+              <LinkedInIcon className="social-icon"></LinkedInIcon>
+            </div>
+          </div>
+
+          <div className="person">
+            <img src={avatar}/>
+            <div className="overlay">
               <h1>We're Hiring!</h1>
               <p><a href="https://complexrehabsystems.github.io/job-descriptions">Click Here to Learn More</a></p>
               <AddPersonIcon className="social-icon"></AddPersonIcon>
