@@ -203,8 +203,8 @@ body {
         background: #ddd;
         color: #148fce;
         align-self: center;
-        height: 0;
-        transition: width .5s linear;
+        transition: margin-top .5s linear;
+        margin-top: 300;
       }
 
       .lede {
@@ -229,7 +229,7 @@ body {
       }
 
       a {
-        height: auto;
+        margin-top: 0;
       }
     }
   }
