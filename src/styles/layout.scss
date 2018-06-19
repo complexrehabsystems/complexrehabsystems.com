@@ -196,7 +196,10 @@ body {
       }
 
       a {
-        color: $brand-light;
+        border-radius: 5px;
+        padding: 5px;
+        background: $brand-light;
+        color: $brand-primary;
       }
 
       .lede {
