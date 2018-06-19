@@ -148,7 +148,7 @@ export default () =>
 
       </section>
 
-      <section id="signup" visible={window.location.search}>
+      <section id="signup">
         <h1>Sign Up Now</h1>
         <img src={signupImg}/>
         <h2>To Receive Email Updates about CRS and Our Products</h2>
