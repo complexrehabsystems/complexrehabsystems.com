@@ -237,6 +237,7 @@ body {
         display: flex;
         flex-direction: column;
         justify-content: space-around;
+        color: lighten($brand-light, 10);
       }
 
       p {
