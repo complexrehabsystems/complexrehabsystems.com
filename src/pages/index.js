@@ -41,24 +41,10 @@ export default () =>
 
   </Header>
 
-  <div className="tiny-nav">
-    <a className="tiny-link" id="top-link" href="#">
-      <UpArrowIcon/>
-    </a>
-
-    <a className="tiny-link" href="#about">
-      <InfoIcon/>
-    </a>
-
-    <a className="tiny-link" href="#team">
-      <PeopleIcon/>
-    </a>
-
-    <a className="tiny-link" href="#signup">
-      <MailIcon/>
-    </a>
-
-  </div>
+  <a id="top-link" href="#">
+    <UpArrowIcon/>
+    <h2>Top</h2>
+  </a>
 
   <div className="content">
 
