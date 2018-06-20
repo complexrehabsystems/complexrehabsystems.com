@@ -146,6 +146,7 @@ body {
 }
 
 #signup {
+  background-color: lighten($brand-light, 5);
   h2 {
     font-weight: 200;
     max-width: 350px;
@@ -165,7 +166,7 @@ body {
 }
 
 #about {
-  background-color: lighten($brand-light, 10);
+  background-color: lighten($brand-light, 5);
   h2 {
     font-weight: 200;
     text-align:center;
