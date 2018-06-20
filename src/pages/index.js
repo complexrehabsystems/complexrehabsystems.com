@@ -7,6 +7,7 @@ import MailIcon from "react-icons/lib/fa/envelope"
 import PeopleIcon from "react-icons/lib/fa/user"
 import LinkedInIcon from "react-icons/lib/fa/linkedin-square"
 import AddPersonIcon from "react-icons/lib/fa/user-plus"
+import UpArrowIcon from "react-icons/lib/fa/arrow-circle-o-up"
 
 import "../styles/layout.scss"
 
@@ -21,6 +22,9 @@ import avatar from "../assets/avatar.png"
 
 if (typeof window !== 'undefined') {
   require('smooth-scroll')('a[href*="#"]');
+  window.addEventListener('scroll', function() {
+    document.getElementById('top-link').style.opacity = (pageYOffset-400);
+  });
 }
 
 export default () => 
@@ -36,6 +40,11 @@ export default () =>
     </div>
 
   </Header>
+
+  <a id="top-link" href="#">
+    <UpArrowIcon/>
+    <h2>Top</h2>
+  </a>
 
   <div className="content">
 
