@@ -60,7 +60,7 @@ export default () =>
 
   <div className="content">
 
-    <div id="nav" className="ctas">
+    <section id="nav" className="ctas">
 
       <a href="#about">
         <div className="cta">
@@ -83,148 +83,154 @@ export default () =>
         </div>
       </a>
 
-    </div>
+    </section>
 
     <div className="sections">
+
       <section id="about">
         <h1>About CRS</h1>
-        <h2>(placeholder)</h2>
+        <div className="section-content">
+          <h2>(placeholder)</h2>
+        </div>
       </section>
+
       <section id="team">
         <h1>The Team</h1>
 
-        <h2>Leadership</h2>
-        <div className="people">
+        <div className="section-content">
+          <h2>Leadership</h2>
+          <div className="people">
 
-          <div className="person">
-            <img src={doug}/>
-            <div className="overlay">
-              <h1>Douglas Munsey</h1>
-              <h2>President</h2>
-              <div className="about">
-              <p>Douglas was an investment research associate at Morgan Stanley working in the medical technology sector.</p>
-              <p>He has a BBA in Finance, Investment, and Banking from the University of Wisconsin-Madison.</p>
-              </div>
-              
-              <div className="social-icons">
-                <a href="https://www.linkedin.com/in/douglas-munsey-17407423/" target="_blank"><LinkedInIcon className="social-icon" /></a>
-              </div>
+            <div className="person">
+              <img src={doug}/>
+              <div className="overlay">
+                <h1>Douglas Munsey</h1>
+                <h2>President</h2>
+                <div className="about">
+                <p>Douglas was an investment research associate at Morgan Stanley working in the medical technology sector.</p>
+                <p>He has a BBA in Finance, Investment, and Banking from the University of Wisconsin-Madison.</p>
+                </div>
+                
+                <div className="social-icons">
+                  <a href="https://www.linkedin.com/in/douglas-munsey-17407423/" target="_blank"><LinkedInIcon className="social-icon" /></a>
+                </div>
 
+              </div>
+            </div>
+
+            <div className="person">
+              <img src={tom}/>
+              <div className="overlay">
+                <h1>Tom Whelan</h1>
+                <h2>CTO</h2>
+                <div className="about">
+                <p> This is some information about tom.</p>
+                </div>
+                
+                <div className="social-icons">
+                  <a href="https://www.linkedin.com/in/tom-whelan-6957855/" target="_blank"><LinkedInIcon className="social-icon" /></a>
+                </div>
+
+              </div>
+            </div>
+
+            <div className="person">
+              <img src={avatar}/>
+              <div className="overlay">
+                <h1>Paul Banz</h1>
+                <h2>Product Manager</h2>
+                <div className="about">
+                <p> This is some information about paul.</p>
+                </div>
+                
+                <div className="social-icons">
+                  <a href="https://www.linkedin.com/in/paul-banz-806ba31/" target="_blank"><LinkedInIcon className="social-icon" /></a>
+                </div>
+
+              </div>
             </div>
           </div>
 
-          <div className="person">
-            <img src={tom}/>
-            <div className="overlay">
-              <h1>Tom Whelan</h1>
-              <h2>CTO</h2>
-              <div className="about">
-              <p> This is some information about tom.</p>
-              </div>
-              
-              <div className="social-icons">
-                <a href="https://www.linkedin.com/in/tom-whelan-6957855/" target="_blank"><LinkedInIcon className="social-icon" /></a>
-              </div>
+          <h2>Developers</h2>
+          <div className="people">
 
+            <div className="person">
+              <img src={daniel}/>
+              <div className="overlay">
+                <h1>Daniel Packard</h1>
+                <h2>Developer</h2>
+                <div className="about">
+                <p>With a diverse background in physics, math, robotics, and software - Daniel brings nearly ten years of experience to the table.</p>
+                <p>In his free time, he enjoys beer, guitar, and bicycles.</p>
+                </div>
+                
+                <div className="social-icons">
+                  <a href="https://github.com/daniel-packard" target="_blank"><GithubIcon className="social-icon" /></a>
+                  <a href="https://www.linkedin.com/in/daniel-packard-71715425/" target="_blank"><LinkedInIcon className="social-icon" /></a>
+                </div>
+
+              </div>
             </div>
-          </div>
 
-          <div className="person">
-            <img src={avatar}/>
-            <div className="overlay">
-              <h1>Paul Banz</h1>
-              <h2>Product Manager</h2>
-              <div className="about">
-              <p> This is some information about paul.</p>
-              </div>
-              
-              <div className="social-icons">
-                <a href="https://www.linkedin.com/in/paul-banz-806ba31/" target="_blank"><LinkedInIcon className="social-icon" /></a>
-              </div>
+            <div className="person">
+              <img src={patrick}/>
+              <div className="overlay">
+                <h1>Patrick Abadi</h1>
+                <h2>Developer</h2>
+                <div className="about">
+                  <p> This is some information about patrick.</p>
+                </div>
+                
+                <div className="social-icons">
+                  <a href="https://github.com/patrickabadi" target="_blank"><GithubIcon className="social-icon" /></a>
+                  <a href="https://www.linkedin.com/in/implicitsoftware/" target="_blank"><LinkedInIcon className="social-icon" /></a>
+                </div>
 
+              </div>
             </div>
-          </div>
-        </div>
 
-        <h2>Developers</h2>
-        <div className="people">
+            <div className="person">
+              <img src={avatar}/>
+              <div className="overlay">
+                <h1>Jonathan Gilmore</h1>
+                <h2>Developer</h2>
+                <div className="about">
+                <p> This is some information about jonathan.</p>
+                </div>
+                
+                <div className="social-icons">
+                  <a href="https://github.com/jgilmorekim" target="_blank"><GithubIcon className="social-icon" /></a>
+                  <a href="https://www.linkedin.com/in/daniel-packard-71715425/" target="_blank"><LinkedInIcon className="social-icon" /></a>
+                </div>
 
-          <div className="person">
-            <img src={daniel}/>
-            <div className="overlay">
-              <h1>Daniel Packard</h1>
-              <h2>Developer</h2>
-              <div className="about">
-              <p>With a diverse background in physics, math, robotics, and software - Daniel brings nearly ten years of experience to the table.</p>
-              <p>In his free time, he enjoys beer, guitar, and bicycles.</p>
               </div>
-              
-              <div className="social-icons">
-                <a href="https://github.com/daniel-packard" target="_blank"><GithubIcon className="social-icon" /></a>
-                <a href="https://www.linkedin.com/in/daniel-packard-71715425/" target="_blank"><LinkedInIcon className="social-icon" /></a>
-              </div>
-
             </div>
-          </div>
 
-          <div className="person">
-            <img src={patrick}/>
-            <div className="overlay">
-              <h1>Patrick Abadi</h1>
-              <h2>Developer</h2>
-              <div className="about">
-                <p> This is some information about patrick.</p>
-              </div>
-              
-              <div className="social-icons">
-                <a href="https://github.com/patrickabadi" target="_blank"><GithubIcon className="social-icon" /></a>
-                <a href="https://www.linkedin.com/in/implicitsoftware/" target="_blank"><LinkedInIcon className="social-icon" /></a>
-              </div>
+            <div className="person">
+              <img src={avatar}/>
+              <div className="overlay">
+                <h1>Hima Bharathi Adusumilli</h1>
+                <h2>Developer</h2>
+                <div className="about">
+                <p> This is some information about hima.</p>
+                </div>
+                
+                <div className="social-icons">
+                  <a href="https://github.com/daniel-packard" target="_blank"><GithubIcon className="social-icon" /></a>
+                  <a href="https://www.linkedin.com/in/daniel-packard-71715425/" target="_blank"><LinkedInIcon className="social-icon" /></a>
+                </div>
 
+              </div>
             </div>
-          </div>
 
-          <div className="person">
-            <img src={avatar}/>
-            <div className="overlay">
-              <h1>Jonathan Gilmore</h1>
-              <h2>Developer</h2>
-              <div className="about">
-              <p> This is some information about jonathan.</p>
-              </div>
-              
-              <div className="social-icons">
-                <a href="https://github.com/jgilmorekim" target="_blank"><GithubIcon className="social-icon" /></a>
-                <a href="https://www.linkedin.com/in/daniel-packard-71715425/" target="_blank"><LinkedInIcon className="social-icon" /></a>
-              </div>
-
+            <div className="person">
+              <img src={avatar}/>
+              <div className="overlay">
+                <h1>We're Hiring!</h1>
+                <p><a className="hiring" href="https://complexrehabsystems.github.io/job-descriptions">Click Here to Learn More</a></p>
+                <AddPersonIcon className="social-icon"></AddPersonIcon>
+                </div>
             </div>
-          </div>
-
-          <div className="person">
-            <img src={avatar}/>
-            <div className="overlay">
-              <h1>Hima Bharathi Adusumilli</h1>
-              <h2>Developer</h2>
-              <div className="about">
-              <p> This is some information about hima.</p>
-              </div>
-              
-              <div className="social-icons">
-                <a href="https://github.com/daniel-packard" target="_blank"><GithubIcon className="social-icon" /></a>
-                <a href="https://www.linkedin.com/in/daniel-packard-71715425/" target="_blank"><LinkedInIcon className="social-icon" /></a>
-              </div>
-
-            </div>
-          </div>
-
-          <div className="person">
-            <img src={avatar}/>
-            <div className="overlay">
-              <h1>We're Hiring!</h1>
-              <p><a className="hiring" href="https://complexrehabsystems.github.io/job-descriptions">Click Here to Learn More</a></p>
-              <AddPersonIcon className="social-icon"></AddPersonIcon>
-              </div>
           </div>
 
         </div>
@@ -232,13 +238,16 @@ export default () =>
       </section>
 
       <section id="signup">
-        <h1>Sign Up Now</h1>
-        <img src={signupImg}/>
-        <h2>To Receive Email Updates about CRS and Our Products</h2>
-        <form id="contact" name="contact" method="POST" action="/" data-netlify="true" netlify>
-          <input name="email" type="email" required/>
-          <input type="submit" value="Signup Now"/>
-        </form>
+        <h1>Email Signup</h1>
+        <div className="section-content">
+        <h2> Signup Now</h2>
+          <img src={signupImg}/>
+          <h2>To Receive Email Updates about CRS and Our Products</h2>
+          <form id="contact" name="contact" method="POST" action="/" data-netlify="true" netlify>
+            <input name="email" type="email" required/>
+            <input type="submit" value="Signup Now"/>
+          </form>
+        </div>
       </section>
 
     </div>

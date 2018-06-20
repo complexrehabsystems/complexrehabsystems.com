@@ -59,13 +59,25 @@ body {
   section {
     min-height: 100vh;
     width: 100vw;
-    &:not(:last-child){
-      border-bottom: 3px solid $brand-highlight;
-    }
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+
+    h1 {
+      width: 100%;
+      text-align: center;
+      background-color: $brand-primary;
+      color: $brand-light;
+      padding: 20px;
+    }
+
+    .section-content {
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
   }
 
   a {
@@ -76,7 +88,6 @@ body {
 
   .ctas {
     min-height: 40vh;
-    border-bottom: 1px solid $brand-highlight;
   }
 
   @media(min-width: $breakpoint-lg) {
@@ -143,6 +154,7 @@ body {
   img {
     max-width: 250px;
     border-radius: 5px;
+    margin: 10px auto;
   }
   form {
     input {
@@ -153,17 +165,19 @@ body {
 }
 
 #about {
+  background-color: lighten($brand-light, 10);
   h2 {
     font-weight: 200;
+    text-align:center;
   }
 }
 
 #team {
-  margin-top: 5vh;
 
   h2 {
     font-weight: 200;
-    margin-bottom: 0;
+    text-align: center;
+    margin: 0;
   }
 
   .people {
@@ -226,6 +240,7 @@ body {
       h1 {
         font-size: 1.2em;
         margin: 12px;
+        padding: 0;
       }
 
       h2 {
