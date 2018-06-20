@@ -5,29 +5,36 @@ body {
   background: $brand-light;
 }
 
-.tiny-link {
-  font-size: 30px;
-  color: $brand-dark;
-  text-decoration: none;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  background: $brand-light;
-
-  h2 {
-    font-size: 20px;
-    text-align: center;
-    font-weight: 200;
-    margin: 0;
-  }
-}
-
-.tiny-nav {
+#tiny-nav {
   position: fixed;
   right: 0px;
   bottom: 15px;
   opacity: 0;
   padding: 10px;
+  z-index: 1;
+
+  .tiny-link {
+    font-size: 30px;
+    color: $brand-dark;
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: $brand-light;
+    margin: 20px 0;
+
+    &:hover {
+      color: $brand-primary;
+    }
+
+    h2 {
+      font-size: 20px;
+      text-align: center;
+      font-weight: 200;
+      margin: 0;
+    }
+  } 
+
 }
 
 .layout {

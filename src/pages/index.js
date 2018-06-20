@@ -23,7 +23,7 @@ import avatar from "../assets/avatar.png"
 if (typeof window !== 'undefined') {
   require('smooth-scroll')('a[href*="#"]');
   window.addEventListener('scroll', function() {
-    document.getElementById('tiny-nav').style.opacity = (pageYOffset-600);
+    document.getElementById('tiny-nav').style.opacity = (pageYOffset-800);
   });
 }
 
@@ -42,14 +42,22 @@ export default () =>
   </Header>
 
   <div id="tiny-nav">
-    <a id="top-link" href="#nav">
+    <a className="tiny-link" href="#">
       <UpArrowIcon/>
-      <h2>Top</h2>
     </a>
-    <a id="top-link" href="#nav">
-      <UpArrowIcon/>
-      <h2>Top</h2>
+
+    <a className="tiny-link" href="#about">
+      <InfoIcon/>
     </a>
+
+    <a className="tiny-link" href="#team">
+      <PeopleIcon/>
+    </a>
+
+    <a className="tiny-link" href="#signup">
+      <MailIcon/>
+    </a>
+
   </div>
 
   <div className="content">
