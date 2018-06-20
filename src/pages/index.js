@@ -90,8 +90,10 @@ export default () =>
             <div className="overlay">
               <h1>Douglas Munsey</h1>
               <h2>President</h2>
+              <div className="about">
               <p>Douglas was an investment research associate at Morgan Stanley working in the medical technology sector.</p>
               <p>He has a BBA in Finance, Investment, and Banking from the University of Wisconsin-Madison.</p>
+              </div>
               
               <div className="social-icons">
                 <a href="https://www.linkedin.com/in/douglas-munsey-17407423/" target="_blank"><LinkedInIcon className="social-icon" /></a>
@@ -105,7 +107,9 @@ export default () =>
             <div className="overlay">
               <h1>Tom Whelan</h1>
               <h2>CTO</h2>
+              <div className="about">
               <p> This is some information about tom.</p>
+              </div>
               
               <div className="social-icons">
                 <a href="https://www.linkedin.com/in/tom-whelan-6957855/" target="_blank"><LinkedInIcon className="social-icon" /></a>
@@ -119,7 +123,9 @@ export default () =>
             <div className="overlay">
               <h1>Paul Banz</h1>
               <h2>Product Manager</h2>
+              <div className="about">
               <p> This is some information about paul.</p>
+              </div>
               
               <div className="social-icons">
                 <a href="https://www.linkedin.com/in/paul-banz-806ba31/" target="_blank"><LinkedInIcon className="social-icon" /></a>
@@ -137,8 +143,10 @@ export default () =>
             <div className="overlay">
               <h1>Daniel Packard</h1>
               <h2>Developer</h2>
+              <div className="about">
               <p>With a diverse background in physics, math, robotics, and software - Daniel brings nearly ten years of experience to the table.</p>
               <p>In his free time, he enjoys beer, guitar, and bicycles.</p>
+              </div>
               
               <div className="social-icons">
                 <a href="https://github.com/daniel-packard" target="_blank"><GithubIcon className="social-icon" /></a>
@@ -153,7 +161,9 @@ export default () =>
             <div className="overlay">
               <h1>Patrick Abadi</h1>
               <h2>Developer</h2>
-              <p> This is some information about patrick.</p>
+              <div className="about">
+                <p> This is some information about patrick.</p>
+              </div>
               
               <div className="social-icons">
                 <a href="https://github.com/patrickabadi" target="_blank"><GithubIcon className="social-icon" /></a>
@@ -168,7 +178,9 @@ export default () =>
             <div className="overlay">
               <h1>Jonathan Gilmore</h1>
               <h2>Developer</h2>
+              <div className="about">
               <p> This is some information about jonathan.</p>
+              </div>
               
               <div className="social-icons">
                 <a href="https://github.com/jgilmorekim" target="_blank"><GithubIcon className="social-icon" /></a>
@@ -183,7 +195,9 @@ export default () =>
             <div className="overlay">
               <h1>Hima Bharathi Adusumilli</h1>
               <h2>Developer</h2>
+              <div className="about">
               <p> This is some information about hima.</p>
+              </div>
               
               <div className="social-icons">
                 <a href="https://github.com/daniel-packard" target="_blank"><GithubIcon className="social-icon" /></a>
