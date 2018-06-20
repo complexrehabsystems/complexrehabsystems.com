@@ -88,6 +88,7 @@ body {
 
   .ctas {
     min-height: 40vh;
+    background-color: darken($brand-light, 5);
   }
 
   @media(min-width: $breakpoint-lg) {
@@ -174,6 +175,7 @@ body {
 }
 
 #team {
+  background-color: darken($brand-light, 5);
 
   h2 {
     font-weight: 200;
