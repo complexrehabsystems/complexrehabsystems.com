@@ -243,7 +243,7 @@ export default () =>
         <h2> Signup Now</h2>
           <img src={signupImg}/>
           <h2>To Receive Email Updates about CRS and Our Products</h2>
-          <form id="contact" name="contact" method="POST" action="/" data-netlify="true" netlify>
+          <form id="contact" name="contact" method="POST" action="/?success" data-netlify="true" netlify>
             <input name="email" type="email" required/>
             <input type="submit" value="Signup Now"/>
           </form>
