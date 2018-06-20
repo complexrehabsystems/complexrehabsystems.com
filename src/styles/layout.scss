@@ -160,6 +160,7 @@ body {
 
 #team {
   margin-top: 5vh;
+
   h2 {
     font-weight: 200;
     margin-bottom: 0;
@@ -171,7 +172,7 @@ body {
     justify-content: center;
     align-items: center;
     margin-bottom: 5vh;
-    max-width: 1024px;
+    max-width: 1280px;
 
     @media (min-width: $breakpoint-md) {
       flex-direction: row;
@@ -180,14 +181,22 @@ body {
 
   }
   .person {
-    width: 325px;
-    height: 325px;
+    width: 380px;
+    height: 400px;;
     padding: 15px;
 
-    .social-icon {
-      font-size: 1.25em;
+    .social-icons {
       width: 100%;
       align-self: center;
+      a {
+        font-size: 1.5em;
+        color: $brand-light;
+        margin: 0 10px;;
+
+        &:hover {
+          color: lighten($brand-light, 10);
+        }
+      }
     }
 
     img {
@@ -216,6 +225,12 @@ body {
 
       h1 {
         font-size: 1.2em;
+        margin: 12px;
+      }
+
+      h2 {
+        font-size: 1.4em;
+        margin: 12px;
       }
 
       p {
@@ -223,9 +238,10 @@ body {
         flex-grow: 1;
         text-align: center;
         display: flex;
+        margin: 0;
       }
 
-      a {
+      a.hiring {
         font-weight: 400;
         border-radius: 5px;
         padding: 20px;
@@ -234,24 +250,12 @@ body {
         align-self: center;
         transform: rotateX(90deg);
         transition: transform .3s ease-in-out .2s;
-
       }
 
-      a:hover {
+      a.hiring:hover {
         background: #eee;
       }
 
-      .lede {
-        margin-top: 12px;
-        font-size: 1.2em;
-        font-weight: 200;
-        align-self: center;
-      }
-
-      .hiring {
-        background: $brand-light;
-        color: $brand-primary;
-      }
     }
 
     &:hover {
@@ -261,7 +265,7 @@ body {
       .overlay {
         opacity: .9;
       }
-      a {
+      a.hiring {
         transform: rotateX(0);
       }
     }

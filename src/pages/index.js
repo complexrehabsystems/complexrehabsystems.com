@@ -6,6 +6,7 @@ import InfoIcon from "react-icons/lib/fa/info-circle"
 import MailIcon from "react-icons/lib/fa/envelope"
 import PeopleIcon from "react-icons/lib/fa/user"
 import LinkedInIcon from "react-icons/lib/fa/linkedin-square"
+import GithubIcon from "react-icons/lib/fa/github-square"
 import AddPersonIcon from "react-icons/lib/fa/user-plus"
 import UpArrowIcon from "react-icons/lib/fa/arrow-circle-o-up"
 
@@ -88,8 +89,14 @@ export default () =>
             <img src={doug}/>
             <div className="overlay">
               <h1>Douglas Munsey</h1>
-              <p> This is some information about douglas.</p>
-              <LinkedInIcon className="social-icon"></LinkedInIcon>
+              <h2>President</h2>
+              <p>Douglas was an investment research associate at Morgan Stanley working in the medical technology sector.</p>
+              <p>He has a BBA in Finance, Investment, and Banking from the University of Wisconsin-Madison.</p>
+              
+              <div className="social-icons">
+                <a href="https://www.linkedin.com/in/douglas-munsey-17407423/" target="_blank"><LinkedInIcon className="social-icon" /></a>
+              </div>
+
             </div>
           </div>
 
@@ -97,8 +104,13 @@ export default () =>
             <img src={tom}/>
             <div className="overlay">
               <h1>Tom Whelan</h1>
+              <h2>CTO</h2>
               <p> This is some information about tom.</p>
-              <LinkedInIcon className="social-icon"></LinkedInIcon>
+              
+              <div className="social-icons">
+                <a href="https://www.linkedin.com/in/tom-whelan-6957855/" target="_blank"><LinkedInIcon className="social-icon" /></a>
+              </div>
+
             </div>
           </div>
 
@@ -106,8 +118,13 @@ export default () =>
             <img src={avatar}/>
             <div className="overlay">
               <h1>Paul Banz</h1>
+              <h2>Product Manager</h2>
               <p> This is some information about paul.</p>
-              <LinkedInIcon className="social-icon"></LinkedInIcon>
+              
+              <div className="social-icons">
+                <a href="https://www.linkedin.com/in/paul-banz-806ba31/" target="_blank"><LinkedInIcon className="social-icon" /></a>
+              </div>
+
             </div>
           </div>
         </div>
@@ -119,9 +136,15 @@ export default () =>
             <img src={daniel}/>
             <div className="overlay">
               <h1>Daniel Packard</h1>
+              <h2>Developer</h2>
               <p>With a diverse background in physics, math, robotics, and software - Daniel brings nearly ten years of experience to the table.</p>
               <p>In his free time, he enjoys beer, guitar, and bicycles.</p>
-              <LinkedInIcon className="social-icon"></LinkedInIcon>
+              
+              <div className="social-icons">
+                <a href="https://github.com/daniel-packard" target="_blank"><GithubIcon className="social-icon" /></a>
+                <a href="https://www.linkedin.com/in/daniel-packard-71715425/" target="_blank"><LinkedInIcon className="social-icon" /></a>
+              </div>
+
             </div>
           </div>
 
@@ -129,8 +152,14 @@ export default () =>
             <img src={patrick}/>
             <div className="overlay">
               <h1>Patrick Abadi</h1>
+              <h2>Developer</h2>
               <p> This is some information about patrick.</p>
-              <LinkedInIcon className="social-icon"></LinkedInIcon>
+              
+              <div className="social-icons">
+                <a href="https://github.com/patrickabadi" target="_blank"><GithubIcon className="social-icon" /></a>
+                <a href="https://www.linkedin.com/in/implicitsoftware/" target="_blank"><LinkedInIcon className="social-icon" /></a>
+              </div>
+
             </div>
           </div>
 
@@ -138,8 +167,14 @@ export default () =>
             <img src={avatar}/>
             <div className="overlay">
               <h1>Jonathan Gilmore</h1>
+              <h2>Developer</h2>
               <p> This is some information about jonathan.</p>
-              <LinkedInIcon className="social-icon"></LinkedInIcon>
+              
+              <div className="social-icons">
+                <a href="https://github.com/jgilmorekim" target="_blank"><GithubIcon className="social-icon" /></a>
+                <a href="https://www.linkedin.com/in/daniel-packard-71715425/" target="_blank"><LinkedInIcon className="social-icon" /></a>
+              </div>
+
             </div>
           </div>
 
@@ -147,8 +182,14 @@ export default () =>
             <img src={avatar}/>
             <div className="overlay">
               <h1>Hima Bharathi Adusumilli</h1>
+              <h2>Developer</h2>
               <p> This is some information about hima.</p>
-              <LinkedInIcon className="social-icon"></LinkedInIcon>
+              
+              <div className="social-icons">
+                <a href="https://github.com/daniel-packard" target="_blank"><GithubIcon className="social-icon" /></a>
+                <a href="https://www.linkedin.com/in/daniel-packard-71715425/" target="_blank"><LinkedInIcon className="social-icon" /></a>
+              </div>
+
             </div>
           </div>
 
@@ -156,7 +197,7 @@ export default () =>
             <img src={avatar}/>
             <div className="overlay">
               <h1>We're Hiring!</h1>
-              <p><a href="https://complexrehabsystems.github.io/job-descriptions">Click Here to Learn More</a></p>
+              <p><a className="hiring" href="https://complexrehabsystems.github.io/job-descriptions">Click Here to Learn More</a></p>
               <AddPersonIcon className="social-icon"></AddPersonIcon>
               </div>
           </div>
