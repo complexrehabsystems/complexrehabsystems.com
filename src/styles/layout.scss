@@ -229,15 +229,14 @@ body {
       }
 
       h2 {
-        font-size: 1.4em;
-        margin-bottom: 12px;
+        font-size: 1.5em;
       }
 
       .about {
         flex-grow: 1;
         display: flex;
         flex-direction: column;
-        justify-content: center;
+        justify-content: space-around;
       }
 
       p {
@@ -245,6 +244,7 @@ body {
         font-weight: 200;
         text-align: center;
         display: flex;
+        margin: 0;
       }
 
       a.hiring {
@@ -256,6 +256,7 @@ body {
         align-self: center;
         transform: rotateX(90deg);
         transition: transform .3s ease-in-out .2s;
+        margin-bottom: 30px;
       }
 
       a.hiring:hover {
