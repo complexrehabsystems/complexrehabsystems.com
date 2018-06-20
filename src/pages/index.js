@@ -41,7 +41,7 @@ export default () =>
 
   </Header>
 
-  <div class="tiny-nav">
+  <div className="tiny-nav">
     <a className="tiny-link" id="top-link" href="#">
       <UpArrowIcon/>
     </a>
