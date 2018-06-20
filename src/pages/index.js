@@ -23,7 +23,7 @@ import avatar from "../assets/avatar.png"
 if (typeof window !== 'undefined') {
   require('smooth-scroll')('a[href*="#"]');
   window.addEventListener('scroll', function() {
-    document.getElementById('top-link').style.opacity = (pageYOffset-400);
+    document.getElementById('top-link').style.opacity = (pageYOffset-600);
   });
 }
 
@@ -41,14 +41,14 @@ export default () =>
 
   </Header>
 
-  <a id="top-link" href="#">
+  <a id="top-link" href="#nav">
     <UpArrowIcon/>
     <h2>Top</h2>
   </a>
 
   <div className="content">
 
-    <div className="ctas">
+    <div id="nav" className="ctas">
 
       <a href="#about">
         <div className="cta">
