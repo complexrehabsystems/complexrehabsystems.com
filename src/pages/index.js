@@ -21,11 +21,22 @@ import patrick from "../assets/patrick.png"
 import tom from "../assets/tom.jpg"
 import avatar from "../assets/avatar.png"
 
+const debounce = (fn, time) => {
+  let timeout;
+
+  return function() {
+    const functionCall = () => fn.apply(this, arguments);
+    
+    clearTimeout(timeout);
+    timeout = setTimeout(functionCall, time);
+  }
+}
+
 if (typeof window !== 'undefined') {
   require('smooth-scroll')('a[href*="#"]');
-  window.addEventListener('scroll', function() {
+  window.addEventListener('scroll', debounce(function() {
     document.getElementById('top-link').style.opacity = (pageYOffset-800);
-  });
+  }, 100));
 }
 
 export default () => 
