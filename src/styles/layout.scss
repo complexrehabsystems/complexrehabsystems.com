@@ -94,11 +94,10 @@ body {
   @media(min-width: $breakpoint-lg) {
     .ctas {
       width: 100%;
-      max-width: 1024px;
       display: flex;
       flex-direction: row;
       flex-wrap: wrap;
-      justify-content: space-around;
+      justify-content: center;
       align-items: center;
     }
   }
