@@ -8,6 +8,7 @@ footer {
   background-size: cover;
   height: min-content;
   border-top: 8px solid $brand-highlight;
+  z-index: 1;
 
   .footer-items {
     display: flex;
