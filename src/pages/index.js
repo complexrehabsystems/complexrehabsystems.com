@@ -17,6 +17,7 @@ import signupImg from "../assets/about-crs2.jpg"
 
 import daniel from "../assets/daniel.png"
 import doug from "../assets/doug.png"
+import jonathan from "../assets/jonathan.png"
 import patrick from "../assets/patrick.png"
 import tom from "../assets/tom.jpg"
 import avatar from "../assets/avatar.png"
@@ -190,7 +191,7 @@ export default () =>
             </div>
 
             <div className="person">
-              <img src={avatar}/>
+              <img src={jonathan}/>
               <div className="overlay">
                 <h1>Jonathan Gilmore</h1>
                 <h2>Developer</h2>

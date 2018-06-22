@@ -11,7 +11,7 @@ body {
   right: 0px;
   bottom: 5px;
   margin: 0;
-  padding: 10px;
+  padding: 15px;
 
   font-size: 30px;
   color: $brand-dark;
@@ -20,6 +20,8 @@ body {
   flex-direction: column;
   align-items: center;
   background: $brand-light;
+
+  z-index: 1;
 
   &:hover {
     color: $brand-primary;
@@ -273,7 +275,7 @@ body {
         color: #148fce;
         align-self: center;
         transform: rotateX(90deg);
-        transition: transform .3s ease-in-out .2s;
+        transition: transform .4s ease-in-out;
         margin-bottom: 30px;
       }
 
