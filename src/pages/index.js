@@ -108,8 +108,8 @@ export default () =>
                 <h1>Douglas Munsey</h1>
                 <h2>President</h2>
                 <div className="about">
-                <p>Douglas was an investment research associate at Morgan Stanley working in the medical technology sector.</p>
-                <p>He has a BBA in Finance, Investment, and Banking from the University of Wisconsin-Madison.</p>
+                  <p>Douglas was an investment research associate at Morgan Stanley working in the medical technology sector.</p>
+                  <p>He has a BBA in Finance, Investment, and Banking from the University of Wisconsin-Madison.</p>
                 </div>
                 
                 <div className="social-icons">
@@ -125,7 +125,8 @@ export default () =>
                 <h1>Tom Whelan</h1>
                 <h2>CTO</h2>
                 <div className="about">
-                <p> This is some information about tom.</p>
+                  <p>Tom has nearly 30 years experience in the field of complex rehab, most recently as VP of Product Management at Ki Mobility.</p>
+                  <p>Tom is also the Founder and President of WoundZoom, a start-up 3D imaging technology company.</p>
                 </div>
                 
                 <div className="social-icons">
@@ -141,7 +142,7 @@ export default () =>
                 <h1>Paul Banz</h1>
                 <h2>Product Manager</h2>
                 <div className="about">
-                <p> This is some information about paul.</p>
+                  <p>This is some information about paul.</p>
                 </div>
                 
                 <div className="social-icons">
@@ -161,8 +162,8 @@ export default () =>
                 <h1>Daniel Packard</h1>
                 <h2>Developer</h2>
                 <div className="about">
-                <p>With a diverse background in physics, math, robotics, and software - Daniel brings nearly ten years of experience to the table.</p>
-                <p>In his free time, he enjoys beer, guitar, and bicycles.</p>
+                  <p>With a diverse background in physics, math, robotics, and software - Daniel brings nearly ten years of experience to the table.</p>
+                  <p>In his free time, he enjoys beer, guitar, and bicycles.</p>
                 </div>
                 
                 <div className="social-icons">
@@ -179,7 +180,8 @@ export default () =>
                 <h1>Patrick Abadi</h1>
                 <h2>Developer</h2>
                 <div className="about">
-                  <p> This is some information about patrick.</p>
+                  <p>An expert in mobile, desktop, and cloud development - Patrick has extensive experience in C/C++/C#/.NET/SQL.</p>
+                  <p>Before joining CRS, Patrick was Founder and CTO of two successful software companies.</p>
                 </div>
                 
                 <div className="social-icons">
@@ -196,7 +198,7 @@ export default () =>
                 <h1>Jonathan Gilmore</h1>
                 <h2>Developer</h2>
                 <div className="about">
-                <p> This is some information about jonathan.</p>
+                  <p>This is some information about jonathan.</p>
                 </div>
                 
                 <div className="social-icons">
@@ -213,7 +215,7 @@ export default () =>
                 <h1>Hima Bharathi Adusumilli</h1>
                 <h2>Developer</h2>
                 <div className="about">
-                <p> This is some information about hima.</p>
+                  <p>This is some information about hima.</p>
                 </div>
                 
                 <div className="social-icons">
@@ -241,7 +243,7 @@ export default () =>
       <section id="signup">
         <h1>Email Signup</h1>
         <div className="section-content">
-        <h2> Signup Now</h2>
+        <h2>Signup Now</h2>
           <img src={signupImg}/>
           <h2>To Receive Email Updates about CRS and Our Products</h2>
           <form id="contact" name="contact" method="POST" action="/?success" data-netlify="true" netlify>
