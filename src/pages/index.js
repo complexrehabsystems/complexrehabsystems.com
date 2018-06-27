@@ -198,7 +198,9 @@ export default () =>
                 <h1>Jonathan Gilmore</h1>
                 <h2>Developer</h2>
                 <div className="about">
-                  <p>This is some information about jonathan.</p>
+                  <p>Desktop, web, mobile, and cloud software development professional. Jonathan has extensive experience as a full-stack software engineer developing application on many different platforms.</p>
+                  <p>Prior to joining CRS, Jonathan developed inspection algorithms for an automatic inspection machine vision system which was used in manufacturing facilities in the U.S. and abroad. </p>
+                  <p>Jonathan has a Bachelor’s degree in Computer Science from Syracuse University</p>
                 </div>
                 
                 <div className="social-icons">
