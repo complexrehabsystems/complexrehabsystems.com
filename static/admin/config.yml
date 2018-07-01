@@ -15,3 +15,10 @@ collections: # A list of collections the CMS should be able to edit
       - {label: "Job-Title", name: "jobTitle", widget: "string", tagname: "h2"}
       - {label: "Image", name: "image", widget: "image", tagname: "img"}
       - {label: "Description", name: "description", widget: "markdown"}
+  - name: "navigation-items" # Used in routes, ie.: /admin/collections/:slug/edit
+    label: "Navigation Items" # Used in the UI, ie.: "New Post"
+    folder: "src/navigation" # The path to the folder where the documents are stored
+    create: true # Allow users to create new documents in this collection
+    fields: # The fields each document in this collection have
+      - {label: "Section Name", name: "title", widget: "string", tagname: "h1"}
+      - {label: "href", name: "href", widget: "string"}
