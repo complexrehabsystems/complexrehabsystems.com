@@ -6,13 +6,6 @@ media_folder: static/uploads
 public_folder: /uploads
 
 collections: # A list of collections the CMS should be able to edit
-  - name: "site-info" # Used in routes, ie.: /admin/collections/:slug/edit
-    label: "Site Info" # Used in the UI, ie.: "New Post"
-    file: "src/site-info.yml" # The path to the folder where the documents are stored
-    create: false # Allow users to create new documents in this collection
-    fields: # The fields each document in this collection have
-      - {label: "Section Name", name: "title", widget: "string", tagname: "h1"}
-      - {label: "href", name: "href", widget: "string"}
   - name: "people" # Used in routes, ie.: /admin/collections/:slug/edit
     label: "People" # Used in the UI, ie.: "New Post"
     folder: "src/people" # The path to the folder where the documents are stored
