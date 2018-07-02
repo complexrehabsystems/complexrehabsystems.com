@@ -91,7 +91,7 @@ export default () =>
       <section id="about">
         <h1>About CRS</h1>
         <div className="section-content">
-          <h2>(dummy text)</h2>
+          <h2>(this is really dummy text)</h2>
         </div>
       </section>
 
