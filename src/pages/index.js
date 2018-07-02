@@ -217,12 +217,13 @@ export default () =>
                 <h1>Hima Bharathi Adusumilli</h1>
                 <h2>Developer</h2>
                 <div className="about">
-                  <p>This is some information about hima.</p>
+                  <p>Hima has graduated from University of Wisconsin-Madison with a degree in Computer Science and a minor in Mathematics.</p>
+                  <p>Before joining CRS, Hima has worked on a Machine Learning project which is Defect Detection of Voids.</p>
                 </div>
                 
                 <div className="social-icons">
-                  <a href="https://github.com/daniel-packard" target="_blank"><GithubIcon className="social-icon" /></a>
-                  <a href="https://www.linkedin.com/in/daniel-packard-71715425/" target="_blank"><LinkedInIcon className="social-icon" /></a>
+                  <a href="https://github.com/HimaBharathi" target="_blank"><GithubIcon className="social-icon" /></a>
+                  <a href="https://www.linkedin.com/in/hima-bharathi-adusumilli-b20064124/" target="_blank"><LinkedInIcon className="social-icon" /></a>
                 </div>
 
               </div>
