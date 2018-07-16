@@ -21,6 +21,7 @@ import jonathan from "../assets/jonathan.png"
 import patrick from "../assets/patrick.png"
 import tom from "../assets/tom.jpg"
 import avatar from "../assets/avatar.png"
+import hima from "../assets/himadusumilli.jpg"
 
 const debounce = (fn, time) => {
   let timeout;
@@ -211,7 +212,7 @@ export default () =>
             </div>
 
             <div className="person">
-              <img src={hadusumilli}/>
+              <img src={hima}/>
               <div className="overlay">
                 <h1>Hima Bharathi Adusumilli</h1>
                 <h2>Developer</h2>
