@@ -21,6 +21,7 @@ import jonathan from "../assets/jonathan.png"
 import patrick from "../assets/patrick.png"
 import tom from "../assets/tom.jpg"
 import avatar from "../assets/avatar.png"
+import hima from "../assets/himadusumilli.jpg"
 
 const debounce = (fn, time) => {
   let timeout;
@@ -205,14 +206,13 @@ export default () =>
                 
                 <div className="social-icons">
                   <a href="https://github.com/jgilmorekim" target="_blank"><GithubIcon className="social-icon" /></a>
-                  <a href="https://www.linkedin.com/in/daniel-packard-71715425/" target="_blank"><LinkedInIcon className="social-icon" /></a>
                 </div>
 
               </div>
             </div>
 
             <div className="person">
-              <img src={avatar}/>
+              <img src={hima}/>
               <div className="overlay">
                 <h1>Hima Bharathi Adusumilli</h1>
                 <h2>Developer</h2>
