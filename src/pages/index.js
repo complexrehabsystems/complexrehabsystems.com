@@ -137,6 +137,7 @@ export default () =>
               </div>
             </div>
 
+            <!-- Add paul back at a later date
             <div className="person">
               <img src={avatar}/>
               <div className="overlay">
@@ -151,7 +152,8 @@ export default () =>
                 </div>
 
               </div>
-            </div>
+            </div> 
+            -->
           </div>
 
           <h2>Developers</h2>
