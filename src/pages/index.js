@@ -137,23 +137,6 @@ export default () =>
               </div>
             </div>
 
-            <!-- Add paul back at a later date
-            <div className="person">
-              <img src={avatar}/>
-              <div className="overlay">
-                <h1>Paul Banz</h1>
-                <h2>Product Manager</h2>
-                <div className="about">
-                  <p>This is some information about paul.</p>
-                </div>
-                
-                <div className="social-icons">
-                  <a href="https://www.linkedin.com/in/paul-banz-806ba31/" target="_blank"><LinkedInIcon className="social-icon" /></a>
-                </div>
-
-              </div>
-            </div> 
-            -->
           </div>
 
           <h2>Developers</h2>
