@@ -18,7 +18,7 @@ collections:
           - {label: "Header Image Tagline", name: "headerImageTagline", widget: "string"}
           - {label: "Header Popout Tagline", name: "headerPopoutTagline", widget: "string"}
           - {label: "Header Popout Text Block", name: "headerPopoutTextBlock", widget: "markdown"}
-      - label: Navigation"
+      - label: "Navigation"
         name: "navigation"
         file: "_data/navigation.yml"
         fields:
