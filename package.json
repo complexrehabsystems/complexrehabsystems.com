@@ -13,6 +13,8 @@
     "gatsby-plugin-netlify-cms": "^2.0.1",
     "gatsby-plugin-sass": "^1.0.26",
     "gatsby-plugin-typography": "^1.7.19",
+    "gatsby-source-filesystem": "^1.5.39",
+    "gatsby-transformer-yaml": "^1.5.18",
     "netlify-cms": "^1.9.2",
     "react-icons": "^2.2.7",
     "smooth-scroll": "^14.2.0"
