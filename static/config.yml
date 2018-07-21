@@ -24,13 +24,32 @@ collections:
         name: "navigation"
         file: "_data/navigation.yml"
         fields:
-          - {label: "Character Image", name: "characterImage", widget: "image"}
-          - {label: "Tagline", name: "tagline", widget: "string"}
-          - {label: "Text Block", name: "textBlock", widget: "markdown"}
+          - label: "What We Do Button"
+            name: "whatWeDoButton" 
+            widget: "object"
+            fields:
+              - {label: "Button Image", name: "btnImage", widget: "image"} 
+              - {label: "Button Hover Image", name: "btnHoverImage", widget: "image"}
+              - {label: "Button Text", name: "btnText", widget: "string"}
+          - label: "Who We Are Button"
+            name: "whoWeAreButton" 
+            widget: "object"
+            fields:
+              - {label: "Button Image", name: "btnImage", widget: "image"}
+              - {label: "Button Hover Image", name: "btnHoverImage", widget: "image"}
+              - {label: "Button Text", name: "btnText", widget: "string"}
+          - label: "Get In Touch Button"
+            name: "getInTouchButton" 
+            widget: "object"
+            fields:
+              - {label: "Button Image", name: "btnImage", widget: "image"}
+              - {label: "Button Hover Image", name: "btnHoverImage", widget: "image"}
+              - {label: "Button Text", name: "btnText", widget: "string"}
       - label: "What We Do"
         name: "whatWeDo"
         file: "_data/what-we-do.yml"
         fields:
+          - {label: "Section Heading", name: sectionHeading, widget: string}
           - {label: "Image", name: "characterImage", widget: "image"}
           - {label: "Tagline", name: whatWeDoTagline, widget: string}
           - {label: "Text Block", name: whatWeDoTextBlock, widget: markdown}
@@ -38,10 +57,11 @@ collections:
         name: "getInTouch"
         file: "_data/get-in-touch.yml"
         fields:
+          - {label: "Section Heading", name: sectionHeading, widget: string}
           - {label: "Get In Touch Image", name: "image", widget: "image"}
           - {label: "Tagline", name: "tagline", widget: string}
           - {label: "Button Text", name: "buttonText", widget: string}
-          - {label: "Success Message", name: "buttonText", widget: string}
+          - {label: "Success Message", name: "successMessage", widget: string}
   - label: "People"
     name: "people"
     folder: "_data/people"
