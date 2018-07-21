@@ -1,4 +1,5 @@
 sectionHeading: Get In Touch
 image: /uploads/get-in-touch.jpg
 tagline: Sign Up Now
-buttonText: sucess
+buttonText: Sign Up Now
+successMessage: You have successfully signed up!
