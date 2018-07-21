@@ -13,7 +13,7 @@ collections:
     files:
       - label: "Header"
         name: "siteHeader"
-        file: "_data/general-content/header.yml"
+        file: "_data/header/header.yml"
         fields:
           - {label: "Background", name: "background", widget: "image"}
           - {label: "Logo", name: "logo", widget: "image"}
@@ -22,7 +22,7 @@ collections:
           - {label: "Popout Text Block", name: "popoutTextBlock", widget: "markdown"}
       - label: "Navigation"
         name: "navigation"
-        file: "_data/general-content/navigation.yml"
+        file: "_data/navigation/navigation.yml"
         fields:
           - label: "What We Do Button"
             name: "whatWeDoButton" 
@@ -47,7 +47,7 @@ collections:
               - {label: "Button Text", name: "btnText", widget: "string"}
       - label: "What We Do"
         name: "whatWeDo"
-        file: "_data/general-content/what-we-do.yml"
+        file: "_data/what-we-do/what-we-do.yml"
         fields:
           - {label: "Section Heading", name: sectionHeading, widget: string}
           - {label: "Image", name: "characterImage", widget: "image"}
@@ -55,7 +55,7 @@ collections:
           - {label: "Text Block", name: whatWeDoTextBlock, widget: markdown}
       - label: "Get In Touch"
         name: "getInTouch"
-        file: "_data/general-content/get-in-touch.yml"
+        file: "_data/get-in-touch/get-in-touch.yml"
         fields:
           - {label: "Section Heading", name: sectionHeading, widget: string}
           - {label: "Get In Touch Image", name: "image", widget: "image"}
@@ -65,6 +65,7 @@ collections:
   - label: "People"
     name: "people"
     folder: "_data/people"
+    format: "yaml"
     create: true
     fields:
       - {label: "Name", name: "title", widget: "string", tagname: "h1"}
