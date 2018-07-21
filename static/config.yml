@@ -6,12 +6,12 @@ media_folder: static/uploads
 public_folder: /uploads
 
 collections:
-  - label: "Site-Content"
-    name: "siteContent"
+  - label: "General Content"
+    name: "generalContent"
     create: false
     files:
       - label: "Header"
-        name: "header"
+        name: "siteHeader"
         file: "_data/header.yml"
         fields:
           - {label: "Header Image", name: "headerImage", widget: "image"}
@@ -25,13 +25,13 @@ collections:
           - {label: "Character Image", name: "characterImage", widget: "image"}
           - {label: "What We Do Tagline", name: whatWeDoTagline, widget: string}
           - {label: "What We Do Text Block", name: whatWeDoTextBlock, widget: markdown}
-      - label: "People"
-        name: "people"
-        folder: "_data/people"
-        create: true
-        fields:
-          - {label: "Name", name: "title", widget: "string", tagname: "h1"}
-          - {label: "Job Title", name: "jobTitle", widget: "string", tagname: "h2"}
-          - {label: "Image", name: "image", widget: "image", tagname: "img"}
-          - {label: "Description", name: "description", widget: "markdown"}
-          - {label: "Role", name: "role", widget: "select", options: ["leadership", "developer"]}
+  - label: "People"
+    name: "people"
+    folder: "_data/people"
+    create: true
+    fields:
+      - {label: "Name", name: "title", widget: "string", tagname: "h1"}
+      - {label: "Job Title", name: "jobTitle", widget: "string", tagname: "h2"}
+      - {label: "Image", name: "image", widget: "image", tagname: "img"}
+      - {label: "Description", name: "description", widget: "markdown"}
+      - {label: "Role", name: "role", widget: "select", options: ["leadership", "developer"]}
