@@ -9,12 +9,14 @@ collections:
   - label: "General Content"
     name: "generalContent"
     create: false
+    delete: false
     files:
       - label: "Header"
         name: "siteHeader"
         file: "_data/header.yml"
         fields:
-          - {label: "Image", name: "image", widget: "image"}
+          - {label: "Background", name: "background", widget: "image"}
+          - {label: "Logo", name: "logo", widget: "image"}
           - {label: "Tagline", name: "tagline", widget: "string"}
           - {label: "Popout Tagline", name: "popoutTagline", widget: "string"}
           - {label: "Popout Text Block", name: "popoutTextBlock", widget: "markdown"}
