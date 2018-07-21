@@ -1,5 +1,0 @@
----
-title: About
-href: '#about'
----
-

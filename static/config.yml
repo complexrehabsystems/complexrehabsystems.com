@@ -1,0 +1,37 @@
+backend:
+  name: git-gateway
+  branch: master
+
+media_folder: static/uploads
+public_folder: /uploads
+
+collections:
+  - label: "Site-Content"
+    name: "siteContent"
+    create: false
+    files:
+      - label: "Site-Header"
+        name: "siteHeader"
+        file: "_data/site-header.yml"
+        fields:
+          - {label: "Header Image", name: "headerImage", widget: "image"}
+          - {label: "Header Image Tagline", name: "headerImageTagline", widget: "string"}
+          - {label: "Header Popout Tagline", name: "headerPopoutTagline", widget: "string"}
+          - {label: "Header Popout Text Block", name: "headerPopoutTextBlock", widget: "markdown"}
+      - label: "What-We-Do"
+        name: "whatWeDo"
+        file: "_data/what-we-do.yml"
+        fields:
+          - {label: "Character Image", name: "characterImage", widget: "image"}
+          - {label: "What We Do Tagline", name: whatWeDoTagline, widget: string}
+          - {label: "What We Do Text Block", name: whatWeDoTextBlock, widget: markdown}
+  - label: "People"
+    name: "people"
+    folder: "_data/people"
+    create: true
+    fields:
+      - {label: "Name", name: "title", widget: "string", tagname: "h1"}
+      - {label: "Job Title", name: "jobTitle", widget: "string", tagname: "h2"}
+      - {label: "Image", name: "image", widget: "image", tagname: "img"}
+      - {label: "Description", name: "description", widget: "markdown"}
+      - {label: "Role", name: "role", widget: "select", options: ["leadership", "developer"]}
