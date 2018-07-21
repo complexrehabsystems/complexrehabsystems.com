@@ -1,6 +1,7 @@
----
-headerImage: "/uploads/square44x44logo.scale-200.png"
-headerImageTagline: "Developer"
-headerImagePopoutTagline: "test"
-headerImagePopoutTextBlock: "test"
----
+headerImage: /uploads/square44x44logo.scale-200.png
+headerImageTagline: The Future of Complex Rehab
+headerPopoutTagline: Building Advanced Tools for ATPs
+headerPopoutTextBlock: >-
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+  incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
+  nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
