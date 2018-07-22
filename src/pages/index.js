@@ -73,8 +73,6 @@ export default ( {data}) => {
 
   const personCard = (p) => {
     return <div className="person">
-      {console.log(images)}
-      {console.log(images[p.title])}
       <img src={images[p.title]}/>
       <div className="overlay">
         <h1>{p.title}</h1>
@@ -152,7 +150,6 @@ export default ( {data}) => {
           <div className="section-content">
             <h2>Leadership</h2>
             <div className="people">
-              {console.log(leadership)}
               {leadership.map( p => personCard(p))}
             </div>
 
@@ -160,6 +157,7 @@ export default ( {data}) => {
             <div className="people">
               {developers.map( p => personCard(p))}
 
+              {/* NOW HIRING CARD */}
               <div className="person">
                 <img src={avatar}/>
                 <div className="overlay hiring-overlay">
@@ -168,6 +166,7 @@ export default ( {data}) => {
                   <AddPersonIcon className="social-icon"></AddPersonIcon>
                   </div>
               </div>
+
             </div>
 
           </div>
@@ -204,8 +203,6 @@ export const query = graphql`
       totalCount
       edges {
         node {
-          background
-          logo
           tagline
           popoutTagline
           popoutTextBlock
@@ -217,7 +214,6 @@ export const query = graphql`
       edges {
         node {
           sectionHeading
-          characterImage
           whatWeDoTagline
           whatWeDoTextBlock
         }
@@ -243,7 +239,6 @@ export const query = graphql`
       edges{
         node{
           sectionHeading
-          image
           tagline
           buttonText
           successMessage
