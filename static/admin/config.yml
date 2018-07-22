@@ -69,7 +69,9 @@ collections:
     create: true
     fields:
       - {label: "Name", name: "title", widget: "string", tagname: "h1"}
+      - {label: "Display Order", name: "displayOrder", widget: "number", required: false}
       - {label: "Job Title", name: "jobTitle", widget: "string", tagname: "h2"}
-      - {label: "Image", name: "image", widget: "image", tagname: "img"}
-      - {label: "Description", name: "description", widget: "markdown"}
       - {label: "Role", name: "role", widget: "select", options: ["leadership", "developer"]}
+      - {label: "Description", name: "description", widget: "markdown"}
+      - {label: "Linked In", name: "linkedIn", widget: "string", required: false}
+      - {label: "Github", name: "github", widget: "string", required: false}
