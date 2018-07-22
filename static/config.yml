@@ -70,6 +70,8 @@ collections:
     fields:
       - {label: "Name", name: "title", widget: "string", tagname: "h1"}
       - {label: "Job Title", name: "jobTitle", widget: "string", tagname: "h2"}
+      - {label: "Role", name: "role", widget: "select", options: ["leadership", "developer"]}
       - {label: "Image", name: "image", widget: "image", tagname: "img"}
       - {label: "Description", name: "description", widget: "markdown"}
-      - {label: "Role", name: "role", widget: "select", options: ["leadership", "developer"]}
+      - {label: "Linked In", name: "linkedIn", widget: "string", required: false}
+      - {label: "Github", name: "github", widget: "string", required: false}
