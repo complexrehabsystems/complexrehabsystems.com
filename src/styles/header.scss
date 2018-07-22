@@ -1,11 +1,12 @@
 @import "_vars.scss";
 
-$header-height: 60vh;
+$header-height-mobile: 95vh;
+$header-height-desktop: 60vh;
 
 header {
   background: url("../assets/banner.svg");
   background-size: cover;
-  height: $header-height;
+  height: $header-height-mobile;
   min-height: 300px;
   display: flex;
   flex-direction: column;
@@ -31,6 +32,11 @@ header {
       font-weight: 200;
       color: $brand-primary;
     }
+    
+  }
+
+  @media (min-width: $breakpoint-lg) {
+    height: $header-height-desktop;
   }
 
   border-bottom: 10px solid $brand-primary;
