@@ -41,16 +41,24 @@ if (typeof window !== 'undefined') {
   }, 100));
 }
 
-export default () => 
-<div className="layout">
+export default ( {data}) => {
+let headerInfo = data.allHeaderYaml.edges[0].node;
+let navigationInfo = data.allNavigationYaml.edges[0].node;
+let whatWeDoInfo = data.allWhatWeDoYaml.edges[0].node;
+let people = data.allPeopleYaml.edges.map(e => e.node);
+let leadership = people.filter(p => p.Role == "leadership")
+let developers = people.filter(p => p.Role == "developer")
+
+return <div className="layout">
 
   <Header className="site-header">
 
     <img src={logo} className="logo"/>
 
     <div className="mission">
-      <h3>The Future of Complex Rehab</h3>
-      <h2>Building advanced tools for ATPs</h2>
+      <h3>{headerInfo.tagline}</h3>
+      <h2>{headerInfo.popoutTagline}</h2>
+      <p>{headerInfo.popoutTextBlock}</p>
     </div>
 
   </Header>
@@ -249,4 +257,82 @@ export default () =>
     <span>1348 Westmore Court - Stevens Point, WI, USA - 54481</span>
   </Footer>
 
-</div>
+ </div>
+}
+
+export const query = graphql`
+  query AllData {
+  
+    allHeaderYaml {
+      totalCount
+      edges {
+        node {
+          background
+          logo
+          tagline
+          popoutTagline
+          popoutTextBlock
+        }
+      }
+    }
+    
+    allNavigationYaml {
+      edges{
+        node {
+          whatWeDoButton{
+            btnImage
+            btnHoverImage
+            btnText
+          }
+          whoWeAreButton{
+            btnImage
+            btnHoverImage
+            btnText
+          }
+          getInTouchButton{
+            btnImage
+            btnHoverImage
+            btnText
+          }
+        }
+      }
+    }
+    
+    
+    allWhatWeDoYaml{
+      edges {
+        node {
+          sectionHeading
+          characterImage
+          whatWeDoTagline
+          whatWeDoTextBlock
+        }
+      }
+    }
+    
+    allPeopleYaml {
+      totalCount
+      edges {
+        node {
+          title
+          jobTitle
+          image
+          description
+          role
+        }
+      }
+    }
+    
+    allGetInTouchYaml {
+      edges{
+        node{
+          sectionHeading
+          image
+          tagline
+          buttonText
+          successMessage
+        }
+      }
+    }
+  }
+`
