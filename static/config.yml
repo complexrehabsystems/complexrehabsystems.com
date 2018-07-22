@@ -15,42 +15,14 @@ collections:
         name: "siteHeader"
         file: "_data/header/header.yml"
         fields:
-          - {label: "Background", name: "background", widget: "image"}
-          - {label: "Logo", name: "logo", widget: "image"}
           - {label: "Tagline", name: "tagline", widget: "string"}
           - {label: "Popout Tagline", name: "popoutTagline", widget: "string"}
           - {label: "Popout Text Block", name: "popoutTextBlock", widget: "markdown"}
-      - label: "Navigation"
-        name: "navigation"
-        file: "_data/navigation/navigation.yml"
-        fields:
-          - label: "What We Do Button"
-            name: "whatWeDoButton" 
-            widget: "object"
-            fields:
-              - {label: "Button Image", name: "btnImage", widget: "image"} 
-              - {label: "Button Hover Image", name: "btnHoverImage", widget: "image"}
-              - {label: "Button Text", name: "btnText", widget: "string"}
-          - label: "Who We Are Button"
-            name: "whoWeAreButton" 
-            widget: "object"
-            fields:
-              - {label: "Button Image", name: "btnImage", widget: "image"}
-              - {label: "Button Hover Image", name: "btnHoverImage", widget: "image"}
-              - {label: "Button Text", name: "btnText", widget: "string"}
-          - label: "Get In Touch Button"
-            name: "getInTouchButton" 
-            widget: "object"
-            fields:
-              - {label: "Button Image", name: "btnImage", widget: "image"}
-              - {label: "Button Hover Image", name: "btnHoverImage", widget: "image"}
-              - {label: "Button Text", name: "btnText", widget: "string"}
       - label: "What We Do"
         name: "whatWeDo"
         file: "_data/what-we-do/what-we-do.yml"
         fields:
           - {label: "Section Heading", name: sectionHeading, widget: string}
-          - {label: "Image", name: "characterImage", widget: "image"}
           - {label: "Tagline", name: whatWeDoTagline, widget: string}
           - {label: "Text Block", name: whatWeDoTextBlock, widget: markdown}
       - label: "Get In Touch"
@@ -58,7 +30,6 @@ collections:
         file: "_data/get-in-touch/get-in-touch.yml"
         fields:
           - {label: "Section Heading", name: sectionHeading, widget: string}
-          - {label: "Get In Touch Image", name: "image", widget: "image"}
           - {label: "Tagline", name: "tagline", widget: string}
           - {label: "Button Text", name: "buttonText", widget: string}
           - {label: "Success Message", name: "successMessage", widget: string}

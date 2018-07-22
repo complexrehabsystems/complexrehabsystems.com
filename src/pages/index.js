@@ -58,8 +58,8 @@ if (typeof window !== 'undefined') {
 // MAIN COMPONENT
 export default ( {data}) => {
   const headerInfo = data.allHeaderYaml.edges[0].node;
-  const navigationInfo = data.allNavigationYaml.edges[0].node;
   const whatWeDoInfo = data.allWhatWeDoYaml.edges[0].node;
+  const getInTouchInfo = data.allGetInTouchYaml.edges[0].node;
   const people = data.allPeopleYaml.edges.map(e => e.node).sort((a,b)=>a.displayOrder > b.displayOrder);
   const leadership = people.filter(p => p.role == "leadership");
   const developers = people.filter(p => p.role == "developer");
@@ -70,6 +70,26 @@ export default ( {data}) => {
 
     return <a href={href}>{icon}</a>
   }
+
+  const personCard = (p) => {
+    return <div className="person">
+      {console.log(images)}
+      {console.log(images[p.title])}
+      <img src={images[p.title]}/>
+      <div className="overlay">
+        <h1>{p.title}</h1>
+        <h2>{p.jobTitle}</h2>
+        <div className="about">
+          {remark().use(reactRenderer).processSync(p.description).contents}
+        </div>
+        <div className="social-icons">
+          {socialLink(p.linkedIn, <LinkedInIcon className="social-icon" />)}
+          {socialLink(p.github, <GithubIcon className="social-icon" />)}
+        </div>
+      </div>
+    </div>
+  }
+
 
   return <div className="layout">
 
@@ -132,46 +152,13 @@ export default ( {data}) => {
           <div className="section-content">
             <h2>Leadership</h2>
             <div className="people">
-              {leadership.map( p => 
-                <div className="person">
-                  {console.log(images)}
-                  {console.log(images[p.title])}
-                  <img src={images[p.title]}/>
-                  <div className="overlay">
-                    <h1>{p.title}</h1>
-                    <h2>{p.jobTitle}</h2>
-                    <div className="about">
-                      {remark().use(reactRenderer).processSync(p.description).contents}
-                    </div>
-                    <div className="social-icons">
-                      {socialLink(p.linkedIn, <LinkedInIcon className="social-icon" />)}
-                      {socialLink(p.github, <GithubIcon className="social-icon" />)}
-                    </div>
-                  </div>
-                </div>
-              )}
+              {console.log(leadership)}
+              {leadership.map( p => personCard(p))}
             </div>
 
             <h2>Developers</h2>
             <div className="people">
-              {developers.map( p => 
-                <div className="person">
-                  {console.log(images)}
-                  {console.log(images[p.title])}
-                  <img src={images[p.title]}/>
-                  <div className="overlay">
-                    <h1>{p.title}</h1>
-                    <h2>{p.jobTitle}</h2>
-                    <div className="about">
-                      {remark().use(reactRenderer).processSync(p.description).contents}
-                    </div>
-                    <div className="social-icons">
-                      {socialLink(p.linkedIn, <LinkedInIcon className="social-icon" />)}
-                      {socialLink(p.github, <GithubIcon className="social-icon" />)}
-                    </div>
-                  </div>
-                </div>
-              )}
+              {developers.map( p => personCard(p))}
 
               <div className="person">
                 <img src={avatar}/>
@@ -188,14 +175,13 @@ export default ( {data}) => {
         </section>
 
         <section id="signup">
-          <h1>Email Signup</h1>
+          <h1>{getInTouchInfo.sectionHeading}</h1>
           <div className="section-content">
-          <h2>Signup Now</h2>
             <img src={signupImg}/>
-            <h2>To Receive Email Updates about CRS and Our Products</h2>
+            <h2>{getInTouchInfo.tagline}</h2>
             <form id="contact" name="contact" method="POST" action="/?success" data-netlify="true" netlify>
               <input name="email" type="email" required/>
-              <input type="submit" value="Signup Now"/>
+              <input type="submit" value={getInTouchInfo.buttonText.toUpperCase()}/>
             </form>
           </div>
         </section>
@@ -226,29 +212,6 @@ export const query = graphql`
         }
       }
     }
-    
-    allNavigationYaml {
-      edges{
-        node {
-          whatWeDoButton{
-            btnImage
-            btnHoverImage
-            btnText
-          }
-          whoWeAreButton{
-            btnImage
-            btnHoverImage
-            btnText
-          }
-          getInTouchButton{
-            btnImage
-            btnHoverImage
-            btnText
-          }
-        }
-      }
-    }
-    
     
     allWhatWeDoYaml{
       edges {
