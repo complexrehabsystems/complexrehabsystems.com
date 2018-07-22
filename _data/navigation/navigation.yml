@@ -1,0 +1,12 @@
+whatWeDoButton:
+  btnHoverImage: /uploads/square44x44logo.scale-200.png
+  btnImage: /uploads/square44x44logo.scale-200.png
+  btnText: What We Do
+whoWeAreButton:
+  btnHoverImage: /uploads/square44x44logo.scale-200.png
+  btnImage: /uploads/square44x44logo.scale-200.png
+  btnText: Who We Are
+getInTouchButton:
+  btnHoverImage: /uploads/square44x44logo.scale-200.png
+  btnImage: /uploads/square44x44logo.scale-200.png
+  btnText: Get In Touch
