@@ -12,9 +12,19 @@ const typography = new Typography({
         "400",
         "700",
       ],
+    },
+      {
+      name: "Roboto Condensed",
+      styles: [
+        "100",
+        "200",
+        "300",
+        "400",
+        "700",
+      ]
     }
   ],
-  headerFontFamily: ["Roboto"],
+  headerFontFamily: ["Roboto Condensed"],
   bodyFontFamily: ["Roboto"],
 });
 
