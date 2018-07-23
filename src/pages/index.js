@@ -92,14 +92,17 @@ export default ( {data}) => {
   return <div className="layout">
 
     <Header className="site-header">
+        <div className="logo-mission">
+            <img src={logo} className="logo" />
+            <h3 className="mission">{headerInfo.tagline} </h3>
+        </div>
 
-      <img src={logo} className="logo"/>
-
-      <div className="mission">
-        <h3>{headerInfo.tagline}</h3>
-        <h2>{headerInfo.popoutTagline}</h2>
-        <p>{headerInfo.popoutTextBlock}</p>
-      </div>
+        <div className="what-is-crs">
+            <h1>{headerInfo.popoutTagline}</h1>
+            <div className="text">
+                <p>{headerInfo.popoutTextBlock}</p>
+            </div>
+        </div>
 
     </Header>
 
