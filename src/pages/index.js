@@ -60,9 +60,9 @@ export default ( {data}) => {
   const headerInfo = data.allHeaderYaml.edges[0].node;
   const whatWeDoInfo = data.allWhatWeDoYaml.edges[0].node;
   const getInTouchInfo = data.allGetInTouchYaml.edges[0].node;
-  const people = data.allPeopleYaml.edges.map(e => e.node).sort((a,b)=>a.displayOrder > b.displayOrder);
-  const leadership = people.filter(p => p.role == "leadership");
-  const developers = people.filter(p => p.role == "developer");
+  const people = data.allPeopleYaml.edges.map(e => e.node);
+  const leadership = people.filter(p => p.role == "leadership").sort((a,b)=>a.displayOrder > b.displayOrder);
+  const developers = people.filter(p => p.role == "developer").sort((a,b)=>a.displayOrder > b.displayOrder);
 
   const socialLink = (href, icon) => {
     if(!href)
