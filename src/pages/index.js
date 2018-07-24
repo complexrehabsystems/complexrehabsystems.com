@@ -142,19 +142,25 @@ export default ( {data}) => {
             <img src={staticInfo} className="cta-icon static"/>
             <img src={hoverInfo} className="cta-icon hover"/>
             <img src={activeInfo} className="cta-icon active"/>
-            <h4>What We Do</h4>
+            <h4>WHAT WE DO</h4>
           </div>
         </a>
 
         <a href="#team">
           <div className="cta">
-            <img src={staticTeam} className="cta-icon"/>
+            <img src={staticTeam} className="cta-icon static"/>
+            <img src={hoverTeam} className="cta-icon hover"/>
+            <img src={activeTeam} className="cta-icon active"/>
+            <h4>WHO WE ARE</h4>
           </div>
         </a>
 
         <a href="#contact">
           <div className="cta">
-            <img src={staticContact} className="cta-icon"/>
+            <img src={staticContact} className="cta-icon static"/>
+            <img src={hoverContact} className="cta-icon hover"/>
+            <img src={activeContact} className="cta-icon active"/>
+            <h4>GET IN TOUCH</h4>
           </div>
         </a>
 

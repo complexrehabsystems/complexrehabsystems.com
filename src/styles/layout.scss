@@ -95,31 +95,11 @@ body {
         display: flex;
         flex-direction: row;
         justify-content: center;
-        width: 100%; 
+        width: 100%;
 
         img {
-          margin: 0;
-          max-height: 425px;
-        }
-    }
-
-    @media(min-width: $breakpoint-md) {
-        .ctas {
-        }
-    }
-
-    @media(min-width: $breakpoint-lg) {
-        .ctas {
-        }
-    }
-
-    @media(min-width: $breakpoint-xl) {
-        .ctas {
-        }
-    }
-
-    @media(min-width: $breakpoint-xxl) {
-        .ctas {
+            margin: 0;
+            max-height: 425px;
         }
     }
 
@@ -154,37 +134,20 @@ body {
     }
 
     h4 {
-      display: none;
-      position: absolute;
-      bottom: 5%;
-      left: 0;
-      width: 100%;
-      text-align: center;
-      font-size: 32px;
-      color: $brand-light;
-      transition: color .1s ease-in-out;
-    }
-
-
-    @media(min-width: $breakpoint-lg) {
-      h4 {
-        display: block;
-      }
-
-        .cta {
-
-        }
+        display: none;
+        position: absolute;
+        bottom: 5%;
+        left: 0;
+        width: 100%;
+        text-align: center;
+        font-size: 32px;
+        color: $brand-light;
+        transition: color .1s ease-in-out;
     }
 
     @media(min-width: $breakpoint-lg) {
-        .cta {
-
-        }
-    }
-
-    @media(min-width: $breakpoint-xxl) {
-        .cta {
-
+        h4 {
+            display: block;
         }
     }
 
@@ -194,8 +157,9 @@ body {
     }
 
     .cta:hover {
-        h4{
-          color: $brand-primary;
+        h4 {
+            display: block;
+            color: $brand-primary;
         }
 
         .hover {
