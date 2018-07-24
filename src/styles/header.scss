@@ -67,6 +67,7 @@ header {
             font-size: 18px;
             text-align: center;
             margin-bottom: 20px;
+            line-height: 0.9;
         }
 
         @media(min-width: $breakpoint-lg) {
@@ -93,7 +94,7 @@ header {
 
         @media(min-width: $breakpoint-xxxl) {
             h1 {
-                max-width: 25vw;
+                max-width: 35vw;
                 font-size: 70px;
             }
         }
@@ -131,7 +132,7 @@ header {
     }
 
     @media (min-width: $breakpoint-lg) {
-        height: $header-height-desktop;
+        min-height: $header-height-desktop;
     }
 
     border-bottom: 10px solid $brand-primary;
