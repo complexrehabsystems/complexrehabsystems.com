@@ -25,6 +25,7 @@ header {
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        margin-top: 1.45rem;
 
         .logo {
             width: 70vw;
@@ -40,6 +41,7 @@ header {
 
         @media(min-width: $breakpoint-lg) {
             margin-right: 40px;
+            margin-top: 0;
 
             .logo {
                 width: 30vw;
@@ -69,13 +71,13 @@ header {
 
         @media(min-width: $breakpoint-lg) {
             h1 {
-                max-width: 35vw;
-                font-size: 35px;
+                text-align: left;
             }
         }
 
         @media(min-width: $breakpoint-xl) {
             h1 {
+                max-width: 35vw;
                 font-size: 50px;
             }
         }
