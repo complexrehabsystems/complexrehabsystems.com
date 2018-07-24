@@ -50,97 +50,140 @@ body {
 }
 
 .content {
-  margin: 0;
-  min-height:100vh;
-  width: 100%;
-  grid-area: content;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-
-  section {
+    margin: 0;
     min-height: 100vh;
-    width: 100vw;
+    width: 100%;
+    grid-area: content;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
 
-    h1 {
-      width: 100%;
-      text-align: center;
-      background-color: $brand-primary;
-      color: $brand-light;
-      padding: 20px;
+    section {
+        min-height: 100vh;
+        width: 100vw;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        h1 {
+            width: 100%;
+            text-align: center;
+            background-color: $brand-primary;
+            color: $brand-light;
+            padding: 20px;
+        }
+
+        .section-content {
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
     }
 
-    .section-content {
-      flex-grow: 1;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
+    a {
+        text-decoration: none;
+        padding: 0;
     }
-  }
 
-  a {
-    text-decoration: none;
-    padding: 0;
-    margin: 15px;
-  }
-
-  .ctas {
-    min-height: 40vh;
-    background-color: darken($brand-light, 5);
-  }
-
-  @media(min-width: $breakpoint-lg) {
     .ctas {
-      width: 100%;
-      display: flex;
-      flex-direction: row;
-      flex-wrap: wrap;
-      justify-content: center;
-      align-items: center;
+        background-image: url("../assets/nav-icons/crs-bg-repeat.png");
+        background-repeat: repeat-x;
+        height: auto;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        width: 100%;
     }
-  }
 
-  .cta {
-    background-color: lighten($brand-light, 6);
-    border: 2px solid $brand-dark;
-    border-radius: 5px;
-    width: 300px;
-    height: 250px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-    transition: background-color .2s ease-in-out;
-  }
+    @media(min-width: $breakpoint-md) {
+        .ctas {
+        }
+    }
 
-  .cta-icon {
-    font-size: 130px;
-    color: $brand-primary;
-    transition: opacity .3s ease-in-out;
-  }
+    @media(min-width: $breakpoint-lg) {
+        .ctas {
+        }
+    }
 
-  .cta-info {
-    color: $brand-dark;
-    text-align: center;
-  }
+    @media(min-width: $breakpoint-xl) {
+        .ctas {
+        }
+    }
 
-  .cta:hover {
-    background: lighten($brand-light, 10);
-    border: 2px solid $brand-primary;
+    @media(min-width: $breakpoint-xxl) {
+        .ctas {
+        }
+    }
+
+    .cta {
+        background-color: lighten($brand-light, 6);
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        transition: background-color .2s ease-in-out;
+        box-sizing: border-box;
+        position: relative;
+    }
+
+    .static {
+        position: relative;
+        top: 0;
+        left: 0;
+    }
+
+    .hover {
+        position: absolute;
+        top: 0;
+        left: 0;
+        opacity: 0;
+    }
+
+    .active {
+        position: absolute;
+        top: 0;
+        left: 0;
+        opacity: 0;
+    }
+
+    @media(min-width: $breakpoint-lg) {
+        .cta {
+
+        }
+    }
+
+    @media(min-width: $breakpoint-lg) {
+        .cta {
+
+        }
+    }
+
+    @media(min-width: $breakpoint-xxl) {
+        .cta {
+
+        }
+    }
 
     .cta-icon {
-      opacity: .8;
+        transition: opacity .1s ease-in-out;
+        margin: 0;
     }
 
-    .cta-info {
-      color: $brand-primary;
-      text-align: center;
+    .cta:hover {
+
+        .hover {
+            opacity: 1;
+        }
     }
-  }
+
+    .cta:active {
+
+        .active {
+            opacity: 1;
+        }
+    }
 }
 
 .site-footer {

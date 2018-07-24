@@ -23,6 +23,22 @@ import tom from "../assets/tom.jpg"
 import avatar from "../assets/avatar.png"
 import hima from "../assets/himadusumilli.jpg"
 
+import activeInfo from "../assets/nav-icons/crs-active-info.png";
+import activeTeam from "../assets/nav-icons/crs-active-team.png";
+import activeContact from "../assets/nav-icons/crs-active-contact.png";
+import hoverInfo from "../assets/nav-icons/crs-hover-info.png";
+import hoverTeam from "../assets/nav-icons/crs-hover-team.png";
+import hoverContact from "../assets/nav-icons/crs-hover-contact.png";
+import staticInfo from "../assets/nav-icons/crs-static-info.png";
+import staticTeam from "../assets/nav-icons/crs-static-team.png";
+import staticContact from "../assets/nav-icons/crs-static-contact.png";
+import leftPadding from "../assets/nav-icons/crs-left-padding.png";
+import rightPadding from "../assets/nav-icons/crs-right-padding.png";
+import bgRepeat from "../assets/nav-icons/crs-bg-repeat.png";
+
+
+
+
 let images = {
   "Douglas Munsey": doug,
   "Thomas Whelan": tom,
@@ -113,30 +129,33 @@ export default ( {data}) => {
 
     <div className="content">
 
-      <section id="nav" className="ctas">
+      <div id="nav" className="ctas">
+
+        <img src={leftPadding} className="left-padding"/>
 
         <a href="#about">
           <div className="cta">
-            <InfoIcon className="cta-icon"/>
-            <h4 className="cta-info">About CRS</h4>
+            <img src={staticInfo} className="cta-icon static"/>
+            <img src={hoverInfo} className="cta-icon hover"/>
+            <img src={activeInfo} className="cta-icon active"/>
           </div>
         </a>
 
         <a href="#team">
           <div className="cta">
-            <PeopleIcon className="cta-icon"/>
-            <h4 className="cta-info">Meet the Team</h4>
+            <img src={staticTeam} className="cta-icon"/>
           </div>
         </a>
 
-        <a href="#signup">
+        <a href="#contact">
           <div className="cta">
-            <MailIcon className="cta-icon"/>
-            <h4 className="cta-info">Signup for E-Mail Updates</h4>
+            <img src={staticContact} className="cta-icon"/>
           </div>
         </a>
 
-      </section>
+        <img src={rightPadding} className="right-padding" />
+
+      </div>
 
       <div className="sections">
 
