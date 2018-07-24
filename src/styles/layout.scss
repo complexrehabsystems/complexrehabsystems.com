@@ -3,6 +3,7 @@
 body {
   margin: 0;
   background: $brand-light;
+  max-width: auto;
 }
 
 #top-link {
@@ -94,7 +95,12 @@ body {
         display: flex;
         flex-direction: row;
         justify-content: center;
-        width: 100%;
+        width: 100%; 
+
+        img {
+          margin: 0;
+          max-height: 425px;
+        }
     }
 
     @media(min-width: $breakpoint-md) {
@@ -118,7 +124,6 @@ body {
     }
 
     .cta {
-        background-color: lighten($brand-light, 6);
         display: flex;
         flex-direction: row;
         justify-content: space-around;
@@ -148,7 +153,24 @@ body {
         opacity: 0;
     }
 
+    h4 {
+      display: none;
+      position: absolute;
+      bottom: 5%;
+      left: 0;
+      width: 100%;
+      text-align: center;
+      font-size: 32px;
+      color: $brand-light;
+      transition: color .1s ease-in-out;
+    }
+
+
     @media(min-width: $breakpoint-lg) {
+      h4 {
+        display: block;
+      }
+
         .cta {
 
         }
@@ -172,6 +194,9 @@ body {
     }
 
     .cta:hover {
+        h4{
+          color: $brand-primary;
+        }
 
         .hover {
             opacity: 1;

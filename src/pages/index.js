@@ -131,13 +131,18 @@ export default ( {data}) => {
 
       <div id="nav" className="ctas">
 
-        <img src={leftPadding} className="left-padding"/>
+        <a>
+          <div className="cta">
+            <img src={leftPadding} className="left-padding"/>
+          </div>
+        </a>
 
         <a href="#about">
           <div className="cta">
             <img src={staticInfo} className="cta-icon static"/>
             <img src={hoverInfo} className="cta-icon hover"/>
             <img src={activeInfo} className="cta-icon active"/>
+            <h4>What We Do</h4>
           </div>
         </a>
 
@@ -153,7 +158,11 @@ export default ( {data}) => {
           </div>
         </a>
 
-        <img src={rightPadding} className="right-padding" />
+        <a>
+          <div className="cta">
+            <img src={rightPadding} className="right-padding" />
+          </div>
+        </a>
 
       </div>
 
