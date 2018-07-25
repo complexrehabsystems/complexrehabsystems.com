@@ -32,6 +32,8 @@ import staticContact from "../assets/nav-icons/crs-static-contact.png";
 import leftPadding from "../assets/nav-icons/crs-left-padding.png";
 import rightPadding from "../assets/nav-icons/crs-right-padding.png";
 
+import MailIcon from "react-icons/lib/fa/envelope"
+
 import joeAtp from "../assets/joe-atp.png"
 
 let images = {
@@ -215,7 +217,7 @@ export default ( {data}) => {
         <section id="signup">
           <h1>{getInTouchInfo.sectionHeading}</h1>
           <div className="section-content">
-            <img src={signupImg}/>
+            <MailIcon className="mail-icon"></MailIcon>
             <h2>{getInTouchInfo.tagline}</h2>
             <form id="contact" name="contact" method="POST" action="/?success" data-netlify="true" netlify>
               <input name="email" type="email" required/>
