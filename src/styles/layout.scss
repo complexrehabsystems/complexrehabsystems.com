@@ -230,7 +230,7 @@ body {
     .joe-atp {
         margin-top: -5px;
         z-index: 10;
-        max-height: 25vh;
+        max-width: 40vh;
         grid-area: character;
         justify-self: center;
         margin-left: -15px;
@@ -238,16 +238,20 @@ body {
 
     @media(min-width: $breakpoint-md) {
         .joe-atp {
-            max-height: 30vh;
+            max-height: fit-content;
             justify-self: end;
             margin-left: 0;
             margin-bottom:0;
         }
     }
-
+    @media(min-width: $breakpoint-md) {
+        .joe-atp {
+            max-height: auto;
+            justify-self: end;
+        }
+    }
     @media(min-width: $breakpoint-xl) {
         .joe-atp {
-            max-height: 40vh;
             margin-top: -10px;
         }
     }
@@ -288,7 +292,7 @@ body {
         h1 {
             max-width: 70vh;
             align-self: end;
-            font-size: 60px;
+            font-size: 70px;
         }
 
         p {
