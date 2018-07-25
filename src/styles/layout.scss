@@ -302,6 +302,8 @@ body {
             max-width: 70vh;
             justify-self: start;
         }
+
+        /* force netlify rebuild */
     }
 
     @media(min-width: $breakpoint-xxl) {
