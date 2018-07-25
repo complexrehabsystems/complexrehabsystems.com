@@ -1,7 +1,7 @@
 @import "_vars.scss";
 
 $header-height-mobile: 245vh;
-$header-height-desktop: 60vh;
+$header-height-desktop: 30vh;
 
 header {
     background: url("../assets/banner.svg");
@@ -69,6 +69,13 @@ header {
             text-align: center;
             margin-bottom: 20px;
             line-height: 0.9;
+        }
+
+        
+        @media(min-width: $breakpoint-sm) {
+            h1 {
+                font-size: 36px;
+            }
         }
 
         @media(min-width: $breakpoint-lg) {

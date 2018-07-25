@@ -2,9 +2,6 @@ import React from "react"
 import Header from "../components/header"
 import Footer from "../components/footer"
 
-import InfoIcon from "react-icons/lib/fa/info-circle"
-import MailIcon from "react-icons/lib/fa/envelope"
-import PeopleIcon from "react-icons/lib/fa/user"
 import LinkedInIcon from "react-icons/lib/fa/linkedin-square"
 import GithubIcon from "react-icons/lib/fa/github-square"
 import AddPersonIcon from "react-icons/lib/fa/user-plus"
@@ -17,8 +14,8 @@ import signupImg from "../assets/about-crs2.jpg"
 
 import daniel from "../assets/daniel.png"
 import doug from "../assets/doug.png"
-import jonathan from "../assets/jonathan.png"
-import patrick from "../assets/patrick.png"
+import jonathan from "../assets/jonathan.jpg"
+import patrick from "../assets/patrick.jpg"
 import tom from "../assets/tom.jpg"
 import avatar from "../assets/avatar.png"
 import hima from "../assets/himadusumilli.jpg"
@@ -34,10 +31,8 @@ import staticTeam from "../assets/nav-icons/crs-static-team.png";
 import staticContact from "../assets/nav-icons/crs-static-contact.png";
 import leftPadding from "../assets/nav-icons/crs-left-padding.png";
 import rightPadding from "../assets/nav-icons/crs-right-padding.png";
-import bgRepeat from "../assets/nav-icons/crs-bg-repeat.png";
 
-
-
+import joeAtp from "../assets/joe-atp.png"
 
 let images = {
   "Douglas Munsey": doug,
@@ -137,7 +132,7 @@ export default ( {data}) => {
           </div>
         </a>
 
-        <a href="#about">
+        <a href="#about-scroll-hack">
           <div className="cta">
             <img src={staticInfo} className="cta-icon static"/>
             <img src={hoverInfo} className="cta-icon hover"/>
@@ -155,7 +150,7 @@ export default ( {data}) => {
           </div>
         </a>
 
-        <a href="#contact">
+        <a href="#signup">
           <div className="cta">
             <img src={staticContact} className="cta-icon static"/>
             <img src={hoverContact} className="cta-icon hover"/>
@@ -174,12 +169,15 @@ export default ( {data}) => {
 
       <div className="sections">
 
-        <section id="about">
-          <h1>About CRS</h1>
-          <div className="section-content">
-            <h2>(this is really dummy text)</h2>
+        <div id="about">
+
+          <div className="joe-atp">
+            <div id="about-scroll-hack"></div>
+            <img src={joeAtp} className="joe-atp" />
           </div>
-        </section>
+          <h1>{whatWeDoInfo.whatWeDoTagline}</h1>
+          <p>{remark().use(reactRenderer).processSync(whatWeDoInfo.whatWeDoTextBlock).contents}</p>
+        </div>
 
         <section id="team">
           <h1>The Team</h1>
