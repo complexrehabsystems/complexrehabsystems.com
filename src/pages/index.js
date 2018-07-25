@@ -172,7 +172,7 @@ export default ( {data}) => {
         <div id="about">
 
           <div className="joe-atp">
-            <div id="about-scroll-hack"></div>
+            <div id="about-section"></div>
             <img src={joeAtp} className="joe-atp" />
           </div>
           <div className="tag-lines">
