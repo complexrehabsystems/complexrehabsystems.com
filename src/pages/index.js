@@ -17,8 +17,8 @@ import signupImg from "../assets/about-crs2.jpg"
 
 import daniel from "../assets/daniel.png"
 import doug from "../assets/doug.png"
-import jonathan from "../assets/jonathan.png"
-import patrick from "../assets/patrick.png"
+import jonathan from "../assets/jonathan.jpg"
+import patrick from "../assets/patrick.jpg"
 import tom from "../assets/tom.jpg"
 import avatar from "../assets/avatar.png"
 import hima from "../assets/himadusumilli.jpg"
@@ -36,8 +36,7 @@ import leftPadding from "../assets/nav-icons/crs-left-padding.png";
 import rightPadding from "../assets/nav-icons/crs-right-padding.png";
 import bgRepeat from "../assets/nav-icons/crs-bg-repeat.png";
 
-
-
+import joeAtp from "../assets/joe-atp.png"
 
 let images = {
   "Douglas Munsey": doug,
@@ -174,12 +173,13 @@ export default ( {data}) => {
 
       <div className="sections">
 
-        <section id="about">
-          <h1>About CRS</h1>
-          <div className="section-content">
-            <h2>(this is really dummy text)</h2>
+        <div id="about">
+          <div className="joe-atp">
+            <img src={joeAtp} className="joe-atp" />
           </div>
-        </section>
+          <h1>SIMPLE AND CATCHY TAGLINE HERE</h1>
+                  <p>{remark().use(reactRenderer).processSync(whatWeDoInfo.whatWeDoTextBlock).contents}</p>
+        </div>
 
         <section id="team">
           <h1>The Team</h1>
