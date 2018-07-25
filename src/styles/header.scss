@@ -121,6 +121,7 @@ header {
             @media(min-width: $breakpoint-lg) {
                 color: $brand-light;
                 padding: 30px 40px;
+                width: 50vw;
 
                 p {
                     max-width: 50vw;
