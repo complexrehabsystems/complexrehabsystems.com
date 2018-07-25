@@ -268,7 +268,7 @@ body {
         align-self: end;
     }
 
-    p {
+    .what-we-do-textblock {
         grid-area: textblock;
         font-size: 15px;
         color: $brand-light;
@@ -283,7 +283,7 @@ body {
             max-width: 60vh;
         }
 
-        p {
+        .what-we-do-textblock {
             font-size: 20px;
             max-width: 90vh;
             justify-self: center;
@@ -297,7 +297,7 @@ body {
             font-size: 60px;
         }
 
-        p {
+        .what-we-do-textblock {
             font-size: 20px;
             max-width: 70vh;
             justify-self: start;
@@ -313,7 +313,7 @@ body {
             font-size: 70px;
         }
 
-        p {
+        .what-we-do-textblock {
             font-size: 20px;
             max-width: 70vh;
             justify-self: start;

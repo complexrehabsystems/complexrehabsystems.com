@@ -176,7 +176,7 @@ export default ( {data}) => {
             <img src={joeAtp} className="joe-atp" />
           </div>
           <h1>{whatWeDoInfo.whatWeDoTagline}</h1>
-          <p>{remark().use(reactRenderer).processSync(whatWeDoInfo.whatWeDoTextBlock).contents}</p>
+          <div className="what-we-do-textblock">{remark().use(reactRenderer).processSync(whatWeDoInfo.whatWeDoTextBlock).contents}</div>
         </div>
 
         <section id="team">
