@@ -2,9 +2,6 @@ import React from "react"
 import Header from "../components/header"
 import Footer from "../components/footer"
 
-import InfoIcon from "react-icons/lib/fa/info-circle"
-import MailIcon from "react-icons/lib/fa/envelope"
-import PeopleIcon from "react-icons/lib/fa/user"
 import LinkedInIcon from "react-icons/lib/fa/linkedin-square"
 import GithubIcon from "react-icons/lib/fa/github-square"
 import AddPersonIcon from "react-icons/lib/fa/user-plus"
@@ -34,7 +31,6 @@ import staticTeam from "../assets/nav-icons/crs-static-team.png";
 import staticContact from "../assets/nav-icons/crs-static-contact.png";
 import leftPadding from "../assets/nav-icons/crs-left-padding.png";
 import rightPadding from "../assets/nav-icons/crs-right-padding.png";
-import bgRepeat from "../assets/nav-icons/crs-bg-repeat.png";
 
 import joeAtp from "../assets/joe-atp.png"
 
@@ -177,8 +173,8 @@ export default ( {data}) => {
           <div className="joe-atp">
             <img src={joeAtp} className="joe-atp" />
           </div>
-          <h1>SIMPLE AND CATCHY TAGLINE HERE</h1>
-                  <p>{remark().use(reactRenderer).processSync(whatWeDoInfo.whatWeDoTextBlock).contents}</p>
+          <h1>{whatWeDoInfo.whatWeDoTagline}</h1>
+          <p>{remark().use(reactRenderer).processSync(whatWeDoInfo.whatWeDoTextBlock).contents}</p>
         </div>
 
         <section id="team">
