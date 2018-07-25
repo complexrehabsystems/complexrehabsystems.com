@@ -175,7 +175,11 @@ export default ( {data}) => {
             <div id="about-scroll-hack"></div>
             <img src={joeAtp} className="joe-atp" />
           </div>
-          <h1>{whatWeDoInfo.whatWeDoTagline}</h1>
+          <div className="tag-lines">
+            <h1>{whatWeDoInfo.whatWeDoTagline1}</h1>
+            <h1>{whatWeDoInfo.whatWeDoTagline2}</h1>
+            <h1>{whatWeDoInfo.whatWeDoTagline3}</h1>
+          </div>
           <div className="what-we-do-textblock">{remark().use(reactRenderer).processSync(whatWeDoInfo.whatWeDoTextBlock).contents}</div>
         </div>
 
@@ -249,7 +253,9 @@ export const query = graphql`
       edges {
         node {
           sectionHeading
-          whatWeDoTagline
+          whatWeDoTagline1
+          whatWeDoTagline2
+          whatWeDoTagline3
           whatWeDoTextBlock
         }
       }

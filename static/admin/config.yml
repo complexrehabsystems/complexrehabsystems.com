@@ -23,7 +23,9 @@ collections:
         file: "_data/what-we-do/what-we-do.yml"
         fields:
           - {label: "Section Heading", name: sectionHeading, widget: string}
-          - {label: "Tagline", name: whatWeDoTagline, widget: string}
+          - {label: "Tagline", name: whatWeDoTagline1, widget: string}
+          - {label: "Tagline", name: whatWeDoTagline2, widget: string}
+          - {label: "Tagline", name: whatWeDoTagline3, widget: string}
           - {label: "Text Block", name: whatWeDoTextBlock, widget: markdown}
       - label: "Get In Touch"
         name: "getInTouch"
