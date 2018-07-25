@@ -226,6 +226,11 @@ body {
         margin: 0;
     }
 
+    .tag-lines {
+        margin-top: -10px;
+        margin-bottom: 10px;
+    }
+
     #about-scroll-hack {
         margin-top: -40px;
         margin-bottom: 40px;
@@ -282,28 +287,28 @@ body {
     @media(min-width: $breakpoint-md) {
         h1 {
             text-align: right;
-            font-size: 45px;
+            font-size: 30px;
             justify-self: start;
-            max-width: 60vh;
+            max-width: 35vw;
         }
 
         .what-we-do-textblock {
-            font-size: 20px;
-            max-width: 90vh;
+            font-size: 15px;
+            max-width: 35vw;
             justify-self: center;
         }
     }
 
     @media(min-width: $breakpoint-lg) {
         h1 {
-            max-width: 70vh;
+            max-width: 35vw;
             align-self: end;
-            font-size: 60px;
+            font-size: 40px;
         }
 
         .what-we-do-textblock {
             font-size: 20px;
-            max-width: 70vh;
+            max-width: 35vw;
             justify-self: start;
         }
 
@@ -312,14 +317,14 @@ body {
 
     @media(min-width: $breakpoint-xxl) {
         h1 {
-            max-width: 70vh;
+            max-width: 30vw;
             align-self: end;
-            font-size: 70px;
+            font-size: 55px;
         }
 
         .what-we-do-textblock {
             font-size: 20px;
-            max-width: 70vh;
+            max-width: 30vw;
             justify-self: start;
         }
     }
