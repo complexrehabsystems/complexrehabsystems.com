@@ -132,7 +132,7 @@ export default ( {data}) => {
           </div>
         </a>
 
-        <a href="#about">
+        <a href="#about-scroll-hack">
           <div className="cta">
             <img src={staticInfo} className="cta-icon static"/>
             <img src={hoverInfo} className="cta-icon hover"/>
@@ -170,7 +170,9 @@ export default ( {data}) => {
       <div className="sections">
 
         <div id="about">
+
           <div className="joe-atp">
+            <div id="about-scroll-hack"></div>
             <img src={joeAtp} className="joe-atp" />
           </div>
           <h1>{whatWeDoInfo.whatWeDoTagline}</h1>
