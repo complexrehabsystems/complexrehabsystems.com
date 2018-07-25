@@ -96,6 +96,7 @@ body {
         flex-direction: row;
         justify-content: center;
         width: 100%;
+        border-bottom: 2px solid $brand-light;
 
         img {
             margin: 0;
@@ -141,8 +142,8 @@ body {
         width: 100%;
         text-align: center;
         font-size: 32px;
-        color: $brand-light;
-        transition: color .1s ease-in-out;
+        color: darken($brand-light,30);
+        transition: color .2s ease-in-out;
     }
 
     @media(min-width: $breakpoint-lg) {
@@ -152,14 +153,13 @@ body {
     }
 
     .cta-icon {
-        transition: opacity .1s ease-in-out;
+        transition: opacity .2s ease-in-out;
         margin: 0;
     }
 
     .cta:hover {
         h4 {
-            display: block;
-            color: $brand-primary;
+            color: lighten($brand-primary, 30);
         }
 
         .hover {
@@ -214,7 +214,7 @@ body {
         grid-template-columns: 1fr 2fr;
     }
 
-    @media(min-width: $breakpoint-xl) {
+    @media(min-width: $breakpoint-lg) {
         background: linear-gradient(180deg, rgba(52,161,221,1) 0%, rgba(15,121,199,1) 155px, rgba(52,161,221,1) 185px, rgba(40,151,207,1) 100%);
         align-items: center;
         grid-template-areas: "character tagline" "character textblock";
@@ -235,12 +235,14 @@ body {
             max-height: 30vh;
             justify-self: end;
             margin-left: 0;
+            margin-bottom:0;
         }
     }
 
     @media(min-width: $breakpoint-xl) {
         .joe-atp {
             max-height: 40vh;
+            margin-top: -10px;
         }
     }
 
@@ -250,12 +252,15 @@ body {
         font-size: 30px;
         font-weight: 900;
         color: $brand-light;
+        margin-right: 20px;
+        align-self: end;
     }
 
     p {
         grid-area: textblock;
         font-size: 15px;
         color: $brand-light;
+        align-self: start;
     }
 
     @media(min-width: $breakpoint-md) {

@@ -154,7 +154,7 @@ export default ( {data}) => {
           </div>
         </a>
 
-        <a href="#contact">
+        <a href="#signup">
           <div className="cta">
             <img src={staticContact} className="cta-icon static"/>
             <img src={hoverContact} className="cta-icon hover"/>
