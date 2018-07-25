@@ -284,10 +284,25 @@ body {
         }
     }
 
-    @media(min-width: $breakpoint-xl) {
+    @media(min-width: $breakpoint-lg) {
         h1 {
             max-width: 70vh;
             align-self: end;
+            font-size: 60px;
+        }
+
+        p {
+            font-size: 20px;
+            max-width: 70vh;
+            justify-self: start;
+        }
+    }
+
+    @media(min-width: $breakpoint-xxl) {
+        h1 {
+            max-width: 70vh;
+            align-self: end;
+            font-size: 70px;
         }
 
         p {
