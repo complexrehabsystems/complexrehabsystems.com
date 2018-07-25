@@ -132,7 +132,7 @@ export default ( {data}) => {
           </div>
         </a>
 
-        <a href="#about-scroll-hack">
+        <a href="#about-section">
           <div className="cta">
             <img src={staticInfo} className="cta-icon static"/>
             <img src={hoverInfo} className="cta-icon hover"/>
