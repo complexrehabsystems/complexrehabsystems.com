@@ -114,6 +114,10 @@ header {
             color: $brand-light;
             padding: 30px 40px;
 
+            @media(min-width: $breakpoint-md) {
+                width: 100vw;
+            }
+            
             @media(min-width: $breakpoint-lg) {
                 color: $brand-light;
                 padding: 30px 40px;
