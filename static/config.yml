@@ -35,6 +35,7 @@ collections:
           - {label: "Tagline", name: "tagline", widget: string}
           - {label: "Button Text", name: "buttonText", widget: string}
           - {label: "Success Message", name: "successMessage", widget: string}
+          - {label: "Beta Closed Message", name: "betaClosed", widget: string}
   - label: "People"
     name: "people"
     folder: "_data/people"

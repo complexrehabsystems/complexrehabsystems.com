@@ -10,7 +10,6 @@ import UpArrowIcon from "react-icons/lib/fa/arrow-circle-o-up"
 import "../styles/layout.scss"
 
 import logo from "../assets/banner_logo.svg"
-import signupImg from "../assets/about-crs2.jpg"
 
 import daniel from "../assets/daniel.png"
 import doug from "../assets/doug.png"
@@ -223,6 +222,8 @@ export default ( {data}) => {
               <input name="email" type="email" required/>
               <input type="submit" value={getInTouchInfo.buttonText.toUpperCase()}/>
             </form>
+            <p className="beta-closed">{getInTouchInfo.betaClosed}</p>
+            
           </div>
         </section>
 
@@ -285,6 +286,7 @@ export const query = graphql`
           tagline
           buttonText
           successMessage
+          betaClosed
         }
       }
     }
