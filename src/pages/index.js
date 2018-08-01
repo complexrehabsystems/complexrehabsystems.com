@@ -242,7 +242,7 @@ export default ( {data}) => {
           <div className="section-content">
             <MailIcon className="mail-icon"></MailIcon>
             <h2>{getInTouchInfo.tagline}</h2>
-            <p className="signup-success">{getInTouchInfo.successMessage}</p>
+            <h2 className="signup-success">{getInTouchInfo.successMessage}</h2>
             <form id="contact" name="contact" method="POST" action="/?success" data-netlify="true" netlify>
               <input name="email" type="email" required/>
               <input type="submit" value={getInTouchInfo.buttonText.toUpperCase()}/>
