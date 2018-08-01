@@ -69,7 +69,9 @@ if (typeof window !== 'undefined') {
 
 // MAIN COMPONENT
 export default ( {data}) => {
+  console.log(data);
   const headerInfo = data.allHeaderYaml.edges[0].node;
+  const footerInfo = data.allFooterYaml.edges[0].node;
   const whatWeDoInfo = data.allWhatWeDoYaml.edges[0].node;
   const getInTouchInfo = data.allGetInTouchYaml.edges[0].node;
   const people = data.allPeopleYaml.edges.map(e => e.node);
@@ -231,8 +233,8 @@ export default ( {data}) => {
     </div>
 
     <Footer className="site-footer">
-      <span>&copy; Complex Rehab Systems 2018</span>
-      <span>1348 Westmore Court - Stevens Point, WI, USA - 54481</span>
+      <span>&copy; {footerInfo.copyright}</span>
+      <span>{footerInfo.address}</span>
     </Footer>
 
   </div>
@@ -251,8 +253,18 @@ export const query = graphql`
         }
       }
     }
-    
-    allWhatWeDoYaml{
+
+    allFooterYaml {
+      totalCount
+      edges {
+        node {
+          copyright
+          address
+        }
+      }
+    }
+
+    allWhatWeDoYaml {
       edges {
         node {
           sectionHeading

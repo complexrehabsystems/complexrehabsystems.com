@@ -18,6 +18,12 @@ collections:
           - {label: "Tagline", name: "tagline", widget: "string"}
           - {label: "Popout Tagline", name: "popoutTagline", widget: "string"}
           - {label: "Popout Text Block", name: "popoutTextBlock", widget: "markdown"}
+      - label: "Footer"
+        name: "siteFooter"
+        file: "_data/footer/footer.yml"
+        fields:
+          - {label: "copyright", name: "copyright", widget: "string"}
+          - {label: "address", name: "address", widget: "string"}
       - label: "What We Do"
         name: "whatWeDo"
         file: "_data/what-we-do/what-we-do.yml"
