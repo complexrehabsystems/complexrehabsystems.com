@@ -75,18 +75,19 @@ if (typeof window !== 'undefined') {
   window.addEventListener('scroll', debounce(function() {
     document.getElementById('top-link').style.opacity = (pageYOffset-800);
   }, 100));
-}
-
-window.onload = () => {
-  let msg = document.querySelector(".signup-success");
-  let form = document.querySelector("#contact");
-  console.log(msg)
-  if(getParameterByName('success')){
-    msg.style = "display: block;";
-    form.style = "display: none;";
+  
+  window.onload = () => {
+    let msg = document.querySelector(".signup-success");
+    let form = document.querySelector("#contact");
     console.log(msg)
+    if(getParameterByName('success')){
+      msg.style = "display: block;";
+      form.style = "display: none;";
+      console.log(msg)
+    }
   }
 }
+
 
 
 // MAIN COMPONENT
