@@ -30,8 +30,8 @@ collections:
         fields:
           - {label: "Section Heading", name: sectionHeading, widget: string}
           - {label: "Tagline", name: whatWeDoTagline1, widget: string}
-          - {label: "Tagline", name: whatWeDoTagline2, widget: string}
-          - {label: "Tagline", name: whatWeDoTagline3, widget: string}
+          - {label: "Tagline2", name: whatWeDoTagline2, widget: string}
+          - {label: "Tagline3", name: whatWeDoTagline3, widget: string}
           - {label: "Text Block", name: whatWeDoTextBlock, widget: markdown}
       - label: "Get In Touch"
         name: "getInTouch"
