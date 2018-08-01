@@ -301,18 +301,17 @@ body {
 
     @media(min-width: $breakpoint-lg) {
         h1 {
-            max-width: 35vw;
+            max-width: 40vw;
             align-self: end;
             font-size: 40px;
         }
 
         .what-we-do-textblock {
             font-size: 20px;
-            max-width: 35vw;
+            max-width: 40vw;
             justify-self: start;
         }
 
-        /* force netlify rebuild */
     }
 
     @media(min-width: $breakpoint-xxl) {
