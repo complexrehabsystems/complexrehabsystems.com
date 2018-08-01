@@ -220,7 +220,7 @@ body {
         background: linear-gradient(180deg, rgba(52,161,221,1) 0%, rgba(15,121,199,1) 155px, rgba(52,161,221,1) 185px, rgba(40,151,207,1) 100%);
         align-items: center;
         grid-template-areas: "character tagline" "character textblock";
-        grid-column-gap: 5%;
+        grid-column-gap: 15px;
     }
 
     .tag-lines h1 {
@@ -250,7 +250,6 @@ body {
     @media(min-width: $breakpoint-md) {
         .joe-atp {
             max-height: 500px;
-            justify-self: center;
             margin-left: 0;
             margin-bottom:0;
         }
@@ -259,6 +258,7 @@ body {
     @media(min-width: $breakpoint-lg) {
         .joe-atp {
             max-height: 600px;
+            justify-self: end;
         }
     }
 
