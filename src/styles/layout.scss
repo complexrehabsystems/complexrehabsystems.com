@@ -466,8 +466,11 @@ body {
   }
 }
 
-#signup-success {
+.signup-success {
+  margin: 0;
+  text-align: center;
   color: $brand-success;
+  display: none;
 }
 
 .mail-icon {

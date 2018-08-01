@@ -59,11 +59,33 @@ const debounce = (fn, time) => {
   }
 }
 
+const getParameterByName = (name, url) => {
+    if (!url) url = window.location.href;
+    name = name.replace(/[\[\]]/g, '\\$&');
+    var regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)'),
+        results = regex.exec(url);
+    console.log(url + " " + results);
+    if (!results) return null;
+    if (!results[2]) return true; // this is a bool flag
+    return decodeURIComponent(results[2].replace(/\+/g, ' '));
+}
+
 if (typeof window !== 'undefined') {
   require('smooth-scroll')('a[href*="#"]');
   window.addEventListener('scroll', debounce(function() {
     document.getElementById('top-link').style.opacity = (pageYOffset-800);
   }, 100));
+}
+
+window.onload = () => {
+  let msg = document.querySelector(".signup-success");
+  let form = document.querySelector("#contact");
+  console.log(msg)
+  if(getParameterByName('success')){
+    msg.style = "display: block;";
+    form.style = "display: none;";
+    console.log(msg)
+  }
 }
 
 
@@ -220,11 +242,12 @@ export default ( {data}) => {
           <div className="section-content">
             <MailIcon className="mail-icon"></MailIcon>
             <h2>{getInTouchInfo.tagline}</h2>
+            <p className="signup-success">{getInTouchInfo.successMessage}</p>
             <form id="contact" name="contact" method="POST" action="/?success" data-netlify="true" netlify>
               <input name="email" type="email" required/>
               <input type="submit" value={getInTouchInfo.buttonText.toUpperCase()}/>
+              <p className="beta-closed">{getInTouchInfo.betaClosed}</p>
             </form>
-            <p className="beta-closed">{getInTouchInfo.betaClosed}</p>
             
           </div>
         </section>
