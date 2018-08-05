@@ -103,6 +103,8 @@ export default ( {data}) => {
   const developers = people.filter(p => p.role == "developer").sort((a,b)=>a.displayOrder > b.displayOrder);
 
   const socialLink = (href, icon) => {
+
+
     if(!href)
       return "";
 
@@ -110,6 +112,7 @@ export default ( {data}) => {
   }
 
   const personCard = (p) => {
+    console.log(p);
     return <div className="person">
       <img src={images[p.title]}/>
       <div className="overlay">
@@ -313,6 +316,7 @@ export const query = graphql`
           role
           linkedIn
           github
+          codepen
         }
       }
     }
