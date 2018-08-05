@@ -4,6 +4,7 @@ import Footer from "../components/footer"
 
 import LinkedInIcon from "react-icons/lib/fa/linkedin-square"
 import GithubIcon from "react-icons/lib/fa/github-square"
+import CodepenIcon from "react-icons/lib/fa/codepen"
 import AddPersonIcon from "react-icons/lib/fa/user-plus"
 import UpArrowIcon from "react-icons/lib/fa/arrow-circle-o-up"
 
@@ -120,6 +121,7 @@ export default ( {data}) => {
         <div className="social-icons">
           {socialLink(p.linkedIn, <LinkedInIcon className="social-icon" />)}
           {socialLink(p.github, <GithubIcon className="social-icon" />)}
+          {socialLink(p.codepen, <CodepenIcon className="social-icon" />)}
         </div>
       </div>
     </div>

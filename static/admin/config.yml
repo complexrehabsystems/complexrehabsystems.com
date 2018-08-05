@@ -55,3 +55,4 @@ collections:
       - {label: "Description", name: "description", widget: "markdown"}
       - {label: "Linked In", name: "linkedIn", widget: "string", required: false}
       - {label: "Github", name: "github", widget: "string", required: false}
+      - {label: "CodePen", name: "codepen", widget: "string", required: false}
