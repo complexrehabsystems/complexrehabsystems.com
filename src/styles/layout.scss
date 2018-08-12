@@ -161,7 +161,8 @@ body {
 
     .cta:hover {
         h4 {
-            color: lighten($brand-primary, 30);
+            color: saturate(lighten($brand-primary, 40), 100%);
+            text-shadow: #222 0 10px 25px;
         }
 
         .hover {
@@ -170,6 +171,9 @@ body {
     }
 
     .cta:active {
+        h4 {
+            color: saturate(lighten($brand-highlight, 30), 30%);
+        }
 
         .active {
             opacity: 1;
