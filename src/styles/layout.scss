@@ -123,6 +123,7 @@ body {
     }
 
     .hover {
+        transition: opacity .4s ease-in-out;
         position: absolute;
         top: 0;
         left: 0;
@@ -164,7 +165,6 @@ body {
         }
 
         .hover {
-            transition: opacity .4s ease-in-out;
             opacity: 1;
         }
     }
