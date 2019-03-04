@@ -18,6 +18,7 @@ collections:
           - {label: "Tagline", name: "tagline", widget: "string"}
           - {label: "Popout Tagline", name: "popoutTagline", widget: "string"}
           - {label: "Popout Text Block", name: "popoutTextBlock", widget: "markdown"}
+          - {label: "Manual Version Number", name: "version", widget: "string", default: ""}
       - label: "Footer"
         name: "siteFooter"
         file: "_data/footer/footer.yml"

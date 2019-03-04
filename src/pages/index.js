@@ -112,6 +112,8 @@ export default ( {data}) => {
   }
 
   const personCard = (p) => {
+    console.log("test");
+    console.log(reactRenderer)
     console.log(p);
     return <div className="person">
       <img src={images[p.title]}/>
@@ -119,7 +121,7 @@ export default ( {data}) => {
         <h1>{p.title}</h1>
         <h2>{p.jobTitle}</h2>
         <div className="about">
-          {remark().use(reactRenderer).processSync(p.description).contents}
+          {remark().use(reactRenderer, {sanitize: false}).processSync(p.description).contents}
         </div>
         <div className="social-icons">
           {socialLink(p.linkedIn, <LinkedInIcon className="social-icon" />)}
@@ -249,7 +251,8 @@ export default ( {data}) => {
             <MailIcon className="mail-icon"></MailIcon>
             <h2>{getInTouchInfo.tagline}</h2>
             <h2 className="signup-success">{getInTouchInfo.successMessage}</h2>
-            <form id="contact" name="contact" method="POST" action="/?success" data-netlify="true" netlify>
+
+            <form id="contact" name="contact" method="POST" data-netlify="true" netlify>
               <input name="email" type="email" required/>
               <input type="submit" value={getInTouchInfo.buttonText.toUpperCase()}/>
               <p className="beta-closed">{getInTouchInfo.betaClosed}</p>
@@ -279,6 +282,7 @@ export const query = graphql`
           tagline
           popoutTagline
           popoutTextBlock
+          version
         }
       }
     }
