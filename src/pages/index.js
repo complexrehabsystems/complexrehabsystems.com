@@ -35,6 +35,7 @@ import rightPadding from "../assets/nav-icons/crs-right-padding.png";
 import MailIcon from "react-icons/lib/fa/envelope"
 
 import joeAtp from "../assets/joe-atp.png"
+import joeAtpLeft from "../assets/joe-atp-leftwave.png"
 
 let images = {
   "Douglas Munsey": doug,
@@ -206,7 +207,7 @@ export default ( {data}) => {
 
           <div className="joe-atp">
             <div id="about-section"></div>
-            <img src={joeAtp} className="joe-atp" />
+            <img src={joeAtpLeft} className="joe-atp" />
           </div>
           <div className="tag-lines">
             <h1>{whatWeDoInfo.whatWeDoTagline1}</h1>
