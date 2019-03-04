@@ -35,7 +35,7 @@ import rightPadding from "../assets/nav-icons/crs-right-padding.png";
 import MailIcon from "react-icons/lib/fa/envelope"
 
 import joeAtp from "../assets/joe-atp.png"
-import joeAtpLeft from "../assets/joe-atp-leftwave.png"
+import joeAtpLeft from "../assets/Joe-ATP-LeftWave.png"
 
 let images = {
   "Douglas Munsey": doug,
