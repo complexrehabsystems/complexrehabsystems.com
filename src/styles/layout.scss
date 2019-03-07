@@ -370,6 +370,7 @@ body {
         background-color: darken($brand-primary, 5);
         border-radius: 5px;
         margin-bottom: 40px;
+        transition: background-color .2s ease-in-out;
 
         @media (min-width: $breakpoint-md) {
             flex-direction: row;
