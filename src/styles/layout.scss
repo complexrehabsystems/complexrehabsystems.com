@@ -38,7 +38,10 @@ body {
 .layout {
     height: 100%;
     display: grid;
-    grid-template-areas: "header" "content" "footer";
+    grid-template-areas:
+      "header"
+      "content"
+      "footer";
     grid-template-rows: auto 1fr auto;
 }
 
