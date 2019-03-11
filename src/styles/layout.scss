@@ -450,6 +450,7 @@ body {
             background-color: darken($brand-primary, 5);
             color: $brand-light;
             opacity: 0;
+            transition: opacity .3s ease-in-out;
             text-align: center;
             display: flex;
             flex-direction: column;
