@@ -221,10 +221,10 @@ export default ({ data }) => {
                     <h1>The Team</h1>
 
                     <div className="section-content">
-                        <h2>Leadership</h2>
+                        {/*<h2>Leadership</h2>
                         <div className="people">
                             {leadership.map(p => personCard(p))}
-                        </div>
+                        </div>*/}
 
                         <h2>Developers</h2>
                         <div className="people">
