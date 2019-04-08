@@ -45,6 +45,7 @@ let images = {
     "Patrick Abadi": patrick,
     "Jonathan Gilmore": jonathan,
     "Hima Bharathi Adusumilli": hima,
+    "Nick Kubisiak": nick,
 }
 
 var remark = require('remark'),
