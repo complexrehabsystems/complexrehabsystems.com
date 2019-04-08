@@ -19,7 +19,7 @@ import patrick from "../assets/patrick.jpg"
 import tom from "../assets/tom.jpg"
 import avatar from "../assets/avatar.png"
 import hima from "../assets/himadusumilli.jpg"
-import Nick from "../assets/Nick.jpg"
+import nick from "../assets/Nick.jpg"
 
 import activeInfo from "../assets/nav-icons/crs-active-info.png";
 import activeTeam from "../assets/nav-icons/crs-active-team.png";
