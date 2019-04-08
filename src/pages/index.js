@@ -14,11 +14,12 @@ import logo from "../assets/banner_logo.svg"
 
 import daniel from "../assets/daniel.png"
 import doug from "../assets/doug.png"
-import jonathan from "../assets/jonathan.jpg"
+import jonathan from "../assets/Jonathan.jpg"
 import patrick from "../assets/patrick.jpg"
 import tom from "../assets/tom.jpg"
 import avatar from "../assets/avatar.png"
 import hima from "../assets/himadusumilli.jpg"
+import Nick from "../assets/Nick.jpg"
 
 import activeInfo from "../assets/nav-icons/crs-active-info.png";
 import activeTeam from "../assets/nav-icons/crs-active-team.png";
