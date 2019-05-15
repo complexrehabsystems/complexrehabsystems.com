@@ -41,11 +41,11 @@ import joeAtpLeft from "../assets/Joe-ATP-LeftWave.png"
 let images = {
     "Douglas Munsey": doug,
     "Thomas Whelan": tom,
-    "Daniel Packard": daniel,
-    "Patrick Abadi": patrick,
-    "Jonathan Gilmore": jonathan,
+    "Daniel": daniel,
+    "Patrick": patrick,
+    "Jonathan": jonathan,
     "Hima Bharathi Adusumilli": hima,
-    "Nick Kubisiak": nick,
+    "Nick": nick,
 }
 
 var remark = require('remark'),
