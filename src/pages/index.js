@@ -12,14 +12,14 @@ import "../styles/layout.scss"
 
 import logo from "../assets/banner_logo.svg"
 
-import daniel from "../assets/daniel.png"
+import daniel from "../assets/CRS_Daniel.jpg"
 import doug from "../assets/doug.png"
-import jonathan from "../assets/Jonathan.jpg"
-import patrick from "../assets/patrick.jpg"
+import jonathan from "../assets/CRS_Jonathan.jpg"
+import patrick from "../assets/CRS_Patrick.jpg"
 import tom from "../assets/tom.jpg"
 import avatar from "../assets/avatar.png"
 import hima from "../assets/himadusumilli.jpg"
-import nick from "../assets/Nick.jpg"
+import nick from "../assets/CRS_Nick.jpg"
 
 import activeInfo from "../assets/nav-icons/crs-active-info.png";
 import activeTeam from "../assets/nav-icons/crs-active-team.png";
