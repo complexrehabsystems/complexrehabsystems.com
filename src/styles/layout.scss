@@ -364,15 +364,15 @@ body {
     }
 
     .hiring-card {
-        width: 304px;
-        height: 304px;
+        width: 355px;
+        height: 567px;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        background-color: darken($brand-primary, 5);
+        background-color: $brand-primary;
         border-radius: 5px;
-        margin-bottom: 40px;
+        margin-bottom: 15px;
         transition: background-color .2s ease-in-out;
 
         @media (min-width: $breakpoint-md) {
@@ -400,6 +400,7 @@ body {
 
         .social-icon {
             width: 100%;
+            height: 50px;
             align-self: center;
             color: $brand-light;
             margin-bottom: 50px;
@@ -407,12 +408,12 @@ body {
     }
 
     .hiring-card:hover {
-        background-color:$brand-primary;
+        background-color:lighten($brand-primary, 3);
     }
 
     .person {
         width: 400px;
-        height: 400px;
+        height: 650px;
         padding: 10px;
         display: flex;
         flex-direction: column;
@@ -440,15 +441,15 @@ body {
         }
 
         img {
-            height: 80%;
+            height: 90%;
             border-radius: 5px;
             transition: opacity .3s ease-in-out;
         }
 
         .overlay {
             width: 100%;
-            height: 100%;
-            margin-top: -365px;
+            height: 600px;
+            margin-top: -610px;
             padding: 15px;
             background-color: darken($brand-primary, 5);
             color: $brand-light;

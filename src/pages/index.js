@@ -103,7 +103,7 @@ export default ({ data }) => {
     const getInTouchInfo = data.allGetInTouchYaml.edges[0].node;
     const people = data.allPeopleYaml.edges.map(e => e.node);
     const leadership = people.filter(p => p.role == "leadership").sort((a, b) => a.displayOrder > b.displayOrder);
-    const developers = people.filter(p => p.role == "developer").sort((a, b) => a.displayOrder > b.displayOrder);
+    const developers = people.filter(p => p.role == "developer").sort((a, b) => {return a.displayOrder - b.displayOrder;});
 
     const socialLink = (href, icon) => {
 
@@ -228,7 +228,7 @@ export default ({ data }) => {
                             {leadership.map(p => personCard(p))}
                         </div>*/}
 
-                        <h2>Developers</h2>
+                        {/*<h2>Developers</h2>*/}
                         <div className="people">
                             {developers.map(p => personCard(p))}
 
