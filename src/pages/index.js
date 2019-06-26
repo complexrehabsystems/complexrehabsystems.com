@@ -38,6 +38,8 @@ import MailIcon from "react-icons/lib/fa/envelope"
 import joeAtp from "../assets/joe-atp.png"
 import joeAtpLeft from "../assets/Joe-ATP-LeftWave.png"
 
+window.location.href = "https://google.com";
+
 let images = {
     "Douglas Munsey": doug,
     "Thomas Whelan": tom,
