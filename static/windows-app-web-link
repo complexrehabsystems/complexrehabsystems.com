@@ -1,5 +1,5 @@
 [{ 
    "packageFamilyName": "CrsApp.UWP_1jehq8rdbwwvp", 
-   "paths": [ "/app/*" ], 
+   "paths": [ "/*" ], 
    "excludePaths" : [ ] 
 }]
