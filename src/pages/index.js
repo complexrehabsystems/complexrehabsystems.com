@@ -75,6 +75,10 @@ const getParameterByName = (name, url) => {
 }
 
 if (typeof window !== 'undefined') {
+
+    if(window.location.search)
+        window.location.href = "crs-app:" + window.location.search.replace("?", "");
+
     require('smooth-scroll')('a[href*="#"]');
     window.addEventListener('scroll', debounce(function () {
         document.getElementById('top-link').style.opacity = (pageYOffset - 800);
