@@ -8,7 +8,10 @@ pipeline {
     }
     stage('build') {
       steps {
-        sh 'gatsby build'
+        sh '''PATH=$PATH:/c/Program\\ Files/Git/bin
+PATH=$PATH:/c/Program\\ Files/Git/usr/bin
+
+gatsby build'''
       }
     }
   }
