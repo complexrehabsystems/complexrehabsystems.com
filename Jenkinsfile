@@ -8,7 +8,9 @@ pipeline {
     }
     stage('build') {
       steps {
-        sh 'gatsby build'
+        sh '''npm --version
+git --version
+'''
       }
     }
   }
