@@ -6,5 +6,10 @@ pipeline {
         git(url: 'https://github.com/complexrehabsystems/complexrehabsystems.com', branch: 'master', changelog: true, poll: true)
       }
     }
+    stage('build') {
+      steps {
+        sh 'gatsby build'
+      }
+    }
   }
 }
