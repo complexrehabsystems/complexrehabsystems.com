@@ -11,7 +11,10 @@ pipeline {
         sh '''npm --version
 git --version
 '''
-        nodejs 'node'
+        nodejs('node') {
+          sh 'gatsby build'
+        }
+
       }
     }
   }
