@@ -11,6 +11,7 @@ pipeline {
         sh '''npm --version
 git --version
 '''
+        nodejs 'node'
       }
     }
   }
