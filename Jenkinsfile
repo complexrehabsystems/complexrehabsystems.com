@@ -12,7 +12,9 @@ pipeline {
 git --version
 '''
         nodejs('node') {
-          sh 'gatsby build'
+          sh '''npm install -g gatsby
+npm install
+gatsby build'''
         }
 
       }
