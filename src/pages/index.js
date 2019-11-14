@@ -255,6 +255,9 @@ export default ({ data }) => {
                         <h2>{getInTouchInfo.tagline}</h2>
                         <h2 className="signup-success">{getInTouchInfo.successMessage}</h2>
                         <form id="contact" name="contact" method="POST" action="/?success" data-netlify="true" netlify>
+                            <p class="hidden">
+                              <label>Don’t fill this out if you're human: <input name="bot-field" /></label>
+                            </p>
                             <input type="hidden" name="form-name" value="contact" />
                             <input name="email" type="email" required />
                             <input type="submit" value={getInTouchInfo.buttonText.toUpperCase()} />
