@@ -77,7 +77,7 @@ if (typeof window !== 'undefined') {
 
     window.onload = () => {
         let msg = document.querySelector(".signup-success");
-        let form = document.querySelector("#contact");
+        let form = document.querySelector("#signup");
         console.log(msg)
         if (getParameterByName('success')) {
             msg.style = "display: block;";
@@ -236,7 +236,7 @@ export default ({ data }) => {
 
                 </section>
 
-                <section id="signup">
+                <section id="signup-section">
                     <h1>{getInTouchInfo.sectionHeading}</h1>
                     <div className="section-content">
                         <SignupIcon className="signup-icon"></SignupIcon>
