@@ -13,13 +13,8 @@ import "../styles/layout.scss"
 import logo from "../assets/banner_logo.svg"
 
 import daniel from "../assets/CRS_Daniel.jpg"
-import doug from "../assets/doug.png"
-import jonathan from "../assets/CRS_Jonathan.jpg"
 import patrick from "../assets/CRS_Patrick.jpg"
-import tom from "../assets/tom.jpg"
 import avatar from "../assets/avatar.png"
-import hima from "../assets/himadusumilli.jpg"
-import nick from "../assets/CRS_Nick.jpg"
 
 import activeInfo from "../assets/nav-icons/crs-active-info.png";
 import activeTeam from "../assets/nav-icons/crs-active-team.png";
@@ -34,18 +29,14 @@ import leftPadding from "../assets/nav-icons/crs-left-padding.png";
 import rightPadding from "../assets/nav-icons/crs-right-padding.png";
 
 import MailIcon from "react-icons/lib/fa/envelope"
+import SignupIcon from "react-icons/lib/fa/user-plus"
 
 import joeAtp from "../assets/joe-atp.png"
 import joeAtpLeft from "../assets/Joe-ATP-LeftWave.png"
 
 let images = {
-    "Douglas Munsey": doug,
-    "Thomas Whelan": tom,
     "Daniel": daniel,
     "Patrick": patrick,
-    "Jonathan": jonathan,
-    "Hima Bharathi Adusumilli": hima,
-    "Nick": nick,
 }
 
 var remark = require('remark'),
@@ -119,9 +110,6 @@ export default ({ data }) => {
     }
 
     const personCard = (p) => {
-        console.log("test");
-        console.log(reactRenderer)
-        console.log(p);
         return <div className="person">
             <img src={images[p.title]} />
             <div className="overlay">
@@ -251,17 +239,17 @@ export default ({ data }) => {
                 <section id="signup">
                     <h1>{getInTouchInfo.sectionHeading}</h1>
                     <div className="section-content">
-                        <MailIcon className="mail-icon"></MailIcon>
+                        <SignupIcon className="signup-icon"></SignupIcon>
                         <h2>{getInTouchInfo.tagline}</h2>
                         <h2 className="signup-success">{getInTouchInfo.successMessage}</h2>
-                        <form id="contact" name="contact" method="POST" action="/?success" data-netlify="true" netlify>
+                        <form id="signup" name="signup" method="POST" action="/?success" data-netlify="true" netlify>
                             <p className="hidden">
                               <label>Don’t fill this out if you're human: <input name="bot-field" /></label>
                             </p>
-                            <input type="hidden" name="form-name" value="contact" />
-                            <input name="email" type="email" required />
+                            <input type="hidden" name="form-name" value="signup" />
+                            <input name="organization" type="text" placeholder="organization inc." required />
+                            <input name="email" type="email" placeholder="email@example.com" required />
                             <input type="submit" value={getInTouchInfo.buttonText.toUpperCase()} />
-                            <p className="beta-closed">{getInTouchInfo.betaClosed}</p>
                         </form>
 
                     </div>
