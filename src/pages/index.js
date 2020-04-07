@@ -67,6 +67,7 @@ const getParameterByName = (name, url) => {
 
 if (typeof window !== 'undefined') {
 
+    console.log("PINEAPPLES");
     if(window.location.search)
         window.location.href = "crs-app:" + window.location.search.replace("?", "");
 
@@ -76,7 +77,7 @@ if (typeof window !== 'undefined') {
     }, 100));
 
     window.onload = () => {
-        console.log("Bananas")
+        console.log("Bananas");
         let msg = document.querySelector(".signup-success");
         let form = document.querySelector("#signup");
         console.log(msg)
