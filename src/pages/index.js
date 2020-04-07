@@ -76,6 +76,7 @@ if (typeof window !== 'undefined') {
     }, 100));
 
     window.onload = () => {
+        console.log("Bananas")
         let msg = document.querySelector(".signup-success");
         let form = document.querySelector("#signup");
         console.log(msg)
@@ -86,8 +87,6 @@ if (typeof window !== 'undefined') {
         }
     }
 }
-
-
 
 // MAIN COMPONENT
 export default ({ data }) => {
