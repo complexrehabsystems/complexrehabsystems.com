@@ -59,7 +59,6 @@ const getParameterByName = (name, url) => {
     name = name.replace(/[\[\]]/g, '\\$&');
     var regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)'),
         results = regex.exec(url);
-    console.log(url + " " + results);
     if (!results) return null;
     if (!results[2]) return true; // this is a bool flag
     return decodeURIComponent(results[2].replace(/\+/g, ' '));
@@ -67,9 +66,10 @@ const getParameterByName = (name, url) => {
 
 if (typeof window !== 'undefined') {
 
-    console.log("PINEAPPLES");
-    if(window.location.search)
+    if(window.location.search && window.location.search !== "?success" ) {
         window.location.href = "crs-app:" + window.location.search.replace("?", "");
+        window.close();
+    }
 
     require('smooth-scroll')('a[href*="#"]');
     window.addEventListener('scroll', debounce(function () {
@@ -77,21 +77,19 @@ if (typeof window !== 'undefined') {
     }, 100));
 
     window.onload = () => {
-        console.log("Bananas");
         let msg = document.querySelector(".signup-success");
+        let ctaTagline = document.querySelector(".cta-tagline");
         let form = document.querySelector("#signup");
-        console.log(msg)
         if (getParameterByName('success')) {
             msg.style = "display: block;";
             form.style = "display: none;";
-            console.log(msg)
+            ctaTagline.style = "display: none;";
         }
     }
 }
 
 // MAIN COMPONENT
 export default ({ data }) => {
-    console.log(data);
     const headerInfo = data.allHeaderYaml.edges[0].node;
     const footerInfo = data.allFooterYaml.edges[0].node;
     const whatWeDoInfo = data.allWhatWeDoYaml.edges[0].node;
@@ -240,9 +238,9 @@ export default ({ data }) => {
                     <h1>{getInTouchInfo.sectionHeading}</h1>
                     <div className="section-content">
                         <SignupIcon className="signup-icon"></SignupIcon>
-                        <h2>{getInTouchInfo.tagline}</h2>
+                        <h2 className="cta-tagline">{getInTouchInfo.tagline}</h2>
                         <h2 className="signup-success">{getInTouchInfo.successMessage}</h2>
-                        <form id="signup" name="signup" method="POST" action="/?success" data-netlify="true" netlify>
+                        <form id="signup" name="signup" method="POST" action="/?success" autoComplete="off" data-netlify="true" netlify>
                             <p className="hidden">
                               <label>Don’t fill this out if you're human: <input name="bot-field" /></label>
                             </p>
