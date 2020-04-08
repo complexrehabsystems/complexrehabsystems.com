@@ -56,7 +56,6 @@ body {
     grid-area: content;
     display: flex;
     flex-direction: column;
-    align-items: center;
 
     section {
         min-height: 100vh;
@@ -65,6 +64,25 @@ body {
         flex-direction: column;
         justify-content: center;
         align-items: center;
+
+        &.covid-alert {
+            min-height: 0px;
+            background-color: lighten($brand-highlight, 30);
+            padding-bottom: 25px;
+
+            h1 {
+                background-color: $brand-highlight;
+            }
+
+            p {
+                text-align: center;
+            }
+
+            .section-content {
+                font-size: 1.25em;
+            }
+
+        }
 
         h1 {
             width: 100%;
@@ -80,6 +98,8 @@ body {
             flex-direction: column;
             justify-content: center;
             align-items: center;
+            padding-left: 5px;
+            padding-right: 10px;
         }
     }
 
@@ -226,7 +246,6 @@ body {
     justify-content: center;
     align-items: center;
     padding: 0 30px 0 30px;
-    border-bottom: 1px solid $brand-dark;
 
     @media(min-width: $breakpoint-md) {
         background: linear-gradient(180deg, rgba(52,161,221,1) 0%, rgba(15,121,199,1) 155px, rgba(52,161,221,1) 185px, rgba(40,151,207,1) 100%);
@@ -346,8 +365,47 @@ body {
     }
 }
 
+#pricing {
+    min-height: 0;
+    padding-bottom: 50px;
+    background-color: darken($brand-light, 5);
+
+    h1 {
+        background-color: darken($brand-light, 5);
+        color: $brand-dark;
+    }
+
+    .pricing {
+        width: 60vw;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: flex-start;
+        flex-wrap: wrap;
+    }
+
+    .pricing-block {
+        min-width: 16vw;
+        width: 20%;
+        height: 50vh;
+        border-radius: 5px;
+        border: 1px solid coral;
+        margin-bottom: 40px;
+        h1 {
+            background: none;
+        }
+    }
+
+
+    @media(min-width: $breakpoint-md) {
+        .pricing {
+            flex-direction: row;
+        }
+    }
+
+}
+
 #team {
-    cursor: pointer;
     background-color: darken($brand-light, 5);
 
     h1 {

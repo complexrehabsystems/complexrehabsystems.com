@@ -14,7 +14,6 @@ import logo from "../assets/banner_logo.svg"
 
 import daniel from "../assets/CRS_Daniel.jpg"
 import patrick from "../assets/CRS_Patrick.jpg"
-import avatar from "../assets/avatar.png"
 
 import activeInfo from "../assets/nav-icons/crs-active-info.png";
 import activeTeam from "../assets/nav-icons/crs-active-team.png";
@@ -28,10 +27,9 @@ import staticContact from "../assets/nav-icons/crs-static-contact.png";
 import leftPadding from "../assets/nav-icons/crs-left-padding.png";
 import rightPadding from "../assets/nav-icons/crs-right-padding.png";
 
-import MailIcon from "react-icons/lib/fa/envelope"
 import SignupIcon from "react-icons/lib/fa/user-plus"
+import AlertIcon from "react-icons/lib/fa/exclamation-triangle"
 
-import joeAtp from "../assets/joe-atp.png"
 import joeAtpLeft from "../assets/Joe-ATP-LeftWave.png"
 
 let images = {
@@ -64,6 +62,22 @@ const getParameterByName = (name, url) => {
     return decodeURIComponent(results[2].replace(/\+/g, ' '));
 }
 
+function getHashParams() {
+    console.log(window.location.hash);
+
+    var hashParams = {};
+    var e,
+        a = /\+/g,  // Regex for replacing addition symbol with a space
+        r = /([^&;=]+)=?([^&;]*)/g,
+        d = function (s) { return decodeURIComponent(s.replace(a, " ")); },
+        q = window.location.hash.substring(1);
+
+    while (e = r.exec(q))
+        hashParams[d(e[1])] = d(e[2]);
+
+    return hashParams;
+}
+
 if (typeof window !== 'undefined') {
 
     if(window.location.search && window.location.search !== "?success" ) {
@@ -76,7 +90,10 @@ if (typeof window !== 'undefined') {
         document.getElementById('top-link').style.opacity = (pageYOffset - 800);
     }, 100));
 
+
     window.onload = () => {
+        let hashParams = getHashParams();
+        console.log(hashParams.signup);
         let msg = document.querySelector(".signup-success");
         let ctaTagline = document.querySelector(".cta-tagline");
         let form = document.querySelector("#signup");
@@ -95,7 +112,6 @@ export default ({ data }) => {
     const whatWeDoInfo = data.allWhatWeDoYaml.edges[0].node;
     const getInTouchInfo = data.allGetInTouchYaml.edges[0].node;
     const people = data.allPeopleYaml.edges.map(e => e.node);
-    const leadership = people.filter(p => p.role == "leadership").sort((a, b) => a.displayOrder > b.displayOrder);
     const developers = people.filter(p => p.role == "developer").sort((a, b) => {return a.displayOrder - b.displayOrder;});
 
     const socialLink = (href, icon) => {
@@ -167,12 +183,12 @@ export default ({ data }) => {
                     </div>
                 </a>
 
-                <a href="#team">
+                <a href="#pricing">
                     <div className="cta">
                         <img src={staticTeam} className="cta-icon static" />
                         <img src={hoverTeam} className="cta-icon hover" />
                         <img src={activeTeam} className="cta-icon active" />
-                        <h4>JOIN OUR TEAM</h4>
+                        <h4>PRICING</h4>
                     </div>
                 </a>
 
@@ -181,7 +197,7 @@ export default ({ data }) => {
                         <img src={staticContact} className="cta-icon static" />
                         <img src={hoverContact} className="cta-icon hover" />
                         <img src={activeContact} className="cta-icon active" />
-                        <h4>GET IN TOUCH</h4>
+                        <h4>SIGN UP NOW</h4>
                     </div>
                 </a>
 
@@ -195,6 +211,14 @@ export default ({ data }) => {
 
             <div className="sections">
 
+                <section id="covid-announcement" className="covid-alert">
+                    <h1><AlertIcon></AlertIcon> COVID 19 announcement</h1>
+                    <div className="section-content">
+                        <p>Due to the recent covid-19 crisis, CRS is releasing early and for free.</p>
+                        <p><em>See offer details below!</em></p>
+                    </div>
+                </section>
+
                 <div id="about">
 
                     <div className="joe-atp">
@@ -207,22 +231,38 @@ export default ({ data }) => {
                         <h1>{whatWeDoInfo.whatWeDoTagline3}</h1>
                     </div>
                     <div className="what-we-do-textblock">{remark().use(reactRenderer).processSync(whatWeDoInfo.whatWeDoTextBlock).contents}</div>
+                    <div className="promo-video"></div>
                 </div>
 
-                <section id="team">
+                <section id="pricing">
+                    <h1>Pricing</h1>
+                    <div className="section-content">
+                        <h2>Software Pricing</h2>
+                        <div className="pricing">
+                            <div className="pricing-block">
+                                <h1>Standard</h1>
+                                <ul className="features">
+                                    <li>Clinical evaluation forms</li>
+                                    <li>Work offline</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <h2>Hardware Pricing</h2>
+                        <div className="pricing">
+                            <div className="pricing-block">
+                                <h1>Standard</h1>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                {/*<section id="team">
                     <h1>The Team</h1>
 
                     <div className="section-content">
-                        {/*<h2>Leadership</h2>
-                        <div className="people">
-                            {leadership.map(p => personCard(p))}
-                        </div>*/}
-
-                        {/*<h2>Developers</h2>*/}
                         <div className="people">
                             {developers.map(p => personCard(p))}
 
-                            {/* NOW HIRING CARD */}
                             <a className="hiring-card" href="https://complexrehabsystems.github.io/job-descriptions">
                                 <h1>We're Hiring!</h1>
                                 <p>Click Here to Learn More</p>
@@ -231,8 +271,7 @@ export default ({ data }) => {
                         </div>
 
                     </div>
-
-                </section>
+                </section>*/}
 
                 <section id="signup-section">
                     <h1>{getInTouchInfo.sectionHeading}</h1>
