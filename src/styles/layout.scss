@@ -702,7 +702,7 @@ body {
 }
 
 .privacy-policy {
-    padding: 100px;
+    padding: 20px;
 
     ol {
         margin-top: 20px;
@@ -710,5 +710,11 @@ body {
 
     .small-link {
         font-size: 0.6em;
+    }
+
+    @media(min-width: $breakpoint-md) {
+        padding: 50px;
+        max-width: 960px;
+        margin: 0 auto;
     }
 }
