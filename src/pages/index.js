@@ -78,6 +78,25 @@ function getHashParams() {
     return hashParams;
 }
 
+function setSuccessMessageVisibility() {
+    let msg = document.querySelector(".signup-success");
+    let ctaTagline = document.querySelector(".cta-tagline");
+    let form = document.querySelector("#signup");
+    if (getParameterByName('success')) {
+        msg.style = "display: block;";
+        form.style = "display: none;";
+        ctaTagline.style = "display: none;";
+    }
+}
+
+function respectHashLink() {
+    if(!window.location.hash)
+        return;
+
+    let h = window.location.hash;
+    window.location.hash = h;
+}
+
 if (typeof window !== 'undefined') {
 
     if(window.location.search && window.location.search !== "?success" ) {
@@ -86,22 +105,15 @@ if (typeof window !== 'undefined') {
     }
 
     require('smooth-scroll')('a[href*="#"]');
+
     window.addEventListener('scroll', debounce(function () {
         document.getElementById('top-link').style.opacity = (pageYOffset - 800);
     }, 100));
 
 
     window.onload = () => {
-        let hashParams = getHashParams();
-        console.log(hashParams.signup);
-        let msg = document.querySelector(".signup-success");
-        let ctaTagline = document.querySelector(".cta-tagline");
-        let form = document.querySelector("#signup");
-        if (getParameterByName('success')) {
-            msg.style = "display: block;";
-            form.style = "display: none;";
-            ctaTagline.style = "display: none;";
-        }
+        setSuccessMessageVisibility();
+        respectHashLink();
     }
 }
 
@@ -183,7 +195,7 @@ export default ({ data }) => {
                     </div>
                 </a>
 
-                <a href="#pricing">
+                <a href="#pricing-section">
                     <div className="cta">
                         <img src={staticTeam} className="cta-icon static" />
                         <img src={hoverTeam} className="cta-icon hover" />
@@ -192,7 +204,7 @@ export default ({ data }) => {
                     </div>
                 </a>
 
-                <a href="#signup">
+                <a href="#signup-section">
                     <div className="cta">
                         <img src={staticContact} className="cta-icon static" />
                         <img src={hoverContact} className="cta-icon hover" />
@@ -212,7 +224,9 @@ export default ({ data }) => {
             <div className="sections">
 
                 <section id="covid-announcement" className="covid-alert">
-                    <h1><AlertIcon></AlertIcon> COVID 19 announcement</h1>
+                    <h1>
+                    <AlertIcon></AlertIcon> COVID 19 Announcement
+                    </h1>
                     <div className="section-content">
                         <p>Due to the recent covid-19 crisis, CRS is releasing early and for free.</p>
                         <p><em>See offer details below!</em></p>
@@ -234,23 +248,46 @@ export default ({ data }) => {
                     <div className="promo-video"></div>
                 </div>
 
-                <section id="pricing">
+                <section id="pricing-section">
+
                     <h1>Pricing</h1>
+
                     <div className="section-content">
-                        <h2>Software Pricing</h2>
                         <div className="pricing">
-                            <div className="pricing-block">
-                                <h1>Standard</h1>
-                                <ul className="features">
-                                    <li>Clinical evaluation forms</li>
-                                    <li>Work offline</li>
-                                </ul>
+
+                            <div className="pricing-category">
+                                <h2>Startup Fee</h2>
+                                <div className="pricing-block">
+                                    <h3>Features</h3>
+                                    <ul className="features">
+                                        <li>Intel RealSense &trade; Depth Sensor</li>
+                                        <li>Ruggedized Sensor Mount</li>
+                                    </ul>
+                                    <h3 className="highlight">LIMITED TIME OFFER</h3>
+                                    <p className="price-value">
+                                        <span className="linethrough">$299.99</span>
+                                        <span>$199.99</span>
+                                    </p>
+                                </div>
                             </div>
-                        </div>
-                        <h2>Hardware Pricing</h2>
-                        <div className="pricing">
-                            <div className="pricing-block">
-                                <h1>Standard</h1>
+
+                            <div className="pricing-category">
+                                <h2>Software Subscription</h2>
+                                <div className="pricing-block">
+                                    <h3>Features</h3>
+                                    <ul className="features">
+                                        <li>Clinical evaluation forms</li>
+                                        <li>Work offline</li>
+                                    </ul>
+                                    <h3 className="highlight">LIMITED TIME OFFER</h3>
+                                    <p className="price-value">
+                                        <span className="linethrough">$89.99/mo</span>
+                                        <span>FREE</span>
+                                    </p>
+                                    <p className="price-value">
+                                    (free for the duration of covid-19 pandemic)
+                                    </p>
+                                </div>
                             </div>
                         </div>
                     </div>
