@@ -107,7 +107,9 @@ if (typeof window !== 'undefined') {
     require('smooth-scroll')('a[href*="#"]');
 
     window.addEventListener('scroll', debounce(function () {
-        document.getElementById('top-link').style.opacity = (pageYOffset - 800);
+        let topLink = document.getElementById('top-link')
+        if(topLink)
+            topLink.style.opacity = (pageYOffset - 800);
     }, 100));
 
 

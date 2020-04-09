@@ -700,3 +700,15 @@ body {
 .hidden { 
     display: none;   
 }
+
+.privacy-policy {
+    padding: 100px;
+
+    ol {
+        margin-top: 20px;
+    }
+
+    .small-link {
+        font-size: 0.6em;
+    }
+}
