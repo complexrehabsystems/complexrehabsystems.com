@@ -281,7 +281,7 @@ export default ({ data }) => {
                                     </ul>
                                     <h3 className="highlight">LIMITED TIME OFFER</h3>
                                     <p className="price-value">
-                                        <span className="linethrough">$89.99/mo</span>
+                                        <span className="linethrough">$89.99/mo/user</span>
                                         <span>FREE</span>
                                     </p>
                                     <p className="price-value">
