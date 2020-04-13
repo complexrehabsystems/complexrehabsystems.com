@@ -99,6 +99,7 @@ function respectHashLink() {
 
 if (typeof window !== 'undefined') {
 
+
     if(window.location.search && window.location.search !== "?success" ) {
         window.location.href = "crs-app:" + window.location.search.replace("?", "");
         window.close();
