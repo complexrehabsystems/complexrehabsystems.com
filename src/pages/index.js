@@ -111,10 +111,10 @@ function respectHashLink() {
 
 if (typeof window !== 'undefined') {
 
-    // if(window.location.search && window.location.search !== "?success" ) {
-    //     window.location.href = "crs-app:" + window.location.search.replace("?", "");
-    //     window.close();
-    // }
+    if(window.location.search && window.location.search !== "?success" ) {
+        window.location.href = "crs-app:" + window.location.search.replace("?", "");
+        window.close();
+    }
 
     require('smooth-scroll')('a[href*="#"]');
 
@@ -127,14 +127,6 @@ if (typeof window !== 'undefined') {
 
 
     window.onload = () => {
-        let msg = document.querySelector(".signup-success");
-        let form = document.querySelector("#contact");
-        console.log(msg)
-        if (getParameterByName('success')) {
-            msg.style = "display: block;";
-            form.style = "display: none;";
-            console.log(msg)
-        }
         setSuccessMessageVisibility();
         respectHashLink();
     }
@@ -148,7 +140,6 @@ export default ({ data }) => {
     const whatWeDoInfo = data.allWhatWeDoYaml.edges[0].node;
     const getInTouchInfo = data.allGetInTouchYaml.edges[0].node;
     const people = data.allPeopleYaml.edges.map(e => e.node);
-    const leadership = people.filter(p => p.role == "leadership").sort((a, b) => a.displayOrder > b.displayOrder);
     const developers = people.filter(p => p.role == "developer").sort((a, b) => {return a.displayOrder - b.displayOrder;});
 
     const socialLink = (href, icon) => {
