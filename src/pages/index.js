@@ -74,15 +74,58 @@ const getParameterByName = (name, url) => {
     return decodeURIComponent(results[2].replace(/\+/g, ' '));
 }
 
+function getHashParams() {
+    console.log(window.location.hash);
+
+    var hashParams = {};
+    var e,
+        a = /\+/g,  // Regex for replacing addition symbol with a space
+        r = /([^&;=]+)=?([^&;]*)/g,
+        d = function (s) { return decodeURIComponent(s.replace(a, " ")); },
+        q = window.location.hash.substring(1);
+
+    while (e = r.exec(q))
+        hashParams[d(e[1])] = d(e[2]);
+
+    return hashParams;
+}
+
+function setSuccessMessageVisibility() {
+    let msg = document.querySelector(".signup-success");
+    let ctaTagline = document.querySelector(".cta-tagline");
+    let form = document.querySelector("#signup");
+    if (getParameterByName('success')) {
+        msg.style = "display: block;";
+        form.style = "display: none;";
+        ctaTagline.style = "display: none;";
+    }
+}
+
+function respectHashLink() {
+    if(!window.location.hash)
+        return;
+
+    let h = window.location.hash;
+    window.location.hash = h;
+}
+
 if (typeof window !== 'undefined') {
 
     if(window.location.search)
+    if(window.location.search && window.location.search !== "?success" ) {
         window.location.href = "crs-app:" + window.location.search.replace("?", "");
+        window.close();
+    }
 
     require('smooth-scroll')('a[href*="#"]');
+
     window.addEventListener('scroll', debounce(function () {
         document.getElementById('top-link').style.opacity = (pageYOffset - 800);
+        let topLink = document.getElementById('top-link')
+        if(topLink)
+            topLink.style.opacity = (pageYOffset - 800);
     }, 100));
+
 
     window.onload = () => {
         let msg = document.querySelector(".signup-success");
@@ -93,10 +136,10 @@ if (typeof window !== 'undefined') {
             form.style = "display: none;";
             console.log(msg)
         }
+        setSuccessMessageVisibility();
+        respectHashLink();
     }
 }
-
-
 
 // MAIN COMPONENT
 export default ({ data }) => {
