@@ -12,11 +12,11 @@ export default ({ data }) => {
     <div className="content">
 
       <div>
-        <h1>Document Links</h1>
+        <h1>User Manuals</h1>
     </div>
 
       <div>
-        <h1>Video Embed</h1>
+        <h1>Video Tutorials</h1>
     </div>
 
       <div>

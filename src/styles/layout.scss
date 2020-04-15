@@ -701,6 +701,11 @@ body {
     display: none;   
 }
 
+.docs>.content>div>h1 {
+    padding-left: 0;
+    padding-right: 0;
+}
+
 .docs,
 .privacy-policy {
     header {
@@ -721,6 +726,7 @@ body {
 
     .small-link {
         font-size: 0.6em;
+        margin-top: 10px;
     }
 
     h1, .content {
