@@ -10,6 +10,10 @@ footer {
   border-top: 8px solid $brand-highlight;
   z-index: 2;
 
+  a {
+    color: #148fce;
+  }
+
   .footer-items {
     display: flex;
     flex-direction: column;

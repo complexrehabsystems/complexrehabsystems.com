@@ -51,14 +51,12 @@ body {
 
 .content {
     margin: 0;
-    min-height: 100vh;
     width: 100%;
     grid-area: content;
     display: flex;
     flex-direction: column;
 
     section {
-        min-height: 100vh;
         width: 100vw;
         display: flex;
         flex-direction: column;
@@ -68,7 +66,7 @@ body {
         &.covid-alert {
             min-height: 0px;
             background-color: lighten($brand-highlight, 30);
-            padding-bottom: 25px;
+            padding-bottom: 15px;
 
             h1 {
                 background-color: $brand-highlight;
@@ -76,6 +74,7 @@ body {
 
             p {
                 text-align: center;
+                padding: 0px;
             }
 
             .section-content {
@@ -100,6 +99,7 @@ body {
             align-items: center;
             padding-left: 5px;
             padding-right: 10px;
+            padding-bottom: 20px;
         }
     }
 
@@ -701,8 +701,19 @@ body {
     display: none;   
 }
 
+.docs,
 .privacy-policy {
-    padding: 20px;
+    header {
+        background: $brand-dark;
+        color: white;
+        min-height: 0px;
+        padding: 20px 0px;
+        margin-bottom: 20px;
+
+        a {
+            color: #148fce;
+        }
+    }
 
     ol {
         margin-top: 20px;
@@ -712,9 +723,10 @@ body {
         font-size: 0.6em;
     }
 
-    @media(min-width: $breakpoint-md) {
-        padding: 50px;
+    h1, .content {
+        width: 100vw;
         max-width: 960px;
+        padding: 10px;
         margin: 0 auto;
     }
 }

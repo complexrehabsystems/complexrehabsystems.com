@@ -16,7 +16,7 @@ header {
     align-items: center;
 
     @media(min-width: $breakpoint-lg) {
-        padding: 40px 0 40px 40px;
+        padding: 20px 0;
         flex-direction: row;
     }
 

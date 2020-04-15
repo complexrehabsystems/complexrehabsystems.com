@@ -90,7 +90,7 @@ function setSuccessMessageVisibility() {
 }
 
 function respectHashLink() {
-    if(!window.location.hash)
+    if (!window.location.hash)
         return;
 
     let h = window.location.hash;
@@ -99,7 +99,7 @@ function respectHashLink() {
 
 if (typeof window !== 'undefined') {
 
-    if(window.location.search && window.location.search !== "?success" ) {
+    if (window.location.search && window.location.search !== "?success") {
         window.location.href = "crs-app:" + window.location.search.replace("?", "");
         window.close();
     }
@@ -108,7 +108,7 @@ if (typeof window !== 'undefined') {
 
     window.addEventListener('scroll', debounce(function () {
         let topLink = document.getElementById('top-link')
-        if(topLink)
+        if (topLink)
             topLink.style.opacity = (pageYOffset - 800);
     }, 100));
 
@@ -126,7 +126,7 @@ export default ({ data }) => {
     const whatWeDoInfo = data.allWhatWeDoYaml.edges[0].node;
     const getInTouchInfo = data.allGetInTouchYaml.edges[0].node;
     const people = data.allPeopleYaml.edges.map(e => e.node);
-    const developers = people.filter(p => p.role == "developer").sort((a, b) => {return a.displayOrder - b.displayOrder;});
+    const developers = people.filter(p => p.role == "developer").sort((a, b) => { return a.displayOrder - b.displayOrder; });
 
     const socialLink = (href, icon) => {
 
@@ -227,11 +227,11 @@ export default ({ data }) => {
 
                 <section id="covid-announcement" className="covid-alert">
                     <h1>
-                    <AlertIcon></AlertIcon> COVID 19 Announcement
+                        <AlertIcon></AlertIcon> COVID 19 Announcement
                     </h1>
                     <div className="section-content">
                         <p>Due to the recent covid-19 crisis, CRS is releasing early and for free.</p>
-                        <p><em>See offer details below!</em></p>
+                        <p>See offer details <a href="#pricing-section">below!</a></p>
                     </div>
                 </section>
 
@@ -288,7 +288,7 @@ export default ({ data }) => {
                                         <span>FREE</span>
                                     </p>
                                     <p className="price-value">
-                                    (free for the duration of covid-19 pandemic)
+                                        (free for the duration of covid-19 pandemic)
                                     </p>
                                 </div>
                             </div>
@@ -314,6 +314,19 @@ export default ({ data }) => {
                 </section>*/}
 
                 <section id="signup-section">
+                    <h1>Support</h1>
+                    <div className="section-content docs">
+                        <p>Visit the CRS Documentation for detailed info on any topic.</p>
+                        <ul>
+                            <li><a href="/docs">User Manuals</a></li>
+                            <li><a href="/docs">Video Tutorials</a></li>
+                            <li><a href="/docs">FAQ</a></li>
+                            <li><a href="/docs">Contact Us</a></li>
+                        </ul>
+                    </div>
+                </section>
+
+                <section id="signup-section" className="alternative-section">
                     <h1>{getInTouchInfo.sectionHeading}</h1>
                     <div className="section-content">
                         <SignupIcon className="signup-icon"></SignupIcon>
@@ -321,7 +334,7 @@ export default ({ data }) => {
                         <h2 className="signup-success">{getInTouchInfo.successMessage}</h2>
                         <form id="signup" name="signup" method="POST" action="/?success" autoComplete="off" data-netlify="true" netlify>
                             <p className="hidden">
-                              <label>Don’t fill this out if you're human: <input name="bot-field" /></label>
+                                <label>Don’t fill this out if you're human: <input name="bot-field" /></label>
                             </p>
                             <input type="hidden" name="form-name" value="signup" />
                             <input name="organization" type="text" placeholder="organization inc." required />
@@ -338,6 +351,7 @@ export default ({ data }) => {
         <Footer className="site-footer">
             <span>&copy; {footerInfo.copyright}</span>
             <span>{footerInfo.address}</span>
+            <span><a href="/privacy">Privacy Policy</a></span>
         </Footer>
 
     </div>
