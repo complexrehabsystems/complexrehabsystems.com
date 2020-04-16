@@ -2,9 +2,9 @@ import React from "react"
 import "../styles/layout.scss"
 
 export default ({ data }) => {
-  return <div className="layout docs" >
+  return <div className="layout support" >
     <header>
-      <h1> Complex Rehab Systems (CRS) Documentation &nbsp;
+      <h1> Complex Rehab Systems (CRS) Support &nbsp;
       <div className="small-link"><a href="/#top">back to site</a></div>
       </h1>
     </header>
@@ -41,7 +41,9 @@ export default ({ data }) => {
         </p>
         <ul>
           <li>
-            <b>Email:</b> <b><a href="mailto:crs.support@kimobility.com">crs.support@kimobility.com</a></b>
+            <b>Email:</b> <b>
+              <a href="mailto:crs.support@kimobility.com">crs.support@kimobility.com</a>
+            </b>
           </li>
           <li>
             <b>Phone:</b> (715) 997-9979
@@ -51,7 +53,7 @@ export default ({ data }) => {
         <h1>Feedback</h1>
         <p>We want to hear from you!</p>
         <p>
-          If you have any feedback to share about the app, including ideas for new features you can do so by emailing crs.support@kimobility.com, or clicking
+          If you have any feedback to share about the app, including ideas for new features you can do so by emailing <a href="mailto:crs.support@kimobility.com">crs.support@kimobility.com</a>, or clicking
           the icon in the header of the CRS application.
         </p>
       </div>
