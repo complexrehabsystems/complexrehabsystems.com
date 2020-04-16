@@ -5,7 +5,6 @@ import Footer from "../components/footer"
 import LinkedInIcon from "react-icons/lib/fa/linkedin-square"
 import GithubIcon from "react-icons/lib/fa/github-square"
 import CodepenIcon from "react-icons/lib/fa/codepen"
-import AddPersonIcon from "react-icons/lib/fa/user-plus"
 import UpArrowIcon from "react-icons/lib/fa/arrow-circle-o-up"
 
 import "../styles/layout.scss"
@@ -125,8 +124,6 @@ export default ({ data }) => {
     const footerInfo = data.allFooterYaml.edges[0].node;
     const whatWeDoInfo = data.allWhatWeDoYaml.edges[0].node;
     const getInTouchInfo = data.allGetInTouchYaml.edges[0].node;
-    const people = data.allPeopleYaml.edges.map(e => e.node);
-    const developers = people.filter(p => p.role == "developer").sort((a, b) => { return a.displayOrder - b.displayOrder; });
 
     const socialLink = (href, icon) => {
 
@@ -295,23 +292,6 @@ export default ({ data }) => {
                         </div>
                     </div>
                 </section>
-
-                {/*<section id="team">
-                    <h1>The Team</h1>
-
-                    <div className="section-content">
-                        <div className="people">
-                            {developers.map(p => personCard(p))}
-
-                            <a className="hiring-card" href="https://complexrehabsystems.github.io/job-descriptions">
-                                <h1>We're Hiring!</h1>
-                                <p>Click Here to Learn More</p>
-                                <AddPersonIcon className="social-icon"></AddPersonIcon>
-                            </a>
-                        </div>
-
-                    </div>
-                </section>*/}
 
                 <section id="signup-section">
                     <h1>Support</h1>

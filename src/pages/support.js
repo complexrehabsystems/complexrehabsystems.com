@@ -58,6 +58,5 @@ export default ({ data }) => {
         </p>
       </div>
     </div>
-
   </div>
 }
