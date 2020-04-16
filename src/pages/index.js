@@ -230,7 +230,7 @@ export default ({ data }) => {
                         <AlertIcon></AlertIcon> COVID 19 Announcement
                     </h1>
                     <div className="section-content">
-                        <p>Due to the recent covid-19 crisis, CRS is releasing early and for free.</p>
+                        <p>Due to the recent covid-19 crisis, CRS is offering a free early release.</p>
                         <p>See offer details <a href="#pricing-section">below!</a></p>
                     </div>
                 </section>
@@ -284,7 +284,7 @@ export default ({ data }) => {
                                     </ul>
                                     <h3 className="highlight">LIMITED TIME OFFER</h3>
                                     <p className="price-value">
-                                        <span className="linethrough">$89.99/mo/user</span>
+                                        <span className="linethrough">$129.99/mo/user</span>
                                         <span>FREE</span>
                                     </p>
                                     <p className="price-value">
