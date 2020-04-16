@@ -318,10 +318,10 @@ export default ({ data }) => {
                     <div className="section-content docs">
                         <p>Visit the CRS Documentation for detailed info on any topic.</p>
                         <ul>
-                            <li><a href="/docs">User Manuals</a></li>
-                            <li><a href="/docs">Video Tutorials</a></li>
-                            <li><a href="/docs">FAQ</a></li>
-                            <li><a href="/docs">Contact Us</a></li>
+                            <li><a href="/docs#user-manuals">User Manuals</a></li>
+                            <li><a href="/docs#video-tutorials">Video Tutorials</a></li>
+                            <li><a href="/docs#faq">FAQ</a></li>
+                            <li><a href="/docs#contact-us">Contact Us</a></li>
                         </ul>
                     </div>
                 </section>
