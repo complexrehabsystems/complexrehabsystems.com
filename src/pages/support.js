@@ -25,7 +25,8 @@ export default ({ data }) => {
 
       <div>
         <h1 id="video-tutorials">Video Tutorials</h1>
-        <p>(Embed coming soon...)</p>
+        <p><a href="https://vimeo.com/showcase/crs-tutorials" target="blank">View Video Tutorials on Vimeo</a></p>
+        <div className="vimeo-showcase-embed-wrapper"><iframe src='https://vimeo.com/showcase/7006209/embed' allowfullscreen frameBorder='0' className="vimeo-showcase-embed-iframe"></iframe></div>
       </div>
 
       <div id="faq">
