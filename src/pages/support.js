@@ -5,7 +5,7 @@ export default ({ data }) => {
   return <div className="layout support" >
     <header>
       <h1> Complex Rehab Systems (CRS) Support &nbsp;
-      <div className="small-link"><a href="/#top">back to site</a></div>
+      {/* <div className="small-link"><a href="/#top">back to site</a></div> */}
       </h1>
     </header>
 
