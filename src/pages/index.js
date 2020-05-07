@@ -245,7 +245,6 @@ export default ({ data }) => {
                     </div>
                     <div className="what-we-do-textblock">{remark().use(reactRenderer).processSync(whatWeDoInfo.whatWeDoTextBlock).contents}</div>
                     <div className="promo-vid"><iframe className="promo-video-embed" src="https://player.vimeo.com/video/410749981?title=0&byline=0&portrait=0" allow="autoplay; fullscreen" allowfullscreen></iframe></div>
-
                 </div>
 
                 <section id="pricing-section">
