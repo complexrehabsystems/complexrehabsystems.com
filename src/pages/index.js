@@ -194,12 +194,12 @@ export default ({ data }) => {
                     </div>
                 </a>
 
-                <a href="#pricing-section">
+                <a href="#support-section">
                     <div className="cta">
                         <img src={staticTeam} className="cta-icon static" />
                         <img src={hoverTeam} className="cta-icon hover" />
                         <img src={activeTeam} className="cta-icon active" />
-                        <h4>PRICING</h4>
+                        <h4>SUPPORT</h4>
                     </div>
                 </a>
 
@@ -222,7 +222,7 @@ export default ({ data }) => {
 
             <div className="sections">
 
-                <section id="covid-announcement" className="covid-alert">
+                {/* <section id="covid-announcement" className="covid-alert">
                     <h1>
                         <AlertIcon></AlertIcon> COVID 19 Announcement
                     </h1>
@@ -230,7 +230,7 @@ export default ({ data }) => {
                         <p>Due to the recent covid-19 crisis, CRS is offering a free early release.</p>
                         <p>See offer details <a href="#pricing-section">below!</a></p>
                     </div>
-                </section>
+                </section> */}
 
                 <div id="about">
 
@@ -244,10 +244,10 @@ export default ({ data }) => {
                         <h1>{whatWeDoInfo.whatWeDoTagline3}</h1>
                     </div>
                     <div className="what-we-do-textblock">{remark().use(reactRenderer).processSync(whatWeDoInfo.whatWeDoTextBlock).contents}</div>
-                    <div className="promo-vid"><iframe className="promo-video-embed" src="https://player.vimeo.com/video/410749981?title=0&byline=0&portrait=0" allow="autoplay; fullscreen" allowfullscreen></iframe></div>
+                    <div className="promo-vid"><iframe className="promo-video-embed" src="https://player.vimeo.com/video/415277130?title=0&byline=0&portrait=0" allow="autoplay; fullscreen" allowfullscreen></iframe></div>
                 </div>
 
-                <section id="pricing-section">
+                {/* <section id="pricing-section">
 
                     <h1>Pricing</h1>
 
@@ -290,9 +290,9 @@ export default ({ data }) => {
                             </div>
                         </div>
                     </div>
-                </section>
+                </section> */}
 
-                <section id="signup-section">
+                <section id="support-section">
                     <h1>Support</h1>
                     <div className="section-content support">
                         <p>Visit the CRS Support page for detailed info on any topic.</p>
@@ -316,7 +316,7 @@ export default ({ data }) => {
                                 <label>Don’t fill this out if you're human: <input name="bot-field" /></label>
                             </p>
                             <input type="hidden" name="form-name" value="signup" />
-                            <input name="organization" type="text" placeholder="organization inc." required />
+                            {/* <input name="organization" type="text" placeholder="organization inc." required /> */}
                             <input name="email" type="email" placeholder="email@example.com" required />
                             <input type="submit" value={getInTouchInfo.buttonText.toUpperCase()} />
                         </form>

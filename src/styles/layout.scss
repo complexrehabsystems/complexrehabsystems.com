@@ -406,9 +406,11 @@ body {
   }
 }
 
+#support-section,
 #pricing-section {
   min-height: 0;
-  padding-bottom: 50px;
+  padding-bottom: 30px;
+  padding-top: 20px;
   background-color: darken($brand-light, 5);
 
   h1 {
