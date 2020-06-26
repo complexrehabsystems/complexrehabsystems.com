@@ -5,8 +5,7 @@ export default ({ data }) => {
   return <div className="layout support" >
     <header>
       <h1> Complex Rehab Systems (CRS) Support &nbsp;
-      {/* <div className="small-link"><a href="/#top">back to site</a></div> */}
-      {/* test branch deploy on netlify*/}
+      <div className="small-link"><a href="/#top">back to CRS site</a></div>
       </h1>
     </header>
 
@@ -16,10 +15,10 @@ export default ({ data }) => {
         <h1 id="user-manuals">User Manuals</h1>
         <ul>
           <li>
-            <a href="/pdfs/QuickStartGuide_20200507.pdf">Quick Start Guide</a>
+            <a href="/pdfs/QuickStartGuide_20200626.pdf">Quick Start Guide</a>
           </li>
           <li>
-            <a href="/pdfs/DetailedUsageGuide_20200507.pdf">Detailed Usage Guide</a>
+            <a href="/pdfs/DetailedUsageGuide_20200626.pdf">Detailed Usage Guide</a>
           </li>
         </ul>
       </div>
