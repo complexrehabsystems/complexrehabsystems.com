@@ -100,7 +100,7 @@ if (typeof window !== 'undefined') {
 
     if(window.location.search && window.location.search !== "?success" ) {
         window.location.href = "crs-app:" + window.location.search.replace("?", "");
-        setTimeout(window.close(), 1000);
+        // setTimeout(window.close(), 1000);
     }
 
     require('smooth-scroll')('a[href*="#"]');
