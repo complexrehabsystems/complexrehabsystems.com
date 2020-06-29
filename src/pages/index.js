@@ -5,7 +5,6 @@ import Footer from "../components/footer"
 import LinkedInIcon from "react-icons/lib/fa/linkedin-square"
 import GithubIcon from "react-icons/lib/fa/github-square"
 import CodepenIcon from "react-icons/lib/fa/codepen"
-import AddPersonIcon from "react-icons/lib/fa/user-plus"
 import UpArrowIcon from "react-icons/lib/fa/arrow-circle-o-up"
 
 import "../styles/layout.scss"
@@ -13,13 +12,7 @@ import "../styles/layout.scss"
 import logo from "../assets/banner_logo.svg"
 
 import daniel from "../assets/CRS_Daniel.jpg"
-import doug from "../assets/doug.png"
-import jonathan from "../assets/CRS_Jonathan.jpg"
 import patrick from "../assets/CRS_Patrick.jpg"
-import tom from "../assets/tom.jpg"
-import avatar from "../assets/avatar.png"
-import hima from "../assets/himadusumilli.jpg"
-import nick from "../assets/CRS_Nick.jpg"
 
 import activeInfo from "../assets/nav-icons/crs-active-info.png";
 import activeTeam from "../assets/nav-icons/crs-active-team.png";
@@ -33,19 +26,14 @@ import staticContact from "../assets/nav-icons/crs-static-contact.png";
 import leftPadding from "../assets/nav-icons/crs-left-padding.png";
 import rightPadding from "../assets/nav-icons/crs-right-padding.png";
 
-import MailIcon from "react-icons/lib/fa/envelope"
+import SignupIcon from "react-icons/lib/fa/user-plus"
+import AlertIcon from "react-icons/lib/fa/exclamation-triangle"
 
-import joeAtp from "../assets/joe-atp.png"
 import joeAtpLeft from "../assets/Joe-ATP-LeftWave.png"
 
 let images = {
-    "Douglas Munsey": doug,
-    "Thomas Whelan": tom,
     "Daniel": daniel,
     "Patrick": patrick,
-    "Jonathan": jonathan,
-    "Hima Bharathi Adusumilli": hima,
-    "Nick": nick,
 }
 
 var remark = require('remark'),
@@ -68,7 +56,6 @@ const getParameterByName = (name, url) => {
     name = name.replace(/[\[\]]/g, '\\$&');
     var regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)'),
         results = regex.exec(url);
-    console.log(url + " " + results);
     if (!results) return null;
     if (!results[2]) return true; // this is a bool flag
     return decodeURIComponent(results[2].replace(/\+/g, ' '));
@@ -102,7 +89,7 @@ function setSuccessMessageVisibility() {
 }
 
 function respectHashLink() {
-    if(!window.location.hash)
+    if (!window.location.hash)
         return;
 
     let h = window.location.hash;
@@ -119,9 +106,8 @@ if (typeof window !== 'undefined') {
     require('smooth-scroll')('a[href*="#"]');
 
     window.addEventListener('scroll', debounce(function () {
-        document.getElementById('top-link').style.opacity = (pageYOffset - 800);
         let topLink = document.getElementById('top-link')
-        if(topLink)
+        if (topLink)
             topLink.style.opacity = (pageYOffset - 800);
     }, 100));
 
@@ -134,13 +120,10 @@ if (typeof window !== 'undefined') {
 
 // MAIN COMPONENT
 export default ({ data }) => {
-    console.log(data);
     const headerInfo = data.allHeaderYaml.edges[0].node;
     const footerInfo = data.allFooterYaml.edges[0].node;
     const whatWeDoInfo = data.allWhatWeDoYaml.edges[0].node;
     const getInTouchInfo = data.allGetInTouchYaml.edges[0].node;
-    const people = data.allPeopleYaml.edges.map(e => e.node);
-    const developers = people.filter(p => p.role == "developer").sort((a, b) => {return a.displayOrder - b.displayOrder;});
 
     const socialLink = (href, icon) => {
 
@@ -152,9 +135,6 @@ export default ({ data }) => {
     }
 
     const personCard = (p) => {
-        console.log("test");
-        console.log(reactRenderer)
-        console.log(p);
         return <div className="person">
             <img src={images[p.title]} />
             <div className="overlay">
@@ -214,21 +194,21 @@ export default ({ data }) => {
                     </div>
                 </a>
 
-                <a href="#team">
+                <a href="#support-section">
                     <div className="cta">
                         <img src={staticTeam} className="cta-icon static" />
                         <img src={hoverTeam} className="cta-icon hover" />
                         <img src={activeTeam} className="cta-icon active" />
-                        <h4>JOIN OUR TEAM</h4>
+                        <h4>SUPPORT</h4>
                     </div>
                 </a>
 
-                <a href="#signup">
+                <a href="#signup-section">
                     <div className="cta">
                         <img src={staticContact} className="cta-icon static" />
                         <img src={hoverContact} className="cta-icon hover" />
                         <img src={activeContact} className="cta-icon active" />
-                        <h4>GET IN TOUCH</h4>
+                        <h4>SIGN UP NOW</h4>
                     </div>
                 </a>
 
@@ -242,6 +222,16 @@ export default ({ data }) => {
 
             <div className="sections">
 
+                {/* <section id="covid-announcement" className="covid-alert">
+                    <h1>
+                        <AlertIcon></AlertIcon> COVID 19 Announcement
+                    </h1>
+                    <div className="section-content">
+                        <p>Due to the recent covid-19 crisis, CRS is offering a free early release.</p>
+                        <p>See offer details <a href="#pricing-section">below!</a></p>
+                    </div>
+                </section> */}
+
                 <div id="about">
 
                     <div className="joe-atp">
@@ -254,47 +244,81 @@ export default ({ data }) => {
                         <h1>{whatWeDoInfo.whatWeDoTagline3}</h1>
                     </div>
                     <div className="what-we-do-textblock">{remark().use(reactRenderer).processSync(whatWeDoInfo.whatWeDoTextBlock).contents}</div>
+                    <div className="promo-vid"><iframe className="promo-video-embed" src="https://player.vimeo.com/video/415277130?title=0&byline=0&portrait=0" allow="autoplay; fullscreen" allowfullscreen></iframe></div>
                 </div>
 
-                <section id="team">
-                    <h1>The Team</h1>
+                {/* <section id="pricing-section">
+
+                    <h1>Pricing</h1>
 
                     <div className="section-content">
-                        {/*<h2>Leadership</h2>
-                        <div className="people">
-                            {leadership.map(p => personCard(p))}
-                        </div>*/}
+                        <div className="pricing">
 
-                        {/*<h2>Developers</h2>*/}
-                        <div className="people">
-                            {developers.map(p => personCard(p))}
+                            <div className="pricing-category">
+                                <h2>Startup Fee</h2>
+                                <div className="pricing-block">
+                                    <h3>Features</h3>
+                                    <ul className="features">
+                                        <li>Intel RealSense &trade; Depth Sensor</li>
+                                        <li>Ruggedized Sensor Mount</li>
+                                    </ul>
+                                    <h3 className="highlight">LIMITED TIME OFFER</h3>
+                                    <p className="price-value">
+                                        <span className="linethrough">$299.99</span>
+                                        <span>$199.99</span>
+                                    </p>
+                                </div>
+                            </div>
 
-                            {/* NOW HIRING CARD */}
-                            <a className="hiring-card" href="https://complexrehabsystems.github.io/job-descriptions">
-                                <h1>We're Hiring!</h1>
-                                <p>Click Here to Learn More</p>
-                                <AddPersonIcon className="social-icon"></AddPersonIcon>
-                            </a>
+                            <div className="pricing-category">
+                                <h2>Software Subscription</h2>
+                                <div className="pricing-block">
+                                    <h3>Features</h3>
+                                    <ul className="features">
+                                        <li>Clinical evaluation forms</li>
+                                        <li>Work offline</li>
+                                    </ul>
+                                    <h3 className="highlight">LIMITED TIME OFFER</h3>
+                                    <p className="price-value">
+                                        <span className="linethrough">$129.99/mo/user</span>
+                                        <span>FREE</span>
+                                    </p>
+                                    <p className="price-value">
+                                        (free for the duration of covid-19 pandemic)
+                                    </p>
+                                </div>
+                            </div>
                         </div>
-
                     </div>
+                </section> */}
 
+                <section id="support-section">
+                    <h1>Support</h1>
+                    <div className="section-content support">
+                        <p>Visit the CRS Support page for detailed info on any topic.</p>
+                        <ul>
+                            <li><a href="/support#user-manuals">User Manuals</a></li>
+                            <li><a href="/support#video-tutorials">Video Tutorials</a></li>
+                            <li><a href="/support#faq">FAQ</a></li>
+                            <li><a href="/support#contact-us">Contact Us</a></li>
+                        </ul>
+                    </div>
                 </section>
 
-                <section id="signup">
+                <section id="signup-section" className="alternative-section">
                     <h1>{getInTouchInfo.sectionHeading}</h1>
                     <div className="section-content">
-                        <MailIcon className="mail-icon"></MailIcon>
-                        <h2>{getInTouchInfo.tagline}</h2>
+                        <SignupIcon className="signup-icon"></SignupIcon>
+                        <h2 className="cta-tagline">{getInTouchInfo.tagline}</h2>
                         <h2 className="signup-success">{getInTouchInfo.successMessage}</h2>
-                        <form id="contact" name="contact" method="POST" action="/?success" data-netlify="true" netlify>
+                        <form id="signup" name="signup" method="POST" action="/?success" autoComplete="off" data-netlify="true" netlify>
                             <p className="hidden">
-                              <label>Don’t fill this out if you're human: <input name="bot-field" /></label>
+                                <label>Don’t fill this out if you're human: <input name="bot-field" /></label>
                             </p>
-                            <input type="hidden" name="form-name" value="contact" />
-                            <input name="email" type="email" required />
+                            <input type="hidden" name="form-name" value="signup" />
+                            {/* <input name="organization" type="text" placeholder="organization inc." required /> */}
+                            <input name="email" type="email" placeholder="email@example.com" required />
                             <input type="submit" value={getInTouchInfo.buttonText.toUpperCase()} />
-                            <p className="beta-closed">{getInTouchInfo.betaClosed}</p>
                         </form>
 
                     </div>
@@ -306,6 +330,7 @@ export default ({ data }) => {
         <Footer className="site-footer">
             <span>&copy; {footerInfo.copyright}</span>
             <span>{footerInfo.address}</span>
+            <span><a href="/privacy">Privacy Policy</a></span>
         </Footer>
 
     </div>
