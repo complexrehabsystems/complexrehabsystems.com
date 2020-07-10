@@ -777,3 +777,39 @@ a {
 a:hover {
     color: lighten(#148fce, 10);
 }
+
+.faq-logo {
+  max-width:250px;
+  margin: 10px 30px;
+}
+
+.faq-question {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.faq-answer {
+  font-weight: normal;
+  margin-left: 50px;
+  margin-bottom: 50px;
+}
+
+.faq-bullet-header {
+  margin-bottom: 5px;
+}
+
+.faq-headers {
+
+  & h1 {
+    font-size: 90px;
+  }
+
+  text-align: center;
+  color: white;
+  background-color: #148fce;
+  padding: 10px;
+  margin: 20px -50vw 40px;
+  border: 2px solid white; 
+  outline: 2px solid #148fce;
+
+}
