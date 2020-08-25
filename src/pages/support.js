@@ -38,7 +38,7 @@ export default ({ data }) => {
             <dt className='faq-answer'>
               The CRS App is designed for Seating Specialists working in Complex
               Rehab. CRS allows you to take a 3D scan of your client and “take
-              them with you” for measurements or reference. The soGware also
+              them with you” for measurements or reference. The software also
               allows you to securely store and share client health information
               on a digital health record app.
             </dt>
