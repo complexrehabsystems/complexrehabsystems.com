@@ -15,10 +15,10 @@ export default ({ data }) => {
         <h1 id="user-manuals">User Manuals</h1>
         <ul>
           <li>
-            <a href="/pdfs/QuickStartGuide_20200626.pdf">Quick Start Guide</a>
+            <a href="/pdfs/QuickStartGuide_20201208.pdf">Quick Start Guide</a>
           </li>
           <li>
-            <a href="/pdfs/DetailedUsageGuide_20200626.pdf">Detailed Usage Guide</a>
+            <a href="/pdfs/DetailedUsageGuide_20201208.pdf">Detailed Usage Guide</a>
           </li>
         </ul>
       </div>
